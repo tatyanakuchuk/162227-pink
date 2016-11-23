@@ -1,7 +1,7 @@
-# Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+﻿# Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Tetiana Kuchuk](https://up.htmlacademy.ru/adaptive/9/user/162227).
-* Наставник: `Неизвестно`.
+* Наставник: [Юлия Бухвалова](https://htmlacademy.ru/profile/id114660).
 
 ---
 
