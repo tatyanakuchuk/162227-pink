@@ -7,16 +7,15 @@
   <body>
     <header class="main-header">
       <div class="container">
-        <div class="header-top">
-          <div class="header-logo">
-            <img src="http://placehold.it/75x25">
+        <h1>PINK - приложение для путешествий!</h1>
+        <div class="main-header__top">
+          <div class="main-header__logo">
+            <img src="http://placehold.it/75x25" alt="PINK">
           </div>
-          <button class="btn-burger">
-            <img src="http://placehold.it/50x25">
-          </button>
+          <button class="btn-toggle">Кнопка открытия/закрытия меню</button>
         </div>
         <!--НАВИГАЦИЯ-->
-        <nav class="main-nav">
+        <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link">Главная</a>
@@ -34,7 +33,7 @@
         </nav>
       </div>
     </header>
-    <main class="main-page">
+    <main class="main-content">
       <div class="container">
         <section class="download">
           <!--КНОПКА "СКАЧАТЬ ПРИЛОЖЕНИЕ"-->
@@ -46,40 +45,40 @@
           </div>
           <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </section>
-        <section class="info">
-          <h2 class="info__title">
+        <section class="advantages">
+          <h2 class="advantages__title">
             <p>Устали от серости мегаполиса?</p>
             <p>Нам есть, что вам предложить!</p>
           </h2>
-          <ul class="info__advantages">
-            <li class="info__advantage  info-advantage">
-              <h3 class="info-advantage__title">Поднимает настроение</h3>
-              <p class="info-advantage__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          <ul class="advantages__list">
+            <li class="advantage">
+              <h3 class="advantage__title">Поднимает настроение</h3>
+              <p class="advantage__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
-            <li class="info__advantage  info-advantage">
-              <h3 class="info-advantage__title">Меняет мир вокруг</h3>
-              <p class="info-advantage__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            <li class="advantage">
+              <h3 class="advantage__title">Меняет мир вокруг</h3>
+              <p class="advantage__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
-            <li class="info__advantage  info-advantage">
-              <h3 class="info-advantage__title">Заводит новых друзей</h3>
-              <p class="info-advantage__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            <li class="advantage">
+              <h3 class="advantage__title">Заводит новых друзей</h3>
+              <p class="advantage__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
         </section>
         <!--ОТЗЫВЫ-СЛАЙДЕР-->
         <section class="reviews slider">
           <ul class="reviews__list">
-            <li class="review-item">
-              <p class="review-item__name">Николай Петров</p>
-              <p class="review-item__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            <li class="review">
+              <p class="review__name">Николай Петров</p>
+              <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
-            <li class="review-item">
-              <p class="review-item__name">Николай Петров</p>
-              <p class="review-item__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            <li class="review">
+              <p class="review__name">Николай Петров</p>
+              <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
-            <li class="review-item">
-              <p class="review-item__name">Николай Петров</p>
-              <p class="review-item__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            <li class="review">
+              <p class="review__name">Николай Петров</p>
+              <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
           </ul>
         </section>
@@ -115,22 +114,22 @@
         <!--КОНТАКТЫ-->
         <div class="contacts">
           <p class="contacts__text">Остались вопросы?Свяжитесь с нами!</p>
-          <div class="contact__phone contact-phone">
+          <div class="contact contact-phone">
             <p class="contact-phone__title">Звоните:</p>
             <p class="contact-phone__text">+7 (812) 555-66-66</p>
           </div>
-          <div class="contact__mail contact-mail">
-            <p class="contact-mail__title">Пишите:</p>
-            <p class="contact-mail__text">mail@htmlacademy.ru</p>
+          <div class="contact contact-email">
+            <p class="contact-email__title">Пишите:</p>
+            <p class="contact-email__text">mail@htmlacademy.ru</p>
           </div>
-          <div class="contact__address contact-address">
+          <div class="contact contact-address">
             <p class="contact-address__title">Приезжайте в гости:</p>
             <p class="contact-address__text">ул. Большая Конюшенная, 19/8</p>
           </div>
         </div>
       </div>
       <div class="map">
-        <img src="http://placehold.it/320x200">
+        <img src="http://placehold.it/320x200" alt="карта">
       </div>
     </footer>
   </body>
