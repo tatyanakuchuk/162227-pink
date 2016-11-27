@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body>
+    <header class="form-header">
+      <div class="container">
+        <h1 class="title-hidden">PINK - приложение для путешествий!</h1>
+        <div class="main-header__top">
+          <div class="main-header__logo">
+            <img src="http://placehold.it/75x25" alt="PINK">
+          </div>
+          <button class="btn-toggle">Кнопка "Oткрыть меню"</button>
+        </div>
+        <h2 class="form-header__title">Конкурс на самое безбашеное путешествие с Пинк</h2>
+        <!--НАВИГАЦИЯ-->
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Фотографии</a>
+            </li>
+            <li class="nav__item">
+              <a class="main-nav__link active">Конкурс</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="main-nav__link">HTMLAcademy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="form-content">
+      <div class="container">
+        <section class="form">
+          <p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните</p>
+          <form action="#" method="post">
+            <div class="form-present">
+              <div class="present__surname">
+                <label for="surname">Фамилия:</label>
+                <input type="text" id="surname" value="Укажите фамилию *" required>
+              </div>
+              <div class="present__name">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" value="Введите ваше имя *" required>
+              </div>
+              <div class="present__middle-name">
+                <label for="middle-name">Отчество:</label>
+                <input type="text" id="middle-name" value="Ну и отчество тоже">
+              </div>
+            </div>
+            <!--ДОСТИЖЕНИЯ-->
+            <div class="form__filter-achievements">
+              <p class="filter-achievement">
+                <input type="checkbox" id="selfie-sharp" checked>
+                <label for="selfie-sharp">Сделал селфи с акулой</label>
+              </p>
+              <p class="filter-achievement">
+                <input type="checkbox" id="burned-on-beach" checked>
+                <label for="burned-on-beach">Обгорел на пляже</label>
+              </p>
+              <p class="filter-achievement">
+                <input type="checkbox" id="saw-chuck-norris">
+                <label for="saw-chuck-norris">Видел Чака Норриса</label>
+              </p>
+              <p class="filter-achievement">
+                <input type="checkbox" id="bought-souvenirs">
+                <label for="bought-souvenirs">Накупил сувениров</label>
+              </p>
+              <p class="filter-achievement">
+                <input type="checkbox" id="keep-tower" checked>
+                <label for="keep-tower">Удержал башню</label>
+              </p>
+              <p class="filter-achievement">
+                <input type="checkbox" id="crushed-hotel">
+                <label for="crushed-hotel">Разгромил отель</label>
+              </p>
+            </div>
+            <!--КОНТАКТНЫЕ ДАННЫЕ-->
+            <div class="form__contacts">
+              <div class="form__contact  form-contact">
+                <label for="form-contact__tel">Номер телефона</label>
+                <input type="tel" id="form-contact__tel" value="Номер, пожалуйста">
+              </div>
+              <div class="form__contact  form-contact">
+                <label for="form-contact__email">Адресок почты</label>
+                <input type="email" id="form-contact__email" value="Введите почту *" required>
+              </div>
+            </div>
+            <!--ВЫБРАТЬ ПРИЛОЖЕНИЕ-->
+            <div class="form__filter-apps">
+              <p class="filter-apps__text">С каким приложением путешествовали?</p>
+              <p class="filter-app">
+                <input type="radio" name="select" id="ios" checked>
+                <label for="ios">Pink для iOS</label>
+              </p>
+              <p class="filter-app">
+                <input type="radio" name="select" id="android">
+                <label for="android">Pink на Android</label>
+              </p>
+              <p class="filter-app">
+                <input type="radio" name="select" id="windows-phone">
+                <label for="windows-phone">Windows Phone</label>
+             </p>
+            </div>
+            <!--ТЕКСТ СООБЩЕНИЯ-->
+            <div class="form__message  form-message">
+              <p class="form-message__name">Опишите свои эмоции</p>
+              <textarea name="form-message__text" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </div>
+            <!--КНОПКА ОТПРАВКИ ФОРМЫ-->
+            <input type="submit" class="form__btn" value="Отправить форму">
+            <p class="form__remark">* — обязательные поля</p>
+          </form>
+        </section>
+      </div>
+    </main>
+    <!--ФУТЕР-->
+    <footer class="form-footer">
+      <div class="container">
+        <img src="http://placehold.it/150x40" class="form-footer__logo" alt="PINK">
+        <div class="form-footer__socials">
+          <a href="#" class="form-footer__social  btn-tw">Twitter</a>
+          <a href="#" class="form-footer__social  btn-fb">Facebook</a>
+          <a href="#" class="form-footer__social  btn-ytb">Youtube</a>
+        </div>
+        <div class="form-footer__copyright">
+          <p class="form-footer__copyright-text">Разработано</p>
+          <a href="#" class="form-footer__copyright-link">HTMLAcademy</a>
+        </div>
+      </div>
+    </footer>
+    <div class="popup-success">
+      <p class="popup-sucess__name">Ваша заявка отправлена</p>
+      <p class="popup-sucess__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+      <button class="popup-success__btn">Закрыть окно</button>
+    </div>
+    <div class="popup-failed">
+      <p class="popup-failed__name">Что-то пошло не так!</p>
+      <p class="popup-failed__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="popup-failed__btn">ок</button>
+    </div>
+  </body>
+</html>
