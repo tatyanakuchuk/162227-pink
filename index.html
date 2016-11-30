@@ -5,8 +5,132 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <header class="page-header">
+      <div class="container">
+        <h1 class="visually-hidden">PINK - приложение для путешествий!</h1>
+        <div class="page-header__top">
+          <div class="page-header__logo">
+            <img src="http://placehold.it/75x25" alt="PINK">
+          </div>
+          <button class="btn-toggle">Oткрыть меню</button>
+        </div>
+        <!--НАВИГАЦИЯ-->
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html" class="main-nav__link">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">HTMLAcademy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="container">
+        <section class="download">
+          <!--КНОПКА "СКАЧАТЬ ПРИЛОЖЕНИЕ"-->
+          <a href="#" class="download__btn">Скачать приложение</a>
+          <div class="download__links">
+            <a href="#" class="download__link">Apple</a>
+            <a href="#" class="download__link">Android</a>
+            <a href="#" class="download__link">Windows</a>
+          </div>
+          <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </section>
+        <section class="advantages">
+          <h2 class="advantages__title advantages-title">
+            <span class="advantages-title__part-one">Устали от серости мегаполиса?</span>
+            <span class="advantages-title__part-two">Нам есть, что вам предложить!</span>
+          </h2>
+          <ul class="advantages__list">
+            <li class="advantage">
+              <h3 class="advantage__title">Поднимает настроение</h3>
+              <p class="advantage__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </li>
+            <li class="advantage">
+              <h3 class="advantage__title">Меняет мир вокруг</h3>
+              <p class="advantage__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li class="advantage">
+              <h3 class="advantage__title">Заводит новых друзей</h3>
+              <p class="advantage__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
+        </section>
+        <!--ОТЗЫВЫ-СЛАЙДЕР-->
+        <section class="reviews slider">
+          <ul class="reviews__list">
+            <li class="review">
+              <p class="review__name">Николай Петров</p>
+              <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </li>
+            <li class="review">
+              <p class="review__name">Николай Петров</p>
+              <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </li>
+            <li class="review">
+              <p class="review__name">Николай Петров</p>
+              <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </li>
+          </ul>
+        </section>
+        <!--ПРАЙС-СЛАЙДЕР-->
+        <section class="prices slider">
+          <table border class="price">
+            <tr>
+              <th>Стандарт 3,99 USD</th>
+              <th>Стандарт 3,99 USD</th>
+              <th>Стандарт 3,99 USD</th>
+            </tr>
+            <tr>
+              <td>Розовый фильтр</td>
+              <td>Розовый фильтр</td>
+              <td>Розовый фильтр</td>
+            </tr>
+            <tr>
+              <td>Смайлики</td>
+              <td>Смайлики</td>
+              <td>Смайлики</td>
+            </tr>
+            <tr>
+              <td>Комментарии</td>
+              <td>Комментарии</td>
+              <td>Комментарии</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <!--КОНТАКТЫ-->
+        <div class="contacts">
+          <h4 class="contacts__title">Остались вопросы?Свяжитесь с нами!</h4>
+          <div class="contact contact-phone">
+            <h4 class="contact-phone__title">Звоните:</h4>
+            <p class="contact-phone__text">+7 (812) 555-66-66</p>
+          </div>
+          <div class="contact contact-email">
+            <h4 class="contact-email__title">Пишите:</h4>
+            <p class="contact-email__text">mail@htmlacademy.ru</p>
+          </div>
+          <div class="contact contact-address">
+            <h4 class="contact-address__title">Приезжайте в гости:</h4>
+            <p class="contact-address__text">ул. Большая Конюшенная, 19/8</p>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <img src="http://placehold.it/320x200" alt="карта">
+      </div>
+    </footer>
   </body>
 </html>
