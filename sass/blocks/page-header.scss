@@ -3,7 +3,14 @@
   background-image: url(../../img/bg-back-mobile@1x.jpg),
                     url(../../img/bg-hand-mobile@1x.png);
   background-repeat: no-repeat, no-repeat;
-  outline: 2px solid #c91353;
   min-height: 400px;
+
+  outline: 1px solid #c91353;
+}
+
+.page-header__top {
+  padding: 20px;
+
+  outline: 1px solid #c91353;
 }
 
