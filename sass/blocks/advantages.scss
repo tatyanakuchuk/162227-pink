@@ -1,0 +1,17 @@
+.advantages {
+  padding: 30px 50px;
+
+  outline: 1px solid #c91353;
+}
+
+.advantages__list {
+  @include drop;
+  padding-top: 50px;
+  padding-bottom: 350px;
+
+  background: #f2f2f2;
+  background-image: url(../../img/iphone-screen-mobile@1x.png);
+  background-repeat: no-repeat;
+
+  outline: 1px solid #c91353;
+}

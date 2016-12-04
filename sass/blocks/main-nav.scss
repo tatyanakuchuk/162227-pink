@@ -1,0 +1,25 @@
+.main-nav {
+  background: #283645;
+  color: #ffffff;
+
+  outline: 1px solid #c91353;
+}
+
+.main-nav__list {
+  @include drop;
+}
+
+.main-nav__item {
+
+  outline: 1px solid #c91353;
+
+}
+
+.main-nav__link {
+  display: block;
+  padding: 5px 20px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}

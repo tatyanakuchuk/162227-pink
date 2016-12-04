@@ -1,0 +1,15 @@
+.page-header {
+  background: #2a3a4a;
+  background-image: url(../../img/iphone-hand-mobile@1x.png),
+                    url(../../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat, no-repeat;
+  min-height: 400px;
+
+  outline: 1px solid #c91353;
+}
+
+.page-header__top {
+  padding: 20px;
+
+  outline: 1px solid #c91353;
+}

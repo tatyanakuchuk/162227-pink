@@ -1,0 +1,30 @@
+.download {
+  padding: 25px 15px;
+
+  background: #1d2631;
+
+  outline: 1px solid #c91353;
+}
+
+.download__btn {
+  display: block;
+  width: 280px;
+  padding: 5px 15px;
+
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  color: #ffffff;
+
+  border: 3px solid #ffffff;
+  border-radius: 50px;
+
+  box-sizing: border-box;
+}
+
+.download__text {
+  color: #ffffff;
+}
