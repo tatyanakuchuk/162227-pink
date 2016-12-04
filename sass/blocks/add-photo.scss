@@ -23,7 +23,7 @@
   margin-bottom: 40px;
 }
 
-.add-photo__filter {
+.add-photo__tools {
   margin-bottom: 30px;
 
   outline: 1px solid #c91353;
@@ -31,31 +31,32 @@
 
 .add-photo__range {
   outline: 1px solid #c91353;
-
-  .line-range {
-    position: relative;
-
-    display: block;
-    width: 240px;
-    height: 2px;
-    background: #283645;
-  }
-  .toggle-range {
-    position: absolute;
-    top: -6px;
-    left: 193px;
-
-    display: block;
-    width: 10px;
-    height: 10px;
-
-    background: #ffffff;
-    border: 2px solid #d22856;
-    border-radius: 50%;
-  }
 }
 
-.add-photo__block-btn {
+.add-photo__line-range {
+  position: relative;
+
+  display: block;
+  width: 240px;
+  height: 2px;
+  background: #283645;
+}
+
+.add-photo__toggle-range {
+  position: absolute;
+  top: -6px;
+  left: 193px;
+
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  background: #ffffff;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+}
+
+.add-photo__wrapper-btn {
   padding: 40px 0;
   outline: 1px solid #c91353;
 
@@ -68,4 +69,5 @@
   color: #d22856;
   background: #ffffff;
   border: 2px solid #d22856;
+  border-radius: 30px;
 }

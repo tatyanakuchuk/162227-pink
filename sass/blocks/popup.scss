@@ -9,11 +9,16 @@
   font-weight: 700;
 }
 
-.popup__block-btn {
+.popup__wrapper-btn {
   padding: 50px 0;
   background: #f2f2f2;
 }
 
 .popup__btn {
   @include btn;
+  padding: 5px 20px;
+  background: #2aab6d;
+  color: #ffffff;
+  border-radius: 4px;
+  text-transform: uppercase;
 }

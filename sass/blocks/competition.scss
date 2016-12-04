@@ -2,11 +2,12 @@
   padding: 55px 20px;
 
   outline: 1px solid #c91353;
-
-  ul{
-    @include drop;
-  }
 }
+
+.competition__list {
+  @include drop;
+}
+
 
 .competition__title {
   margin-bottom: 35px;

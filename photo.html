@@ -20,13 +20,13 @@
         <nav class="main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="#" class="main-nav__link">Главная</a>
+              <a href="index.html" class="main-nav__link">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--active">Фотографии</a>
             </li>
             <li class="main-nav__item">
-              <a href="#" class="main-nav__link">Конкурс</a>
+              <a href="form.html" class="main-nav__link">Конкурс</a>
             </li>
             <li class="main-nav__item">
               <a href="#" class="main-nav__link">HTMLAcademy</a>
@@ -144,19 +144,19 @@
             <div class="add-photo__picture">
               <img src="img/photo-7-mobile@1x.jpg" alt="PostPhoto">
             </div>
-            <div class="add-photo__filter">
-              <span class="crop-tool">Обрезать</span>
-              <span class="paint-tool">Заливка</span>
-              <span class="contrast-tool">Контраст</span>
+            <div class="add-photo__tools tools">
+              <button class="tool tool--crop">Обрезать</button>
+              <button class="tool tool--paint">Заливка</button>
+              <button class="tool tool--contrast">Контраст</button>
             </div>
             <!--БЕГУНОК-->
             <div class="add-photo__range">
-              <div class="line-range">
-                <div class="toggle-range"></div>
+              <div class="add-photo__line-range">
+                <div class="add-photo__toggle-range"></div>
               </div>
             </div>
           </div>
-          <div class="add-photo__block-btn">
+          <div class="add-photo__wrapper-btn">
             <button class="add-photo__btn add-photo__btn--post">Запостить</button>
             <button class="add-photo__btn add-photo__btn--cancel">Отмена</button>
           </div>
