@@ -5,15 +5,13 @@
 }
 
 .advantages__list {
-  margin: 0;
-  padding: 0;
+  @include drop;
   padding-top: 50px;
   padding-bottom: 350px;
 
-
-  list-style: none;
   background: #f2f2f2;
   background-image: url(../../img/iphone-screen-mobile@1x.png);
   background-repeat: no-repeat;
+
   outline: 1px solid #c91353;
 }

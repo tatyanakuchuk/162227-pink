@@ -1,6 +1,7 @@
 .page-footer {
   padding: 40px;
   padding-bottom: 0;
+
   outline: 1px solid #c91353;
 }
 .contacts__title {
@@ -9,20 +10,19 @@
   font-weight: 400;
   text-transform: uppercase
 }
-.contact-phone__text,
-.contact-email__text,
-.contact-address__text {
+
+.contact__title {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.contact__text {
   color: #d22856;
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
 }
 
-.contact-phone__title,
-.contact-email__title,
-.contact-address__title {
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 700;
-}
+
 
