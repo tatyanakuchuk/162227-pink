@@ -1,0 +1,40 @@
+.photo {
+  padding-top: 45px;
+
+  outline: 1px solid #c91353;
+
+  h3 {
+    margin-bottom: 50px;
+
+    line-height: 30px;
+  }
+}
+
+.photo__article {
+  margin-bottom: 20px;
+
+  background: #f2f2f2;
+
+  outline: 1px solid #c91353;
+}
+
+.photo-content {
+  padding: 20px 15px;
+}
+
+.photo-content__author {
+  font-weight: bold;
+}
+
+.photo-content__time {
+  text-transform: uppercase;
+}
+
+.photo-content__title {
+  font-weight: normal;
+}
+
+.photo-content__like {
+  color: #d22856;
+  text-transform: uppercase;
+}

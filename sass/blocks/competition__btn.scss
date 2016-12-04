@@ -1,3 +1,11 @@
 .competition__btn {
   @include btn;
+  padding: 5px 15px;
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+  background: #2aab6d;
+
+  border-radius: 4px;
 }
