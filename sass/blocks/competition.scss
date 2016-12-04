@@ -1,0 +1,15 @@
+.competition {
+  padding: 55px 20px;
+
+  outline: 1px solid #c91353;
+
+  ul{
+    @include drop;
+  }
+}
+
+.competition__title {
+  margin-bottom: 35px;
+  color: #283645;
+  line-height: 30px;
+}

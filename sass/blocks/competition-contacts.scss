@@ -1,0 +1,36 @@
+.competition-contacts {
+   outline: 1px solid #c91353;
+
+  h4 {
+    margin-bottom: 30px;
+
+    text-transform: uppercase;
+    color: #d22856;
+    line-height: 18px;
+  }
+}
+
+.competition-contacts__item {
+  margin-bottom: 15px;
+}
+
+.competition-contacts__item:last-child {
+  margin-bottom: 40px;
+}
+
+.competition-contacts__label {
+  margin-bottom: 5px;
+
+  text-transform: uppercase;
+  color: #d22856;
+  line-height: 30px;
+}
+
+.competition-contacts__input {
+  padding: 5px 15px;
+
+  font-size: 18px;
+  line-height: 30px;
+
+  box-sizing: border-box;
+}

@@ -1,0 +1,23 @@
+.competition-achievements {
+background: #f2f2f2;
+
+  outline: 1px solid #c91353;
+
+  h4 {
+    margin-bottom: 30px;
+
+    text-transform: uppercase;
+    color: #d22856;
+    line-height: 18px;
+  }
+}
+
+.competition-achievements__item {
+  margin-bottom: 35px;
+}
+
+.competition-achievements__label {
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+}

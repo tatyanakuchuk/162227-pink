@@ -3,17 +3,13 @@
   outline: 1px solid #c91353;
 }
 .reviews__list {
-  margin: 0;
-  padding: 0;
+  @include drop;
   padding: 20px 50px 150px;
-  list-style: none;
 
   outline: 1px solid #c91353;
 }
 
 .review {
-
   display: inline-block;
   vertical-align: top;
-
 }
