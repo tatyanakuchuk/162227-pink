@@ -3,21 +3,42 @@
   padding-bottom: 100px;
   background: #f2f2f2;
 
+  /*overflow: hidden;*/
+
   @include container;
 }
 
 .price {
+  width: 860px;
   background: #ffffff;
+  left: -260px;
 
   th {
+
     background: #283645;
     color: #ffffff;
     text-transform: uppercase;
+  }
+  td {
+    width: 280px;
+  }
+
+  .options,
+  .options__filter,
+  .options__smiles,
+  .options__comments {
+    display: none;
   }
 }
 
 @media ($tablet-widths) {
   .price {
-    width: 100%;
+    max-width: 620px;
+  }
+  .options,
+  .options__filter,
+  .options__smiles,
+  .options__comments {
+    display: block;
   }
 }
