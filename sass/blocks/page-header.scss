@@ -24,25 +24,25 @@
 /*планшетная версия*/
 @media ($tablet-widths) {
   .page-header {
+
   }
 }
 
 /*десктопная версия*/
 @media ($desktop-widths) {
   .page-header {
-    position: relative;
-    background: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
+
+    background-image: url(../../img/iphone-hand-mobile@1x.png),
+                      url(../../img/bg-back-mobile@1x.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 495px 253px, -295px -285px;
+    background-size: 40%, 155%;
 
     @include clearfix;
   }
 
   .page-header__top {
-    float: left;
-    max-width: 150px;
-    background: none;
-    border:none;
-  }
-  .btn-toggle {
     display: none;
   }
 }

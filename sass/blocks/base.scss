@@ -4,8 +4,6 @@ body {
   font-family: 'Open Sans', 'Arial', sans-serif;
 }
 
-
-
 img {
   max-width: 100%;
   height: auto;
@@ -27,8 +25,3 @@ img {
   overflow: hidden;
 }
 
-@media ($desktop-widths) {
-  body {
-    position: relative;
-  }
-}

@@ -1,6 +1,10 @@
 .main-nav {
-  background: #283645;
+
   color: #ffffff;
+}
+
+.main-nav__logo {
+  display: none;
 }
 
 .main-nav__list {
@@ -26,12 +30,21 @@
   color: #ffffff;
 }
 
+@media ($tablet-widths) {
+  .main-nav {
+
+  }
+}
+
 @media ($desktop-widths) {
   .main-nav {
-    max-width: 750px;
-    float: right;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.3);
+  }
 
-    background: none;
+  .main-nav__logo {
+    display: block;
   }
 
   .main-nav__list {
