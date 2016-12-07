@@ -1,13 +1,16 @@
 .page-footer {
-  padding: 40px;
+  padding: 20px;
   padding-bottom: 0;
 
-  outline: 1px solid #c91353;
+  box-sizing: border-box;
+
+  @include container;
 }
 .contacts__title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
+
   text-transform: uppercase
 }
 

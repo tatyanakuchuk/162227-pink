@@ -3,13 +3,29 @@
   background-image: url(../../img/iphone-hand-mobile@1x.png),
                     url(../../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat, no-repeat;
-  min-height: 400px;
+  background-position: 0 437px, -190px 260px;
 
-  outline: 1px solid #c91353;
+  @include container;
+
+  min-height: 720px; /*для сетки*/
 }
 
 .page-header__top {
   padding: 20px;
 
-  outline: 1px solid #c91353;
+  background: #283645;
+  border-bottom: 1px solid #000;
+
+  @include clearfix;
 }
+
+.page-header__logo {
+  float: left;
+}
+
+.btn-toggle {
+  float: right;
+}
+
+/*планшетная версия*/
+

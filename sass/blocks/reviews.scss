@@ -1,12 +1,14 @@
 .reviews {
-
+  @include container;
   outline: 1px solid #c91353;
 }
 .reviews__list {
   @include drop;
-  padding: 20px 50px 150px;
 
-  outline: 1px solid #c91353;
+
+  padding: 50px 20px 150px;
+
+  box-sizing: border-box;
 }
 
 .review {
