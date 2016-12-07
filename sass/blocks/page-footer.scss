@@ -26,3 +26,20 @@
   line-height: 28px;
   font-weight: 400;
 }
+
+@media ($tablet-widths) {
+  .contacts {
+  text-align: center;
+  }
+
+  .contact {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+  }
+
+  .contact:last-child {
+    text-align: center;
+  }
+}

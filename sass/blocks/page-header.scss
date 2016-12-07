@@ -1,13 +1,7 @@
 .page-header {
   background: #2a3a4a;
-  background-image: url(../../img/iphone-hand-mobile@1x.png),
-                    url(../../img/bg-back-mobile@1x.jpg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: 0 437px, -190px 260px;
 
   @include container;
-
-  min-height: 720px; /*для сетки*/
 }
 
 .page-header__top {
@@ -28,4 +22,28 @@
 }
 
 /*планшетная версия*/
+@media ($tablet-widths) {
+  .page-header {
+  }
+}
+
+/*десктопная версия*/
+@media ($desktop-widths) {
+  .page-header {
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+
+    @include clearfix;
+  }
+
+  .page-header__top {
+    float: left;
+    max-width: 150px;
+    background: none;
+    border:none;
+  }
+  .btn-toggle {
+    display: none;
+  }
+}
 

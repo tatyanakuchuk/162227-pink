@@ -1,3 +1,26 @@
 .page-main {
+  padding-top: 400px;
 
+  background-image: url(../../img/iphone-hand-mobile@1x.png),
+                    url(../../img/bg-back-mobile@1x.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 20px 115px, -170px -62px;
+
+  @include container;
+
+  outline: 1px solid #red;
+}
+
+@media ($tablet-widths) {
+  .page-main {
+  position: relative;
+
+  background-position: 240px 115px, -40px -61px;
+  }
+}
+
+@media ($desktop-widths) {
+  .page-main {
+
+  }
 }

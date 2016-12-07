@@ -22,3 +22,22 @@
   background-repeat: no-repeat;
   background-position: 84px 460px;
 }
+
+@media ($tablet-widths) {
+  .advantages {
+    padding-top: 50px;
+  }
+
+  .advantages-title {
+    width: 600px;
+  }
+
+  .advantages__list {
+    max-width: 310px;
+    padding-bottom: 0;
+    padding-left: 330px;
+
+
+    background-position: 20px 0px;
+  }
+}

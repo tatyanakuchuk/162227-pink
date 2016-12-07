@@ -25,3 +25,21 @@
   text-align: center;
   color: #ffffff;
 }
+
+@media ($desktop-widths) {
+  .main-nav {
+    max-width: 750px;
+    float: right;
+
+    background: none;
+  }
+
+  .main-nav__list {
+    @include clearfix;
+  }
+
+  .main-nav__item {
+    float: left;
+    border: none;
+  }
+}
