@@ -5,6 +5,8 @@
                     url(../../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: 25px 113px, -170px -65px;
+
+  @include container;
 }
 
 .download {

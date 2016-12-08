@@ -1,14 +1,20 @@
-.page-header {
+.wrapper--header {
   background: #2a3a4a;
+}
 
-  @include container;
+.page-header {
+
+
+}
+.wrapper--page-header__top {
+  background: #283645;
+  border-bottom: 1px solid #000;
 }
 
 .page-header__top {
+  @include container;
   padding: 20px 0;
 
-  background: #283645;
-  border-bottom: 1px solid #000;
 
   @include clearfix;
 }
