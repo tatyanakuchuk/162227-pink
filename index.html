@@ -6,46 +6,50 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
-      <div class="container">
-        <h1 class="visually-hidden">PINK - приложение для путешествий!</h1>
-        <div class="page-header__top">
-          <div class="page-header__logo">
-            <img src="img/logo-pink-white-mobile.svg" alt="PINK">
+    <div class="wrapper--header">
+      <header class="page-header">
+        <div class="container">
+          <h1 class="visually-hidden">PINK - приложение для путешествий!</h1>
+          <div class="page-header__top">
+            <div class="page-header__logo">
+              <img src="img/logo-pink-white-mobile.svg" alt="PINK">
+            </div>
+            <button class="btn-toggle">Oткрыть меню</button>
           </div>
-          <button class="btn-toggle">Oткрыть меню</button>
-        </div>
-        <!--НАВИГАЦИЯ-->
-        <nav class="main-nav">
-          <div class="main-nav__logo">
+          <!--НАВИГАЦИЯ-->
+          <nav class="main-nav">
+            <div class="main-nav__logo">
               <img src="img/logo-pink-blue-mobile.svg" alt="PINK">
+            </div>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="photo.html" class="main-nav__link">Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html" class="main-nav__link">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">HTMLAcademy</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="wrapper--download">
+            <p class="page-header__text">Взгляните на жизнь иначе!</p>
+            <section class="download">
+            <!--КНОПКА "СКАЧАТЬ ПРИЛОЖЕНИЕ"-->
+              <a href="#" class="download__btn">Скачать приложение</a>
+              <div class="download__links">
+                <a href="#" class="download__link">Apple</a>
+                <a href="#" class="download__link">Android</a>
+                <a href="#" class="download__link">Windows</a>
+              </div>
+              <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            </section>
           </div>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="photo.html" class="main-nav__link">Фотографии</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html" class="main-nav__link">Конкурс</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__link">HTMLAcademy</a>
-            </li>
-          </ul>
-        </nav>
-        <section class="download">
-          <!--КНОПКА "СКАЧАТЬ ПРИЛОЖЕНИЕ"-->
-          <h2 class="download__title">Взгляните на жизнь иначе!</h2>
-          <a href="#" class="download__btn">Скачать приложение</a>
-          <div class="download__links">
-            <a href="#" class="download__link">Apple</a>
-            <a href="#" class="download__link">Android</a>
-            <a href="#" class="download__link">Windows</a>
-          </div>
-          <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-        </section>
+        </div>
       </div>
     </header>
     <main class="page-main">
@@ -102,19 +106,19 @@
               <th>Стандарт 3,99 USD</th>
             </tr>
             <tr>
-              <td class="options__filter">Розовый фильтр</td>
+              <td class="options">Розовый фильтр</td>
               <td>Розовый фильтр</td>
               <td>Розовый фильтр</td>
               <td>Розовый фильтр</td>
             </tr>
             <tr>
-              <td class="options__smiles">Смайлики</td>
+              <td class="options">Смайлики</td>
               <td>Смайлики</td>
               <td>Смайлики</td>
               <td>Смайлики</td>
             </tr>
             <tr>
-              <td class="options__comments">Комментарии</td>
+              <td class="options">Комментарии</td>
               <td>Комментарии</td>
               <td>Комментарии</td>
               <td>Комментарии</td>
@@ -128,22 +132,24 @@
         <!--КОНТАКТЫ-->
         <div class="page-footer__contacts contacts">
           <h4 class="contacts__title">Остались вопросы?Свяжитесь с нами!</h4>
-          <div class="contact contact-phone">
-            <h4 class="contact__title">Звоните:</h4>
-            <p class="contact__text">+7 (812) 555-66-66</p>
-          </div>
-          <div class="contact contact-email">
-            <h4 class="contact__title">Пишите:</h4>
-            <p class="contact__text">mail@htmlacademy.ru</p>
-          </div>
-          <div class="contact contact-address">
-            <h4 class="contact__title">Приезжайте в гости:</h4>
-            <p class="contact__text">ул. Большая Конюшенная, 19/8</p>
+          <div class="contacts__wrapper">
+            <div class="contact contact-phone">
+              <h4 class="contact__title">Звоните:</h4>
+              <p class="contact__text">+7 (812) 555-66-66</p>
+            </div>
+            <div class="contact contact-email">
+              <h4 class="contact__title">Пишите:</h4>
+              <p class="contact__text">mail@htmlacademy.ru</p>
+            </div>
+            <div class="contact contact-address">
+              <h4 class="contact__title">Приезжайте в гости:</h4>
+              <p class="contact__text">ул. Большая Конюшенная, 19/8</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="map">
-        <img src="img/bg-map-mobile@1x.png" alt="карта">
+
       </div>
       <div class="page-footer__socials container">
         <div class="page-footer__logo">

@@ -1,0 +1,44 @@
+.research {
+  display: none;
+}
+
+/*ПЛАНШЕТНАЯ ВЕРСИЯ*/
+@media ($tablet-widths) {
+  .research {
+    display: block;
+    padding-top: 90px;
+    padding-left: 300px;
+    padding-right: 45px;
+    padding-bottom: 30px;
+
+    text-align: left;
+
+    background-image: url(../../img/timer.png);
+    background-repeat: no-repeat;
+    background-position: 0 60px;
+  }
+
+  .research__title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: normal;
+  }
+
+  .research__text {
+    margin-bottom: 15px;
+  }
+}
+
+/*ДЕСКТОПНАЯ ВЕРСИЯ*/
+@media ($desktop-widths) {
+  .research {
+    display: block;
+    padding-left: 370px;
+    padding-bottom: 100px;
+
+    background: #f2f2f2;
+    background-image: url(../../img/timer.png);
+    background-repeat: no-repeat;
+    background-position: 35px 60px;
+  }
+}

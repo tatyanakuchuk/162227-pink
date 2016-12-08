@@ -3,7 +3,7 @@
   padding-bottom: 100px;
   background: #f2f2f2;
 
-  /*overflow: hidden;*/
+  overflow: hidden;
 
   @include container;
 }
@@ -14,31 +14,44 @@
   left: -260px;
 
   th {
-
     background: #283645;
     color: #ffffff;
     text-transform: uppercase;
   }
-  td {
-    width: 280px;
-  }
+}
 
-  .options,
-  .options__filter,
-  .options__smiles,
-  .options__comments {
+.options {
     display: none;
   }
-}
 
 @media ($tablet-widths) {
   .price {
-    max-width: 620px;
+    width: 620px;
+    margin: 0 auto;
+
+    th,
+    td {
+      width: 155px;
+    }
   }
-  .options,
-  .options__filter,
-  .options__smiles,
-  .options__comments {
+
+  .options {
+    display: block;
+  }
+}
+
+@media ($desktop-widths) {
+  .price {
+    width: 940px;
+    margin: 0 auto;
+
+    th,
+    td {
+      width: 235px;
+    }
+  }
+
+  .options {
     display: block;
   }
 }

@@ -1,9 +1,5 @@
 .page-main {
-  padding-top: 20px;
-
   @include container;
-
-  outline: 1px solid #red;
 }
 
 @media ($tablet-widths) {

@@ -37,10 +37,16 @@
 }
 
 @media ($desktop-widths) {
+
+  .wrapper--main-nav {
+
+  }
+
   .main-nav {
     display: flex;
     justify-content: space-between;
     background: rgba(0, 0, 0, 0.3);
+
   }
 
   .main-nav__logo {
@@ -48,7 +54,7 @@
   }
 
   .main-nav__list {
-    @include clearfix;
+
   }
 
   .main-nav__item {
