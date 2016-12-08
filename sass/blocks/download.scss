@@ -1,18 +1,13 @@
 .wrapper--download {
-  background: #1d2631;
-
-  background-image: url(../../img/iphone-hand-mobile@1x.png),
-                    url(../../img/bg-back-mobile@1x.jpg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: 25px 113px, -170px -65px;
-
-  @include container;
+  padding-top: 395px;
 }
 
 .download {
-  padding: 28px 0;
-  padding-top: 395px;
+  @include container;
+  padding-top: 28px;
+  padding-bottom: 28px;
 
+  background: #1d2631;
 }
 
 .download__btn {

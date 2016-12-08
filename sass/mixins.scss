@@ -34,6 +34,7 @@
 
   padding: 0 20px;
 
+
   @media ($tablet-widths) {
     width: 620px;
     padding: 0 40px;
@@ -41,6 +42,6 @@
 
   @media ($desktop-widths) {
     width: 940px;
-    padding: 130px;
+    padding: 0 130px;
   }
 }

@@ -1,5 +1,5 @@
 .main-nav {
-
+  background: #283645;
   color: #ffffff;
 }
 
@@ -31,34 +31,30 @@
 }
 
 @media ($tablet-widths) {
-  .main-nav {
 
-  }
 }
 
+/*ДЕСКТОПНАЯ ВЕРСИЯ*/
 @media ($desktop-widths) {
-
-  .wrapper--main-nav {
-
+  .main-nav {
+    background: none;
   }
 
-  .main-nav {
+  .main-nav__list {
     display: flex;
     justify-content: space-between;
-    background: rgba(0, 0, 0, 0.3);
-
   }
 
   .main-nav__logo {
     display: block;
   }
 
-  .main-nav__list {
-
+  .main-nav__item {
+    border: none;
   }
 
-  .main-nav__item {
-    float: left;
-    border: none;
+  .main-nav__link {
+    font-weight: normal;
+    text-transform: none;
   }
 }
