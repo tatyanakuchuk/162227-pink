@@ -1,10 +1,11 @@
 .page-header {
   background: #2a3a4a;
+
   @include container;
 }
 
 .page-header__top {
-  padding: 20px;
+  padding: 20px 0;
 
   background: #283645;
   border-bottom: 1px solid #000;
@@ -30,6 +31,7 @@
     width: 700px;
     margin: 0 auto;
   }
+
   .page-header__text {
     display: block;
     padding: 0 50px;
