@@ -8,74 +8,75 @@
 
 .wrapper--page-header__top {
   background: #283645;
-  border-bottom: 1px solid #000;
 }
 
 .page-header__top {
-  display: flex;
-  justify-content: space-between;
-  @include container;
+  border-bottom: 1px solid #000;
   padding: 20px 0;
 }
 
-.page-header__text {
-  display: none;
+.inner-wrapper--page-header__top {
+  display: flex;
+  justify-content: space-between;
+  @include container;
+
 }
 
-/*планшетная версия*/
+
+/*-------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
 @media ($tablet-widths) {
   .wrapper--page-header__top {
     border-bottom: none;
   }
 
   .page-header__top {
-    display: flex;
-    justify-content: space-between;
-
-    @include container;
-
+    padding: 40px 0;
     border-bottom: 1px solid #000;
   }
 
-  .page-header__text {
-    display: block;
-    padding: 0 50px;
-    width: 300px;
-    margin-bottom: 30px;
-
-    color: #fff;
-
-    font-size: 40px;
-    line-height: 44px;
-    font-weight: 400;
-
-    text-align: center;
-
-    box-sizing: border-box;
+  .inner-wrapper--page-header__top {
+    display: flex;
+    justify-content: space-between;
+    @include container;
   }
 }
 
-/*ДЕСКТОПНАЯ ВЕРСИЯ*/
+
+/*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
 @media ($desktop-widths) {
   .wrapper--header {
     background: #1d2631;
     background-image: url(../../img/iphone-hand-mobile@1x.png),
                       url(../../img/bg-back-mobile@1x.jpg);
     background-repeat: no-repeat, no-repeat;
-    background-position: 560px 280px, -295px -363px;
+    background-position: 560px 280px, 0 -185px;
     background-size: 30%, cover;
-  }
-
-  .wrapper--page-header__top {
-    background: rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: space-between;
-    @include container;
-    padding-top: 40px;
   }
 
   .page-header {
     background-color: transparent;
+  }
+
+  .inner-wrapper--page-header {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .wrapper--page-header__top {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    @include container;
+  }
+
+  .inner-wrapper--page-header__top {
+    padding: 0;
+    display: block;
+    width: 150px;
+  }
+
+  .page-header__top {
+    margin: 0;
+    padding: 0;
   }
 
   .page-header__logo {
@@ -84,17 +85,8 @@
     height: 50px;
   }
 
-  .page-header__top {
-    width: 150px;
-    margin: 0;
-    padding: 0;
-  }
-
   .btn-toggle {
     display: none;
-  }
-
-  .page-header__top {
   }
 }
 
