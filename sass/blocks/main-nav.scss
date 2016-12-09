@@ -3,10 +3,6 @@
   color: #ffffff;
 }
 
-.main-nav__logo {
-  display: none;
-}
-
 .main-nav__list {
   @include drop;
 }
@@ -37,11 +33,11 @@
 /*ДЕСКТОПНАЯ ВЕРСИЯ*/
 @media ($desktop-widths) {
   .main-nav {
-    width: 700px;
     background: none;
   }
 
   .main-nav__list {
+    width: 625px;
     display: flex;
     justify-content: space-between;
   }
@@ -55,6 +51,7 @@
   }
 
   .main-nav__link {
+    padding: 41px 0;
     font-weight: normal;
     text-transform: none;
   }
