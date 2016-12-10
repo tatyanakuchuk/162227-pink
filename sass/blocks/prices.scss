@@ -1,57 +1,57 @@
 .prices {
-  padding-top: 65px;
-  padding-bottom: 100px;
-  background: #f2f2f2;
+  position: relative;
 
-  overflow: hidden;
+  padding-top: 90px;
+  padding-bottom: 100px;
+/*  background: #f2f2f2;*/
+
+ /* overflow: hidden;*/
 
   @include container;
 }
 
 .price {
-  width: 860px;
-  background: #ffffff;
-  left: -260px;
+  width: 1035px;
+  position: absolute;
+  /*left: -239px;*/
+  /*background: #ffffff;*/
+}
 
-  th {
-    background: #283645;
+.cell-name {
+
+}
+
+.tariff {
+    padding: 18px 5px;
+
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+
+    /*background: #283645;*/
+
     color: #ffffff;
     text-transform: uppercase;
-  }
 }
 
-.options {
-    display: none;
-  }
+.tariff-price {
+    padding: 19px 22px;
 
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400px;
+
+    color: #ffffff;
+}
+
+
+/*--------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
 @media ($tablet-widths) {
-  .price {
-    width: 620px;
-    margin: 0 auto;
 
-    th,
-    td {
-      width: 155px;
-    }
-  }
-
-  .options {
-    display: block;
-  }
 }
 
+
+/*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
 @media ($desktop-widths) {
-  .price {
-    width: 940px;
-    margin: 0 auto;
 
-    th,
-    td {
-      width: 235px;
-    }
-  }
-
-  .options {
-    display: block;
-  }
 }

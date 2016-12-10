@@ -93,53 +93,99 @@
           </div>
         </section>
         <section class="research">
-          <h3 class="research__title">Эффект на 24 часа!</h3>
-          <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-          <a href="#" class="research__link">Узнать больше об исследовании</a>
+          <div class="research-inner">
+            <h3 class="research__title">Эффект на 24 часа!</h3>
+            <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a href="#" class="research__link">Узнать больше об исследовании</a>
+          </div>
         </section>
         <!--ОТЗЫВЫ-СЛАЙДЕР-->
-        <section class="reviews slider">
+        <section class="reviews reviews-slider">
           <ul class="reviews__list">
             <li class="review">
-              <p class="review__name">Николай Петров</p>
-              <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </li>
-            <li class="review">
-              <p class="review__name">Николай Петров</p>
-              <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </li>
-            <li class="review">
-              <p class="review__name">Николай Петров</p>
+              <div class="review-client">
+                <p class="review-client__name">Николай Петров</p>
+                <p class="review-client__info">25 лет, водитель трамвая</p>
+              </div>
               <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
           </ul>
+          <div class="reviews-slider__nav">
+            <a href="#" class="reviews-slider__link  reviews-slider__link--forward  reviews-slider__link--active">вперед</a>
+            <a href="#" class="reviews-slider__link"></a>
+            <a href="#" class="reviews-slider__link  reviews-slider__link--back">назад</a>
+          </div>
         </section>
         <!--ПРАЙС-СЛАЙДЕР-->
         <section class="prices slider">
           <table border class="price">
             <tr>
-              <th class="options">опции</th>
-              <th>Стандарт 3,99 USD</th>
-              <th>Стандарт 3,99 USD</th>
-              <th>Стандарт 3,99 USD</th>
+              <th class="cell-name">
+                <span class="tariff">тарифы</span>
+              </th>
+              <th>
+                <span class="tariff">База</span>
+                <span class="tariff-price">1,99 USD</span>
+              <th>
+              <th>
+                <span class="tariff">Стандарт</span>
+                <span class="tariff-price">3,99 USD</span>
+              </th>
+              <th>
+                <span class="tariff">Анлим</span>
+                <span class="tariff-price">9,99 USD</span>
+              </th>
             </tr>
             <tr>
-              <td class="options">Розовый фильтр</td>
-              <td>Розовый фильтр</td>
-              <td>Розовый фильтр</td>
-              <td>Розовый фильтр</td>
+              <td class="cell-name">
+                <span class="option">Розовый фильтр</span>
+              </td>
+              <td>
+                <span class="option">Розовый фильтр</span>
+                <span class="option-mark  option-mark--yes">да</span>
+              </td>
+              <td>
+                <span class="option">Розовый фильтр</span>
+                <span class="option-mark  option-mark--no">нет</span>
+              </td>
+              <td>
+                <span class="option">Розовый фильтр</span>
+                <span class="option-mark  option-mark--no">нет</span>
+              </td>
             </tr>
             <tr>
-              <td class="options">Смайлики</td>
-              <td>Смайлики</td>
-              <td>Смайлики</td>
-              <td>Смайлики</td>
+              <td class="cell-name">
+                <span class="option">Смайлики</span>
+              </td>
+              <td>
+                <span class="option">Смайлики</span>
+                <span class="option-mark  option-mark--no">нет</span>
+              </td>
+              <td>
+                <span class="option">Смайлики</span>
+                <span class="option-mark  option-mark--yes">да</span>
+              </td>
+              <td>
+                <span class="option">Смайлики</span>
+                <span class="option-mark  option-mark--yes">да</span>
+              </td>
             </tr>
             <tr>
-              <td class="options">Комментарии</td>
-              <td>Комментарии</td>
-              <td>Комментарии</td>
-              <td>Комментарии</td>
+              <td class="cell-name">
+                <span class="option">Комментарии</span>
+              </td>
+              <td>
+                <span class="option">Комментарии</span>
+                <span class="option-mark  option-mark--no">нет</span>
+              </td>
+              <td>
+                <span class="option">Комментарии</span>
+                <span class="option-mark  option-mark--no">нет</span>
+              </td>
+              <td>
+                <span class="option">Комментарии</span>
+                <span class="option-mark  option-mark--yes">да</span>
+              </td>
             </tr>
           </table>
         </section>

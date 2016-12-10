@@ -1,16 +1,160 @@
 .reviews {
   @include container;
-  outline: 1px solid #c91353;
+
+  position: relative;
+  padding-top: 47px;
+  padding-bottom: 88px;
 }
 .reviews__list {
   @include drop;
-
-  padding: 50px 20px 150px;
-
-  box-sizing: border-box;
 }
 
 .review {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.review-client__name {
+  margin: 0;
+  margin-bottom: 13px;
+
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.review-client__info {
+  display: none;
+
+  line-height: 30px;
+}
+
+.reviews-slider__nav {
+  position: absolute;
+
+  left: 129px;
+  bottom: 38px;
+}
+
+.review__text {
+  margin: 0;
+
+  line-height: 30px;
+}
+
+.reviews-slider__link {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  margin-right: 14px;
+
+  border-radius: 50%;
+
+  background: #bec2c7;
+
+  @include hidden-text;
+}
+
+.reviews-slider__link--active {
+  width: 6px;
+  height: 6px;
+  border: 3px solid #2d3b49;
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+
+/*--------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
+@media ($tablet-widths) {
+
+  .reviews {
+    padding-top: 96px;
+    padding-bottom: 68px;
+  }
+
+  .review-client__info {
+    display: block;
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .review-client__name {
+    margin-bottom: 3px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .review__text {
+    margin-bottom: 33px;
+
+    font-size: 18px;
+    line-height: 30px;
+
+    order: -1;
+  }
+
+  .reviews-slider__nav {
+    left: 319px;
+    bottom: 17px;
+  }
+}
+
+
+/*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
+@media ($desktop-widths) {
+  .reviews {
+    padding-top: 187px;
+  }
+
+  .reviews__list {
+    padding: 0 130px;
+  }
+
+  .review__text {
+    margin-bottom: 38px;
+  }
+
+  .review-client__name {
+    font-size: 24px;
+    line-height: 30px;
+
+    margin-bottom: 1px;
+  }
+
+  .review-client__info {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .reviews-slider__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+
+    left: 131px;
+    bottom: 183px;
+  }
+
+  .reviews-slider__link {
+    display: none;
+  }
+
+  .reviews-slider__link--forward,
+  .reviews-slider__link--back {
+    display: block;
+    width: 26px;
+    height: 50px;
+    margin: 0;
+
+    border: none;
+    background: none;
+  }
+
 }
