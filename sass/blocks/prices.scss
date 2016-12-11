@@ -1,57 +1,141 @@
 .prices {
   position: relative;
 
-  padding-top: 90px;
+  padding-top: 75px;
   padding-bottom: 100px;
 /*  background: #f2f2f2;*/
 
- /* overflow: hidden;*/
+  overflow: hidden;
 
   @include container;
 }
 
 .price {
-  width: 1035px;
-  position: absolute;
-  /*left: -239px;*/
+  width: 840px;
+  margin-left: -280px;
+
   /*background: #ffffff;*/
 }
 
-.cell-name {
+.tariff-cell {
+  width: 280px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
 
+.option-name,
+.tariff-name {
+  display: none;
+  width: 280px;
+}
+
+.option-cell {
+  width: 280px;
+  position: relative;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  }
+
+.option:hover::before {
+  content: attr(data-name);
+  background: #ffe;
+  padding: 5px;
+  border: 1px solid #666;
+  position: absolute;
+  top: 20px;
+}
+.option {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 30px;
+
+  text-transform: uppercase;
 }
 
 .tariff {
-    padding: 18px 5px;
+  margin: 0;
 
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
 
-    /*background: #283645;*/
+  /*background: #283645;*/
 
-    color: #ffffff;
-    text-transform: uppercase;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
 .tariff-price {
-    padding: 19px 22px;
+  margin: 0;
 
-    font-size: 14px;
-    line-height: 30px;
-    font-weight: 400px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
 
-    color: #ffffff;
+  color: #ffffff;
+}
+
+.prices-slider__nav {
+  position: absolute;
+
+  left: 129px;
+  bottom: 38px;
+}
+
+.prices-slider__link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  margin-right: 14px;
+
+  border-radius: 50%;
+
+  background: #bec2c7;
+
+  @include hidden-text;
+}
+
+.prices-slider__link--active {
+  width: 6px;
+  height: 6px;
+  border: 3px solid #2d3b49;
+  border-radius: 50%;
+
+  background: #ffffff;
 }
 
 
 /*--------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
 @media ($tablet-widths) {
+  .prices {
+    @include container;
+  }
 
+  .price {
+    margin-left: 0;
+    width: 620px;
+
+  }
+
+  .option-name,
+  .tariff-name {
+    display: block;
+    width: 155px;
+  }
+
+  .tariff-cell,
+  .option-cell {
+    width: 155px;
+  }
 }
 
 
 /*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
 @media ($desktop-widths) {
-
+  .prices {
+    height: 495px;
+  }
 }
