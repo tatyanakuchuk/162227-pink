@@ -1,47 +1,17 @@
 .page-header {
-/*  background: #1d2631;
+/*background: #1d2631
   background-image: url(../../img/iphone-hand-mobile@1x.png),
                     url(../../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: 118px 445px, -80px 270px;*/
 }
 
-.main-nav__top {
-  border-bottom: 1px solid #000;
-}
 
-.main-nav__logo {
-  display: block;
-  width: 75px;
-  height: 30px;
 
-  background-image: url(../../img/logo-pink-white-mobile.svg);
-  background-repeat: no-repeat;
-
-  @include hidden-text;
-}
-
-.btn-toggle {
-  @include btn;
-  @include hidden-text;
-
-  width: 24px;
-  height: 23px;
-
-  background-image: url(../../img/icon-menu-cross.svg);
-  background-repeat: no-repeat;
-}
-
-.main-nav__top-inner {
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-between;
-  @include container;
-}
 
 
 /*-------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
-@media ($tablet-widths) {
+@media (min-width: $tablet-widths) {
 /*  .page-header {
   background: #1d2631;
   background-image: url(../../img/iphone-hand-mobile@1x.png),
@@ -61,7 +31,7 @@
 
 
 /*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
-@media ($desktop-widths) {
+@media (min-width: $desktop-widths) {
  /* .page-header {
     background: #1d2631;
      background-image: url(../../img/iphone-hand-mobile@1x.png),

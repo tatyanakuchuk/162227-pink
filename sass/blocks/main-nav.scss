@@ -1,6 +1,39 @@
 .main-nav {
-  background: #283645;
   color: #ffffff;
+
+}
+
+.main-nav__top {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 21px;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #000;
+  @include container;
+}
+
+.main-nav__logo {
+  display: block;
+  width: 75px;
+  height: 30px;
+
+  background-image: url(../../img/logo-pink-white-mobile.svg);
+  background-repeat: no-repeat;
+
+  @include hidden-text;
+}
+
+.btn-toggle {
+  @include btn;
+  @include hidden-text;
+
+  width: 24px;
+  height: 23px;
+
+  background-image: url(../../img/icon-menu-cross.svg);
+  background-repeat: no-repeat;
 }
 
 .main-nav__list {
@@ -14,10 +47,11 @@
 
 .main-nav__link {
   display: block;
-  padding: 20px 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   font-size: 18px;
-  line-height: 25px;
+  line-height: 32px;
   font-weight: 700;
 
   text-transform: uppercase;
@@ -26,14 +60,34 @@
   color: #ffffff;
 }
 
-@media ($tablet-widths) {
 
+/*-------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
+
+@media (min-width: $tablet-widths) {
+  .main-nav__top {
+    padding-top: 45px;
+    padding-bottom: 35px;
+  }
+
+  .main-nav__link {
+    padding-top: 14px;
+    padding-bottom: 16px;
+  }
 }
 
-/*ДЕСКТОПНАЯ ВЕРСИЯ*/
-@media ($desktop-widths) {
+
+/*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
+
+@media (min-width: $desktop-widths) {
   .main-nav {
     background: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__top {
+    width: 150px;
+    margin: 0;
   }
 
   .main-nav__list {
@@ -52,6 +106,7 @@
 
   .main-nav__link {
     padding: 41px 0;
+
     font-weight: normal;
     text-transform: none;
   }

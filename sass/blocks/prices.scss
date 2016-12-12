@@ -1,7 +1,7 @@
 .prices {
   position: relative;
 
-  padding-top: 75px;
+  padding-top: 87px;
   padding-bottom: 100px;
 /*  background: #f2f2f2;*/
 
@@ -13,14 +13,25 @@
 .price {
   width: 840px;
   margin-left: -280px;
+}
 
-  /*background: #ffffff;*/
+
+tr {
+  border: 2px solid #e5e5e5;
+}
+
+tr:first-child {
+  border-bottom: none;
 }
 
 .tariff-cell {
   width: 280px;
   padding-top: 19px;
   padding-bottom: 19px;
+
+  background: #283645;
+  border-left: 2px solid #e5e5e5;
+  border-right: 2px solid #e5e5e5;
 }
 
 .option-name,
@@ -31,11 +42,18 @@
 
 .option-cell {
   width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
   position: relative;
 
-  padding-top: 15px;
-  padding-bottom: 15px;
-  }
+  padding-top: 14px;
+  padding-bottom: 13px;
+
+  text-align: center;
+
+  border-right: 2px solid #e5e5e5;
+  border-left: 2px solid #e5e5e5;
+}
 
 .option:hover::before {
   content: attr(data-name);
@@ -45,13 +63,16 @@
   position: absolute;
   top: 20px;
 }
+
 .option {
+  float: left;
   margin: 0;
 
   font-size: 14px;
   line-height: 30px;
 
   text-transform: uppercase;
+
 }
 
 .tariff {
@@ -71,7 +92,7 @@
   margin: 0;
 
   font-size: 24px;
-  line-height: 30px;
+  line-height: 34px;
   font-weight: 400;
 
   color: #ffffff;
@@ -80,8 +101,8 @@
 .prices-slider__nav {
   position: absolute;
 
-  left: 129px;
-  bottom: 38px;
+  left: 130px;
+  bottom: 41px;
 }
 
 .prices-slider__link {
@@ -107,35 +128,156 @@
   background: #ffffff;
 }
 
+.option-mark {
+    float: right;
+    display: block;
+    font-size: 0;
+    width: 28px;
+    height: 28px;
+
+    background-repeat: no-repeat;
+}
+
+.option-mark--yes {
+  background-image: url(../../img/icon-yes.svg);
+}
+
+.option-mark--no {
+  background-image: url(../../img/icon-no.svg);
+}
+
+
+
 
 /*--------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
-@media ($tablet-widths) {
+
+@media (min-width: $tablet-widths) {
   .prices {
     @include container;
+    padding-bottom: 74px;
   }
 
   .price {
-    margin-left: 0;
     width: 620px;
-
+    margin-left: 0;
   }
 
-  .option-name,
+  tr:first-child {
+    border-left: none;
+  }
+
   .tariff-name {
     display: block;
     width: 155px;
+    border-right: none;
   }
 
-  .tariff-cell,
+  .tariff-name__text {
+    font-size: 0;
+  }
+
+  .option-name {
+    display: block;
+    width: 136px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 9px;
+  }
+
+  .option-name__text {
+    margin: 0;
+  }
+
+  .option-mark {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .tariff-cell {
+    width: 155px;
+
+    padding-top: 12px;
+    padding-bottom: 8px;
+  }
+
   .option-cell {
     width: 155px;
+    padding-top: 12px;
+    padding-bottom: 0;
+
+  }
+
+  .tariff {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+
+  .tariff-price {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .option {
+    font-size: 0;
+  }
+
+
+
+  .prices-slider__nav {
+    display: none;
   }
 }
 
 
 /*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
-@media ($desktop-widths) {
+
+@media (min-width: $desktop-widths) {
   .prices {
-    height: 495px;
+    padding-top: 140px;
+    padding-bottom: 97px;
+  }
+
+  .price {
+    width: 940px;
+    margin: 0;
+  }
+
+  tr:first-child
+
+  .tariff-cell {
+    padding-top: 17px;
+    padding-bottom: 18px;
+
+    border-bottom: none;
+  }
+
+  .option-name {
+    width: 212px;
+    padding-top: 13px;
+    padding-bottom: 15px;
+    border-right: none;
+    padding-left: 20px;
+  }
+
+  .option-name__text {
+    font-size: 19px;
+    line-height: 30px;
+    font-weight: normal;
+  }
+
+  .option-cell {
+    width: 235px;
+    padding-bottom: 14px;
+  }
+
+  .tariff {
+    font-size: 18px;
+    line-height: 31px;
+  }
+
+  .tariff-price {
+    font-size: 24px;
+    line-height: 30px;
   }
 }

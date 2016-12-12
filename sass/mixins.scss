@@ -36,16 +36,16 @@
   padding-right: 20px;
 
 
-  @media ($tablet-widths) {
+  @media (min-width: $tablet-widths) {
     width: 620px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  @media ($desktop-widths) {
+  @media (min-width: $desktop-widths) {
     width: 940px;
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 

@@ -2,13 +2,13 @@
 
 }
 
-@media ($tablet-widths) {
+@media (min-width: $tablet-widths) {
   .page-main {
 
   }
 }
 
-@media ($desktop-widths) {
+@media (min-width: $desktop-widths) {
   .page-main {
   padding-top: 0;
   background: none;

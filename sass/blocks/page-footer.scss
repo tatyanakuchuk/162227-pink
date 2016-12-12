@@ -6,14 +6,12 @@
 
 .page-footer__contacts {
   padding-top: 43px;
-  padding-bottom: 11px;
-
-  @include container;
+  padding-bottom: 15px;
 }
 
 .contacts__title {
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 35px;
 
   font-size: 24px;
   line-height: 29px;
@@ -22,18 +20,20 @@
   text-transform: none;
 }
 
-.contacts__wrapper {
+.contacts__block {
+   @include container;
+
   display: flex;
   flex-direction: column;
 }
 
 .contact {
-  margin-bottom: 29px;
+  margin-bottom: 27px;
 }
 
 .contact__title {
   margin: 0;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 
   font-size: 18px;
   line-height: 20px;
@@ -50,92 +50,20 @@
   font-weight: 400;
 }
 
-.map-wrapper {
-  background-image: url(../../img/bg-map-mobile@1x.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .map {
+/*  background-image: url(../../img/bg-map-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-size: cover;*/
+
   display: block;
   height: 200px;
-
-  @include container;
 }
 
 .page-footer__socials {
   display: none;
 }
 
-
-/*-------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
-@media ($tablet-widths) {
-  .page-footer__contacts {
-    padding-top: 32px;
-    padding-bottom: 0;
-  }
-
-  .contacts__title {
-    width: 370px;
-    margin: 0 auto;
-    margin-bottom: 45px;
-
-    font-size: 40px;
-    line-height: 47px;
-    font-weight: 400;
-  }
-
-  .contacts__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .contact {
-    width: 300px;
-    margin-bottom: 48px;
-
-    text-align: center;
-  }
-
-  .contact-address {
-    width: 250px;
-    margin-bottom: 28px;
-  }
-
-  .contact__title {
-    margin-bottom: 8px;
-  }
-
-  .map-wrapper {
-    background-image: url(../../img/bg-map-mobile@1x.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .map {
-    display: block;
-    height: 380px;
-
-    @include container;
-  }
-
-  .page-footer__socials {
-    display: flex;
-    justify-content: space-between;
-
-    padding-bottom: 32px;
-    padding-top: 32px;
-
-    @include container;
-  }
-
-  .page-footer__logo {
-    width: 150px;
-  }
-
-  .page-footer__logo-link {
+.page-footer__logo-link {
     @include hidden-text;
     display: block;
     width: 150px;
@@ -144,13 +72,6 @@
     background-repeat: no-repeat;
   }
 
-  .page-footer__social {
-    display: flex;
-    justify-content: space-between;
-    width: 185px;
-
-    text-align: center;
-  }
 
   .social__btn {
     @include hidden-text;
@@ -206,11 +127,82 @@
     background-repeat: no-repeat;
     background-position: 0 0;
   }
+
+
+
+/*-------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
+
+@media (min-width: $tablet-widths) {
+  .page-footer__contacts {
+    padding-top: 44px;
+    padding-bottom: 0;
+  }
+
+  .contacts__title {
+    width: 370px;
+    margin: 0 auto;
+    margin-bottom: 47px;
+
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: 400;
+  }
+
+  .contacts__block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact {
+    width: 300px;
+    margin-bottom: 48px;
+
+    text-align: center;
+  }
+
+  .contact-address {
+    width: 250px;
+    margin-bottom: 28px;
+  }
+
+  .contact__title {
+    margin-bottom: 8px;
+  }
+
+  .map {
+    display: block;
+    height: 380px;
+  }
+
+  .page-footer__socials {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 34px;
+    padding-top: 34px;
+
+    @include container;
+  }
+
+  .page-footer__logo {
+    width: 150px;
+  }
+
+  .page-footer__social {
+    display: flex;
+    justify-content: space-between;
+    width: 185px;
+
+    text-align: center;
+  }
+
 }
 
 
 /*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
-@media ($desktop-widths) {
+@media (min-width: $desktop-widths) {
   .contacts__title {
     width: 470px;
     margin-bottom: 63px;
@@ -220,11 +212,11 @@
   }
 
   .page-footer__contacts {
-    padding-top: 63px;
+    padding-top: 69px;
     padding-bottom: 20px;
   }
 
-  .contacts__wrapper {
+  .contacts__block {
     height: auto;
     justify-content: space-between;
   }

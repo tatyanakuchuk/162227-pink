@@ -1,12 +1,11 @@
 .reviews {
-  @include container;
-
   position: relative;
-  padding-top: 47px;
+  padding-top: 40px;
   padding-bottom: 88px;
 }
 .reviews__list {
   @include drop;
+  @include container;
 }
 
 .review {
@@ -70,11 +69,15 @@
 
 
 /*--------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
-@media ($tablet-widths) {
+@media (min-width: $tablet-widths) {
 
   .reviews {
     padding-top: 96px;
     padding-bottom: 68px;
+  }
+
+  .reviews__list {
+
   }
 
   .review-client__info {
@@ -102,20 +105,23 @@
   }
 
   .reviews-slider__nav {
-    left: 319px;
+    left: 298px;
     bottom: 17px;
   }
 }
 
 
 /*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
-@media ($desktop-widths) {
+
+@media (min-width: $desktop-widths) {
   .reviews {
     padding-top: 187px;
+    padding-bottom: 49px;
   }
 
-  .reviews__list {
-    padding: 0 130px;
+  .review {
+    width: 700px;
+    margin: 0 auto;
   }
 
   .review__text {
@@ -138,8 +144,8 @@
     justify-content: space-between;
     width: 940px;
 
-    left: 131px;
-    bottom: 183px;
+    left: 10px;
+    bottom: 165px;
   }
 
   .reviews-slider__link {
