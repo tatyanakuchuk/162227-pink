@@ -1,9 +1,22 @@
 .main-nav {
   color: #ffffff;
 
+  @media (min-width: $tablet-widths) {
+  }
+
+  @media (min-width: $desktop-widths) {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    @include container;
+
+    box-sizing: border-box;
+  }
 }
 
 .main-nav__top {
+  @include container;
+
   display: flex;
   justify-content: space-between;
 
@@ -11,7 +24,19 @@
   padding-bottom: 18px;
 
   border-bottom: 1px solid #000;
-  @include container;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-widths) {
+
+    padding-top: 45px;
+    padding-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 150px;
+    margin: 0;
+  }
 }
 
 .main-nav__logo {
@@ -23,6 +48,11 @@
   background-repeat: no-repeat;
 
   @include hidden-text;
+
+  @media (min-width: $desktop-widths) {
+    width: 150px;
+    height: 50px;
+  }
 }
 
 .btn-toggle {
@@ -34,15 +64,29 @@
 
   background-image: url(../../img/icon-menu-cross.svg);
   background-repeat: no-repeat;
+
+  @media (min-width: $desktop-widths) {
+    display: none;
+  }
 }
 
 .main-nav__list {
   @include drop;
+
+  @media (min-width: $desktop-widths) {
+    width: 625px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .main-nav__item {
   border-bottom: 1px solid #000;
   border-top: 1px solid #485461;
+
+  @media (min-width: $desktop-widths) {
+    border: none;
+  }
 }
 
 .main-nav__link {
@@ -58,53 +102,13 @@
   text-decoration: none;
   text-align: center;
   color: #ffffff;
-}
 
-
-/*-------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
-
-@media (min-width: $tablet-widths) {
-  .main-nav__top {
-    padding-top: 45px;
-    padding-bottom: 35px;
-  }
-
-  .main-nav__link {
+  @media (min-width: $tablet-widths) {
     padding-top: 14px;
     padding-bottom: 16px;
   }
-}
 
-
-/*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
-
-@media (min-width: $desktop-widths) {
-  .main-nav {
-    background: none;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .main-nav__top {
-    width: 150px;
-    margin: 0;
-  }
-
-  .main-nav__list {
-    width: 625px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .main-nav__logo {
-    display: block;
-  }
-
-  .main-nav__item {
-    border: none;
-  }
-
-  .main-nav__link {
+  @media (min-width: $desktop-widths) {
     padding: 41px 0;
 
     font-weight: normal;

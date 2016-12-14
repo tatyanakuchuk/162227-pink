@@ -1,20 +1,31 @@
 .prices {
-  position: relative;
-
-  padding-top: 87px;
-  padding-bottom: 100px;
-/*  background: #f2f2f2;*/
-
   overflow: hidden;
-
-  @include container;
 }
+
+.prices__wrapper {
+  @include container;
+  position: relative;
+  padding-top: 88px;
+  padding-bottom: 100px;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-widths) {
+    padding-bottom: 65px;
+  }
+}
+
+/*-------ТАБЛИЦА------*/
 
 .price {
   width: 840px;
   margin-left: -280px;
-}
 
+  @media (min-width: $tablet-widths) {
+    width: 620px;
+    margin-left: 0;
+  }
+}
 
 tr {
   border: 2px solid #e5e5e5;
@@ -22,57 +33,40 @@ tr {
 
 tr:first-child {
   border-bottom: none;
+  border-top: none;
+
+  @media (min-width: $tablet-widths) {
+    border-left: none;
+  }
+}
+
+/*отсутствующая ячейка*/
+.tariff-cell:first-child {
+  display: none;
+
+  @media (min-width: $tablet-widths) {
+    display: block;
+
+    border-right: none;
+  }
 }
 
 .tariff-cell {
-  width: 280px;
-  padding-top: 19px;
-  padding-bottom: 19px;
+  width: 278px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
-  background: #283645;
+  /*background: #283645;*/
   border-left: 2px solid #e5e5e5;
   border-right: 2px solid #e5e5e5;
-}
 
-.option-name,
-.tariff-name {
-  display: none;
-  width: 280px;
-}
+  box-sizing: border-box;
 
-.option-cell {
-  width: 280px;
-  padding-left: 20px;
-  padding-right: 20px;
-  position: relative;
-
-  padding-top: 14px;
-  padding-bottom: 13px;
-
-  text-align: center;
-
-  border-right: 2px solid #e5e5e5;
-  border-left: 2px solid #e5e5e5;
-}
-
-.option:hover::before {
-  content: attr(data-name);
-  background: #ffe;
-  padding: 5px;
-  border: 1px solid #666;
-  position: absolute;
-  top: 20px;
-}
-
-.option {
-  float: left;
-  margin: 0;
-
-  font-size: 14px;
-  line-height: 30px;
-
-  text-transform: uppercase;
-
+  @media (min-width: $tablet-widths) {
+    width: 155px;
+    padding-top: 12px;
+    padding-bottom: 6px;
+  }
 }
 
 .tariff {
@@ -81,8 +75,6 @@ tr:first-child {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
-
-  /*background: #283645;*/
 
   color: #ffffff;
   text-transform: uppercase;
@@ -98,11 +90,91 @@ tr:first-child {
   color: #ffffff;
 }
 
+.option-name {
+  display: none;
+  width: 278px;
+
+  @media (min-width: $tablet-widths) {
+    display: block;
+    width: 136px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 11px;
+  }
+}
+
+.option-cell {
+  width: 278px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+
+  padding-top: 14px;
+  padding-bottom: 17px;
+
+  text-align: center;
+
+  border-right: 2px solid #e5e5e5;
+  border-left: 2px solid #e5e5e5;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.option-cell::before {
+  content: attr(data-name);
+  width: 200px;
+
+  position: absolute;
+  top: 15px;
+  left: 24px  ;
+
+  font-size: 14px;
+  line-height: 30px;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-widths) {
+    display: none;
+  }
+}
+
+.option-mark {
+    float: right;
+    display: block;
+    width: 28px;
+    height: 28px;
+
+    font-size: 0;
+
+    background-repeat: no-repeat;
+}
+
+.option-mark--yes {
+  background-image: url(../../img/icon-yes.svg);
+}
+
+.option-mark--no {
+  background-image: url(../../img/icon-no.svg);
+}
+
+/*-------НАВИГАЦИЯ ТАБЛИЦЫ ПРАЙСА-------*/
+
 .prices-slider__nav {
   position: absolute;
 
-  left: 130px;
-  bottom: 41px;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 44px;
+
+  @media (min-width: $tablet-widths) {
+    display: none;
+  }
 }
 
 .prices-slider__link {
@@ -119,6 +191,10 @@ tr:first-child {
   @include hidden-text;
 }
 
+.prices-slider__link--back {
+  margin-right: 0;
+}
+
 .prices-slider__link--active {
   width: 6px;
   height: 6px;
@@ -128,60 +204,13 @@ tr:first-child {
   background: #ffffff;
 }
 
-.option-mark {
-    float: right;
-    display: block;
-    font-size: 0;
-    width: 28px;
-    height: 28px;
-
-    background-repeat: no-repeat;
-}
-
-.option-mark--yes {
-  background-image: url(../../img/icon-yes.svg);
-}
-
-.option-mark--no {
-  background-image: url(../../img/icon-no.svg);
-}
-
-
 
 
 /*--------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
 
 @media (min-width: $tablet-widths) {
-  .prices {
-    @include container;
-    padding-bottom: 74px;
-  }
-
-  .price {
-    width: 620px;
-    margin-left: 0;
-  }
-
-  tr:first-child {
-    border-left: none;
-  }
-
-  .tariff-name {
-    display: block;
-    width: 155px;
-    border-right: none;
-  }
-
   .tariff-name__text {
     font-size: 0;
-  }
-
-  .option-name {
-    display: block;
-    width: 136px;
-    padding-top: 10px;
-    padding-left: 15px;
-    padding-bottom: 9px;
   }
 
   .option-name__text {
@@ -191,13 +220,6 @@ tr:first-child {
   .option-mark {
     float: none;
     margin: 0 auto;
-  }
-
-  .tariff-cell {
-    width: 155px;
-
-    padding-top: 12px;
-    padding-bottom: 8px;
   }
 
   .option-cell {
@@ -220,12 +242,6 @@ tr:first-child {
 
   .option {
     font-size: 0;
-  }
-
-
-
-  .prices-slider__nav {
-    display: none;
   }
 }
 

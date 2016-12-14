@@ -1,10 +1,42 @@
-.download {
+.download__wrapper {
   @include container;
+
   padding-top: 390px;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-widths) {
+
+  }
+}
+
+.download__content {
+  box-sizing: border-box;
+  @media (min-width: $tablet-widths) {
+    width: 300px;
+  }
 }
 
 .promotion {
   display: none;
+
+  padding: 0 40px;
+  padding-top: 90px;
+  padding-bottom: 29px;
+
+  @media (min-width: $tablet-widths) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding: 0 31px;
+    padding-top: 105px;
+    padding-bottom: 54px;
+  }
 }
 
 .promotion__text {
@@ -15,11 +47,37 @@
   font-weight: 400;
 
   text-align: center;
+
+  @media (min-width: $tablet-widths) {
+    margin: 0;
+    line-height: 49px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    font-size: 50px;
+    line-height: 59px;
+  }
 }
 
 .download__block {
+  @include container;
   padding-top: 33px;
   padding-bottom: 30px;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-widths) {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 109px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-bottom: 120px;
+  }
 }
 
 /*-------КНОПКА СКАЧАТЬ ПРИЛОЖЕНИЕ-------*/
@@ -42,6 +100,16 @@
   border-radius: 50px;
 
   box-sizing: border-box;
+
+  @media (min-width: $tablet-widths) {
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    margin-bottom: 62px;
+    font-size: 21px;
+    line-height: 22px;
+  }
 }
 
 .download__links {
@@ -50,6 +118,14 @@
 
   margin-bottom: 20px;
   padding: 0 20px;
+
+  @media (min-width: $tablet-widths) {
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    margin-bottom: 55px;
+  }
 }
 
 .download__link {
@@ -65,16 +141,28 @@
 .download__link--apple {
   background-image: url(../../img/logo-apple.svg);
   background-position: 8px 3px;
+
+  @media (min-width: $tablet-widths) {
+    background-position: 14px 3px;
+  }
 }
 
 .download__link--android {
   background-image: url(../../img/logo-android.svg);
   background-position: 8px 11px;
+
+  @media (min-width: $tablet-widths) {
+    background-position: 9px 11px;
+  }
 }
 
 .download__link--windows {
   background-image: url(../../img/logo-microsoft.svg);
   background-position: 8px 14px;
+
+  @media (min-width: $tablet-widths) {
+    background-position: 0 16px;
+  }
 }
 
 .download__text {
@@ -83,94 +171,9 @@
   font-weight: 400;
   text-align: center;
   color: #ffffff;
-}
 
-
-/*ПЛАНШЕТНАЯ ВЕРСИЯ*/
-@media (min-width: $tablet-widths) {
-  .download {
-    padding-top: 0;
-  }
-
-  .download__content {
-    width: 300px;
-  }
-
-  .promotion {
-    display: block;
-    padding: 0 40px;
-    padding-top: 88px;
-    padding-bottom: 29px;
-  }
-
-  .promotion__text {
-    margin: 0;
-    line-height: 49px;
-  }
-
-  .download__block {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    padding-bottom: 109px;
-    margin: 0;
-
-    background: none;
-  }
-
-  .download__btn {
-    width: 100%;
-    margin-bottom: 43px;
-  }
-
-  .download__links {
-    margin-bottom: 36px;
-  }
-
-  .download__link--apple {
-    background-position: 14px 3px;
-  }
-
-  .download__link--android {
-    background-position: 9px 11px;
-  }
-
-  .download__link--windows {
-    background-position: 0 16px;
-  }
-
-  .download__text {
+  @media (min-width: $tablet-widths) {
     font-size: 18px;
     line-height: 24px;
   }
 }
-
-/*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
-
-@media (min-width: $desktop-widths) {
-  .promotion {
-    padding: 0 31px;
-    padding-top: 105px;
-    padding-bottom: 54px;
-  }
-
-  .download__block {
-    padding-bottom: 120px;
-  }
-
-  .promotion__text {
-    font-size: 50px;
-    line-height: 59px;
-  }
-
-  .download__btn {
-    margin-bottom: 62px;
-    font-size: 21px;
-    line-height: 22px;
-  }
-
-  .download__links {
-    margin-bottom: 55px;
-  }
-}
-

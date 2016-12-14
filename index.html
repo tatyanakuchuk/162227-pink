@@ -29,8 +29,8 @@
         <!--НАВИГАЦИЯ-->
         <nav class="main-nav">
           <div class="main-nav__top">
-              <div class="main-nav__logo">PINK</div>
-              <button class="btn-toggle">Oткрыть меню</button>
+            <div class="main-nav__logo">PINK</div>
+            <button class="btn-toggle">Oткрыть меню</button>
           </div>
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -49,10 +49,11 @@
         </nav>
         <!-- БЛОК ЗАГРУЗОК -->
         <div class="download">
-          <div class="download__content">
-            <div class="promotion">
-              <p class="promotion__text">Взгляните на жизнь иначе!</p>
-            </div>
+          <div class="download__wrapper">
+            <div class="download__content">
+              <div class="promotion">
+                <p class="promotion__text">Взгляните на жизнь иначе!</p>
+              </div>
             <div class="download__block">
               <!--КНОПКА "СКАЧАТЬ ПРИЛОЖЕНИЕ"-->
               <a href="#" class="download__btn">Скачать приложение</a>
@@ -65,28 +66,31 @@
             </div>
           </div>
         </div>
+      </div>
     </header>
     <main class="page-main">
         <section class="advantages">
-          <h2 class="advantages__title advantages-title">
-            <span class="advantages-title__half advantages-title__half--top">Устали от серости мегаполиса?</span>
-            <span class="advantages-title__half advantages-title__half--bottom">Нам есть, что вам предложить!</span>
-          </h2>
-          <div class="advantages__list-wrapper">
-            <ul class="advantages__list">
-              <li class="advantage">
-                <h3 class="advantage__title">Поднимает настроение</h3>
-                <p class="advantage__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-              </li>
-              <li class="advantage">
-                <h3 class="advantage__title">Меняет мир вокруг</h3>
-                <p class="advantage__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-              </li>
-              <li class="advantage">
-                <h3 class="advantage__title">Заводит новых друзей</h3>
-                <p class="advantage__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-              </li>
-            </ul>
+          <div class="advantages__wrapper">
+            <h2 class="advantages__title advantages-title">
+              <span class="advantages-title__half advantages-title__half--top">Устали от серости мегаполиса?</span>
+              <span class="advantages-title__half advantages-title__half--bottom">Нам есть, что вам предложить!</span>
+            </h2>
+            <div class="advantages__list-wrapper">
+              <ul class="advantages__list">
+                <li class="advantage">
+                  <h3 class="advantage__title">Поднимает настроение</h3>
+                  <p class="advantage__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+                </li>
+                <li class="advantage">
+                  <h3 class="advantage__title">Меняет мир вокруг</h3>
+                  <p class="advantage__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                </li>
+                <li class="advantage">
+                  <h3 class="advantage__title">Заводит новых друзей</h3>
+                  <p class="advantage__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
         <section class="research">
@@ -100,134 +104,132 @@
         </section>
         <!--ОТЗЫВЫ-СЛАЙДЕР-->
         <section class="reviews reviews-slider">
-          <ul class="reviews__list">
-            <li class="review">
-              <div class="review-client">
-                <p class="review-client__name">Николай Петров</p>
-                <p class="review-client__info">25 лет, водитель трамвая</p>
-              </div>
-              <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </li>
-          </ul>
-          <div class="reviews-slider__nav">
-            <a href="#" class="reviews-slider__link  reviews-slider__link--forward  reviews-slider__link--active">вперед</a>
-            <a href="#" class="reviews-slider__link"></a>
-            <a href="#" class="reviews-slider__link  reviews-slider__link--back">назад</a>
+          <div class="reviews__wrapper">
+            <ul class="reviews__list">
+              <li class="review">
+                <div class="review-client">
+                  <p class="review-client__name">Николай Петров</p>
+                  <p class="review-client__info">25 лет, водитель трамвая</p>
+                </div>
+                <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </li>
+            </ul>
+            <div class="reviews-slider__nav">
+              <a href="#" class="reviews-slider__link  reviews-slider__link--forward  reviews-slider__link--active">вперед</a>
+              <a href="#" class="reviews-slider__link"></a>
+              <a href="#" class="reviews-slider__link  reviews-slider__link--back">назад</a>
+            </div>
           </div>
         </section>
         <!--ПРАЙС-СЛАЙДЕР-->
         <section class="prices slider">
-          <table class="price">
-            <tr>
-              <th class="tariff-name">
-                <p class="tariff-name__text">тарифы</p>
-              </th>
-              <th class="tariff-cell">
-                <p class="tariff">База</p>
-                <p class="tariff-price">1,99 USD</p>
-              </th>
-              <th class="tariff-cell">
-                <p class="tariff">Стандарт</p>
-                <p class="tariff-price">3,99 USD</p>
-              </th>
-              <th class="tariff-cell">
-                <p class="tariff">Анлим</p>
-                <p class="tariff-price">9,99 USD</p>
-              </th>
-            </tr>
-            <tr>
-              <td class="option-name">
-                <p class="option-name__text">Розовый фильтр</p>
-              </td>
-              <td class="option-cell" data-name="Розовый фильтр">
-                <span class="option">Розовый фильтр</span>
-                <span class="option-mark  option-mark--yes">да</span>
-              </td>
-              <td class="option-cell" data-name="Розовый фильтр">
-                <span class="option">Розовый фильтр</span>
-                <span class="option-mark  option-mark--yes">да</span>
-              </td>
-              <td class="option-cell" data-name="Розовый фильтр">
-                <span class="option">Розовый фильтр</span>
-                <span class="option-mark  option-mark--yes">да</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="option-name">
-                Смайлики
-              </td>
-              <td class="option-cell" data-name="Смайлики">
-                <span class="option">Смайлики</span>
-                <span class="option-mark  option-mark--no">нет</span>
-              </td>
-              <td class="option-cell" data-name="Смайлики">
-                <span class="option">Смайлики</span>
-                <span class="option-mark  option-mark--yes">да</span>
-              </td>
-              <td class="option-cell" data-name="Смайлики">
-                <span class="option">Смайлики</span>
-                <span class="option-mark  option-mark--yes">да</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="option-name">
-                Комментарии
-              </td>
-              <td class="option-cell" data-name="Комментарии">
-                <span class="option">Комментарии</span>
-                <span class="option-mark  option-mark--no">нет</span>
-              </td>
-              <td class="option-cell" data-name="Комментарии">
-                <span class="option">Комментарии</span>
-                <span class="option-mark  option-mark--no">нет</span>
-              </td>
-              <td class="option-cell" data-name="Комментарии">
-                <span class="option">Комментарии</span>
-                <span class="option-mark  option-mark--yes">да</span>
-              </td>
-            </tr>
-          </table>
-          <div class="prices-slider__nav">
-            <a href="#" class="prices-slider__link  prices-slider__link--forward">вперед</a>
-            <a href="#" class="prices-slider__link  reviews-slider__link--active"></a>
-            <a href="#" class="prices-slider__link  prices-slider__link--back">назад</a>
+          <div class="prices__wrapper">
+            <table class="price">
+              <tr>
+                <th class="tariff-cell">
+                </th>
+                <th class="tariff-cell">
+                  <p class="tariff">База</p>
+                  <p class="tariff-price">1,99 USD</p>
+                </th>
+                <th class="tariff-cell">
+                  <p class="tariff">Стандарт</p>
+                  <p class="tariff-price">3,99 USD</p>
+                </th>
+                <th class="tariff-cell">
+                  <p class="tariff">Анлим</p>
+                  <p class="tariff-price">9,99 USD</p>
+                </th>
+              </tr>
+              <tr>
+                <td class="option-name">
+                  <p class="option-name__text">Розовый фильтр</p>
+                </td>
+                <td class="option-cell" data-name="Розовый фильтр">
+                  <span class="option-mark  option-mark--yes">да</span>
+                </td>
+                <td class="option-cell" data-name="Розовый фильтр">
+                  <span class="option-mark  option-mark--yes">да</span>
+                </td>
+                <td class="option-cell" data-name="Розовый фильтр">
+                  <span class="option-mark  option-mark--yes">да</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="option-name">
+                  <p class="option-name__text">Смайлики</p>
+                </td>
+                <td class="option-cell" data-name="Смайлики">
+                  <span class="option-mark  option-mark--no">нет</span>
+                </td>
+                <td class="option-cell" data-name="Смайлики">
+                  <span class="option-mark  option-mark--yes">да</span>
+                </td>
+                <td class="option-cell" data-name="Смайлики">
+                  <span class="option-mark  option-mark--yes">да</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="option-name">
+                  <p class="option-name__text">Комментарии</p>
+                </td>
+                <td class="option-cell" data-name="Комментарии">
+                  <span class="option-mark  option-mark--no">нет</span>
+                </td>
+                <td class="option-cell" data-name="Комментарии">
+                  <span class="option-mark  option-mark--no">нет</span>
+                </td>
+                <td class="option-cell" data-name="Комментарии">
+                  <span class="option-mark  option-mark--yes">да</span>
+                </td>
+              </tr>
+            </table>
+            <div class="prices-slider__nav">
+              <a href="#" class="prices-slider__link  prices-slider__link--forward">вперед</a>
+              <a href="#" class="prices-slider__link  reviews-slider__link--active"></a>
+              <a href="#" class="prices-slider__link  prices-slider__link--back">назад</a>
+            </div>
           </div>
         </section>
-    </main>
+      </main>
     <footer class="page-footer">
       <!--КОНТАКТЫ-->
       <div class="page-footer__contacts contacts">
-        <h4 class="contacts__title">Остались вопросы?Свяжитесь с нами!</h4>
-        <div class="contacts__block">
-          <div class="contact contact-phone">
-            <h4 class="contact__title">Звоните:</h4>
-            <p class="contact__text">+7 (812) 555-66-66</p>
-          </div>
-          <div class="contact contact-email">
-            <h4 class="contact__title">Пишите:</h4>
-            <p class="contact__text">mail@htmlacademy.ru</p>
-          </div>
-          <div class="contact  contact-address">
-            <h4 class="contact__title">Приезжайте в гости:</h4>
-            <p class="contact__text">ул. Большая Конюшенная, 19/8</p>
+        <div class="contacts__wrapper">
+          <h4 class="contacts__title">Остались вопросы?Свяжитесь с нами!</h4>
+          <div class="contacts__block">
+            <div class="contact contact-phone">
+              <h4 class="contact__title">Звоните:</h4>
+              <p class="contact__text">+7 (812) 555-66-66</p>
+            </div>
+            <div class="contact contact-email">
+              <h4 class="contact__title">Пишите:</h4>
+              <p class="contact__text">mail@htmlacademy.ru</p>
+            </div>
+            <div class="contact  contact-address">
+              <h4 class="contact__title">Приезжайте в гости:</h4>
+              <p class="contact__text">ул. Большая Конюшенная, 19/8</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="map">
 
       </div>
-      <div class="page-footer__socials  container">
-        <div class="page-footer__logo">
-          <a href="#" class="page-footer__logo-link">PINK</a>
-        </div>
-        <div class="page-footer__social  social">
-          <a href="#" class="social__btn  social__btn--tw">Twitter</a>
-          <a href="#" class="social__btn  social__btn--fb">Facebook</a>
-          <a href="#" class="social__btn  social__btn--ytb">Youtube</a>
-        </div>
-        <div class="page-footer__copyright  copyright">
-          <p class="copyright__text">Разработано</p>
-          <a href="#" class="copyright__link">HTMLAcademy</a>
+      <div class="page-footer__socials">
+        <div class="page-footer__socials-wrapper">
+          <div class="page-footer__logo">
+            <a href="#" class="page-footer__logo-link">PINK</a>
+          </div>
+          <div class="page-footer__social  social">
+            <a href="#" class="social__btn  social__btn--tw">Twitter</a>
+            <a href="#" class="social__btn  social__btn--fb">Facebook</a>
+            <a href="#" class="social__btn  social__btn--ytb">Youtube</a>
+          </div>
+          <div class="page-footer__copyright  copyright">
+            <p class="copyright__text">Разработано</p>
+            <a href="#" class="copyright__link">HTMLAcademy</a>
+          </div>
         </div>
       </div>
     </footer>
