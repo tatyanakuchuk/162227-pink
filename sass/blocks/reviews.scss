@@ -1,4 +1,4 @@
-.reviews__wrapper {
+.reviews {
   @include container;
 
   position: relative;
@@ -6,21 +6,19 @@
   padding-top: 40px;
   padding-bottom: 88px;
 
-  box-sizing: border-box;
-
   @media (min-width: $tablet-widths) {
     padding-top: 96px;
     padding-bottom: 68px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .reviews__list {
   @include drop;
-
-  @media (min-width: $tablet-widths) {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 }
 
 .review {
@@ -50,14 +48,12 @@
 
   left: 50%;
   margin-left: -30px;
-  bottom: 39px;
+  bottom: 38px;
 
   @media (min-width: $tablet-widths) {
-    bottom: 18px;
+    bottom: 15px;
   }
 }
-
-
 
 .review__text {
   margin: 0;

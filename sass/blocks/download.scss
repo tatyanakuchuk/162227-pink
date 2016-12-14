@@ -1,21 +1,21 @@
-.download__wrapper {
+.download {
   @include container;
 
   padding-top: 390px;
 
-  box-sizing: border-box;
+
 
   @media (min-width: $tablet-widths) {
     padding-top: 0;
   }
 
   @media (min-width: $desktop-widths) {
-
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .download__content {
-  box-sizing: border-box;
   @media (min-width: $tablet-widths) {
     width: 300px;
   }
@@ -60,16 +60,14 @@
 }
 
 .download__block {
-  @include container;
   padding-top: 33px;
   padding-bottom: 30px;
 
-  box-sizing: border-box;
-
   @media (min-width: $tablet-widths) {
-    width: 300px;
     display: flex;
     flex-direction: column;
+
+    width: 300px;
     padding: 0;
     padding-bottom: 109px;
     margin: 0;
@@ -81,11 +79,11 @@
 }
 
 /*-------КНОПКА СКАЧАТЬ ПРИЛОЖЕНИЕ-------*/
+
 .download__btn {
   display: block;
   width: 100%;
   padding: 14px 5px;
-  margin: 0 auto;
   margin-bottom: 30px;
 
   font-size: 18px;
@@ -107,6 +105,7 @@
 
   @media (min-width: $desktop-widths) {
     margin-bottom: 62px;
+
     font-size: 21px;
     line-height: 22px;
   }

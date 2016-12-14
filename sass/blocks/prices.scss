@@ -1,17 +1,23 @@
 .prices {
   overflow: hidden;
-}
-
-.prices__wrapper {
   @include container;
+
+
   position: relative;
-  padding-top: 88px;
+  padding-top: 91px;
   padding-bottom: 100px;
 
-  box-sizing: border-box;
 
   @media (min-width: $tablet-widths) {
     padding-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-top: 140px;
+    padding-bottom: 97px;
+
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -24,6 +30,11 @@
   @media (min-width: $tablet-widths) {
     width: 620px;
     margin-left: 0;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 940px;
+    margin-left: -10px;
   }
 }
 
@@ -40,6 +51,15 @@ tr:first-child {
   }
 }
 
+th,
+td {
+  width: 25%;
+}
+
+td {
+  white-space:nowrap;  /*???*/
+}
+
 /*отсутствующая ячейка*/
 .tariff-cell:first-child {
   display: none;
@@ -52,7 +72,6 @@ tr:first-child {
 }
 
 .tariff-cell {
-  width: 278px;
   padding-top: 16px;
   padding-bottom: 16px;
 
@@ -63,9 +82,15 @@ tr:first-child {
   box-sizing: border-box;
 
   @media (min-width: $tablet-widths) {
-    width: 155px;
     padding-top: 12px;
     padding-bottom: 6px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-top: 17px;
+    padding-bottom: 18px;
+
+    border-bottom: none;
   }
 }
 
@@ -78,6 +103,16 @@ tr:first-child {
 
   color: #ffffff;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-widths) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    font-size: 18px;
+    line-height: 31px;
+  }
 }
 
 .tariff-price {
@@ -88,23 +123,51 @@ tr:first-child {
   font-weight: 400;
 
   color: #ffffff;
+
+  @media (min-width: $tablet-widths) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 .option-name {
   display: none;
-  width: 278px;
 
   @media (min-width: $tablet-widths) {
     display: block;
-    width: 136px;
     padding-top: 10px;
     padding-left: 15px;
     padding-bottom: 11px;
   }
+
+  @media (min-width: $desktop-widths) {
+    padding-top: 13px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+
+    border-right: none;
+  }
+}
+
+.option-name__text {
+
+  @media (min-width: $tablet-widths) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-widths) {
+    font-size: 19px;
+    line-height: 30px;
+    font-weight: normal;
+  }
 }
 
 .option-cell {
-  width: 278px;
   padding-left: 20px;
   padding-right: 20px;
   position: relative;
@@ -122,6 +185,10 @@ tr:first-child {
   @media (min-width: $tablet-widths) {
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-bottom: 14px;
   }
 }
 
@@ -145,14 +212,19 @@ tr:first-child {
 }
 
 .option-mark {
-    float: right;
-    display: block;
-    width: 28px;
-    height: 28px;
+  float: right;
+  display: block;
+  width: 28px;
+  height: 28px;
 
-    font-size: 0;
+  font-size: 0;
 
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
+
+    @media (min-width: $tablet-widths) {
+    float: none;
+    margin: 0 auto;
+  }
 }
 
 .option-mark--yes {
@@ -202,98 +274,4 @@ tr:first-child {
   border-radius: 50%;
 
   background: #ffffff;
-}
-
-
-
-/*--------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
-
-@media (min-width: $tablet-widths) {
-  .tariff-name__text {
-    font-size: 0;
-  }
-
-  .option-name__text {
-    margin: 0;
-  }
-
-  .option-mark {
-    float: none;
-    margin: 0 auto;
-  }
-
-  .option-cell {
-    width: 155px;
-    padding-top: 12px;
-    padding-bottom: 0;
-
-  }
-
-  .tariff {
-    font-size: 16px;
-    line-height: 28px;
-  }
-
-
-  .tariff-price {
-    font-size: 18px;
-    line-height: 30px;
-  }
-
-  .option {
-    font-size: 0;
-  }
-}
-
-
-/*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
-
-@media (min-width: $desktop-widths) {
-  .prices {
-    padding-top: 140px;
-    padding-bottom: 97px;
-  }
-
-  .price {
-    width: 940px;
-    margin: 0;
-  }
-
-  tr:first-child
-
-  .tariff-cell {
-    padding-top: 17px;
-    padding-bottom: 18px;
-
-    border-bottom: none;
-  }
-
-  .option-name {
-    width: 212px;
-    padding-top: 13px;
-    padding-bottom: 15px;
-    border-right: none;
-    padding-left: 20px;
-  }
-
-  .option-name__text {
-    font-size: 19px;
-    line-height: 30px;
-    font-weight: normal;
-  }
-
-  .option-cell {
-    width: 235px;
-    padding-bottom: 14px;
-  }
-
-  .tariff {
-    font-size: 18px;
-    line-height: 31px;
-  }
-
-  .tariff-price {
-    font-size: 24px;
-    line-height: 30px;
-  }
 }
