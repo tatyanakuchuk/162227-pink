@@ -3,26 +3,21 @@
 
   padding-top: 390px;
 
-
-
   @media (min-width: $tablet-widths) {
     padding-top: 0;
   }
 
   @media (min-width: $desktop-widths) {
-    padding-left: 0;
-    padding-right: 0;
+
   }
 }
 
 .download__content {
-  @media (min-width: $tablet-widths) {
-    width: 300px;
-  }
 }
 
 .promotion {
   display: none;
+  width: 300px;
 
   padding: 0 40px;
   padding-top: 90px;
@@ -30,6 +25,8 @@
 
   @media (min-width: $tablet-widths) {
     display: block;
+
+    box-sizing: border-box;
   }
 
   @media (min-width: $desktop-widths) {
@@ -60,8 +57,11 @@
 }
 
 .download__block {
+
   padding-top: 33px;
   padding-bottom: 30px;
+
+  box-sizing: border-box;
 
   @media (min-width: $tablet-widths) {
     display: flex;
