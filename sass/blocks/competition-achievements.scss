@@ -1,11 +1,8 @@
 .competition__achievements-wrapper {
-  @include container;
-
   padding-top: 41px;
 
   @media (min-width: $tablet-widths) {
     order: 3;
-
     padding-top: 10px;
     padding-bottom: 50px;
   }
@@ -37,8 +34,8 @@
 
    @media (min-width: $desktop-widths) {
     width: auto;
-    padding-left: 59px;
-    padding-right: 10px;
+    padding-left: 49px;
+    padding-right: 0;
     padding-bottom: 10px;
    }
 }
@@ -118,23 +115,33 @@ input[type="checkbox"] + label::before {
 }
 
 .competition-achievements__item:nth-child(2) {
-  order: 3;
+  @media (min-width: $desktop-widths) {
+    order: 3;
+  }
 }
 
 .competition-achievements__item:nth-child(3) {
-  order: 1;
+  @media (min-width: $desktop-widths) {
+    order: 1;
+  }
 }
 
 .competition-achievements__item:nth-child(4) {
-  order: 4;
+  @media (min-width: $desktop-widths) {
+    order: 4;
+  }
 }
 
 .competition-achievements__item:nth-child(5) {
-  order: 2;
+  @media (min-width: $desktop-widths) {
+    order: 2;
+  }
 }
 
 .competition-achievements__item:nth-child(6) {
-  order: 6;
+  @media (min-width: $desktop-widths) {
+    order: 6;
+  }
 }
 
 

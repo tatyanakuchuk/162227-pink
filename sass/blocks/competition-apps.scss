@@ -1,6 +1,4 @@
 .competition__apps-wrapper {
-  @include container;
-
   padding-top: 41px;
   padding-bottom: 45px;
 
@@ -14,6 +12,7 @@
     width: 50%;
     min-width: 440px;
     margin: 0;
+    box-sizing: border-box;
 
     padding-top: 13px;
     padding-left: 33px;

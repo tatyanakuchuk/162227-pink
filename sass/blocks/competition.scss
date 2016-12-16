@@ -1,4 +1,5 @@
 .competition {
+  @include container;
   padding-top: 47px;
 
    @media (min-width: $tablet-widths) {
