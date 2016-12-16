@@ -21,13 +21,21 @@
   }
 
   @media (min-width: $desktop-widths) {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 140px;
 
+    padding-bottom: 110px;
   }
 }
 
 .research__content {
   @media (min-width: $tablet-widths) {
     width: 310px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 575px;
   }
 }
 
@@ -41,6 +49,16 @@
     line-height: 35px;
     font-weight: 700;
   }
+
+  @media (min-width: $desktop-widths) {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 21px;
+
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+  }
 }
 
 .research__text {
@@ -50,6 +68,13 @@
 
     line-height: 24px;
   }
+
+  @media (min-width: $desktop-widths) {
+    margin-bottom: 30px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .research__link {
@@ -58,48 +83,10 @@
 
     color: #d22856;
   }
-}
 
-/*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
-
-@media (min-width: $desktop-widths) {
-  .research {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 140px;
-
-    padding-bottom: 110px;
-
-   /* background: #f2f2f2;*/
-
-  }
-
-  .research__content {
-    width: 575px;
-  }
-
-  .research__title {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 21px;
-
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 700;
-  }
-
-  .research__text {
-    margin: 0;
-    margin-bottom: 30px;
-
+  @media (min-width: $desktop-widths) {
     font-size: 18px;
     line-height: 30px;
   }
-
-  .research__link {
-    font-size: 18px;
-    line-height: 30px;
-
-    color: #d22856;
-  }
 }
+

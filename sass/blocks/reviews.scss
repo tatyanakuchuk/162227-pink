@@ -12,7 +12,8 @@
   }
 
   @media (min-width: $desktop-widths) {
-
+    padding-top: 187px;
+    padding-bottom: 49px;
   }
 }
 
@@ -25,6 +26,11 @@
   flex-direction: column;
 
   text-align: center;
+
+  @media (min-width: $desktop-widths) {
+    width: 700px;
+    margin: 0 auto;
+  }
 }
 
 .review-client__name {
@@ -34,12 +40,33 @@
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+
+  @media (min-width: $tablet-widths) {
+    margin-bottom: 3px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    font-size: 24px;
+
+    margin-bottom: 1px;
+  }
 }
 
 .review-client__info {
   display: none;
+  margin: 0;
 
   line-height: 30px;
+
+  @media (min-width: $tablet-widths) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-widths) {
+    font-size: 18px;
+  }
 }
 
 .reviews-slider__nav {
@@ -52,12 +79,34 @@
   @media (min-width: $tablet-widths) {
     bottom: 15px;
   }
+
+  @media (min-width: $desktop-widths) {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+
+    left: 50%;
+    margin-left: -470px;
+    bottom: 165px;
+  }
 }
 
 .review__text {
   margin: 0;
 
   line-height: 30px;
+
+  @media (min-width: $tablet-widths) {
+    margin-bottom: 33px;
+
+    font-size: 18px;
+
+    order: -1;
+  }
+
+  @media (min-width: $desktop-widths) {
+    margin-bottom: 38px;
+  }
 }
 
 .reviews-slider__link {
@@ -72,6 +121,10 @@
   background: #bec2c7;
 
   @include hidden-text;
+
+  @media (min-width: $desktop-widths) {
+    display: none;
+  }
 }
 
 .reviews-slider__link--back {
@@ -87,80 +140,10 @@
   background: #ffffff;
 }
 
+.reviews-slider__link--forward,
+.reviews-slider__link--back {
 
-/*--------ПЛАНШЕТНАЯ ВЕРСИЯ-------*/
-@media (min-width: $tablet-widths) {
-
-  .review-client__info {
-    display: block;
-    margin: 0;
-
-    font-size: 14px;
-    line-height: 30px;
-  }
-
-  .review-client__name {
-    margin-bottom: 3px;
-
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .review__text {
-    margin-bottom: 33px;
-
-    font-size: 18px;
-    line-height: 30px;
-
-    order: -1;
-  }
-}
-
-
-/*-------ДЕСКТОПНАЯ ВЕРСИЯ-------*/
-
-@media (min-width: $desktop-widths) {
-  .reviews {
-    padding-top: 187px;
-    padding-bottom: 49px;
-  }
-
-  .review {
-    width: 700px;
-    margin: 0 auto;
-  }
-
-  .review__text {
-    margin-bottom: 38px;
-  }
-
-  .review-client__name {
-    font-size: 24px;
-    line-height: 30px;
-
-    margin-bottom: 1px;
-  }
-
-  .review-client__info {
-    font-size: 18px;
-    line-height: 30px;
-  }
-  .reviews-slider__nav {
-    display: flex;
-    justify-content: space-between;
-    width: 920px;
-
-    left: 50%;
-    margin-left: -460px;
-    bottom: 165px;
-  }
-
-  .reviews-slider__link {
-    display: none;
-  }
-
-  .reviews-slider__link--forward,
-  .reviews-slider__link--back {
+  @media (min-width: $desktop-widths) {
     display: block;
     width: 26px;
     height: 50px;
@@ -169,5 +152,4 @@
     border: none;
     background: none;
   }
-
 }

@@ -2,11 +2,9 @@
   overflow: hidden;
   @include container;
 
-
   position: relative;
   padding-top: 91px;
   padding-bottom: 100px;
-
 
   @media (min-width: $tablet-widths) {
     padding-bottom: 65px;
@@ -71,7 +69,6 @@ td {
   padding-top: 16px;
   padding-bottom: 16px;
 
-  /*background: #283645;*/
   border-left: 2px solid #e5e5e5;
   border-right: 2px solid #e5e5e5;
 
@@ -127,18 +124,18 @@ td {
 
   @media (min-width: $desktop-widths) {
     font-size: 24px;
-    line-height: 30px;
   }
 }
 
 .option-name {
   display: none;
 
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 11px;
+
   @media (min-width: $tablet-widths) {
     display: block;
-    padding-top: 10px;
-    padding-left: 15px;
-    padding-bottom: 11px;
   }
 
   @media (min-width: $desktop-widths) {
@@ -151,7 +148,6 @@ td {
 }
 
 .option-name__text {
-
   @media (min-width: $tablet-widths) {
     margin: 0;
   }
@@ -192,9 +188,7 @@ td {
   content: attr(data-name);
   width: 200px;
 
-  position: absolute;
-  top: 15px;
-  left: 24px  ;
+  float: left;
 
   font-size: 14px;
   line-height: 30px;

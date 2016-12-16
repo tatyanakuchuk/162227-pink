@@ -1,16 +1,57 @@
 .competition {
-  padding: 55px 20px;
+  padding-top: 47px;
 
-  outline: 1px solid #c91353;
+   @media (min-width: $tablet-widths) {
+    padding-top: 97px;
+   }
+
+
 }
 
-.competition__list {
-  @include drop;
+legend {
+  text-align: center;
 }
-
 
 .competition__title {
+  margin: 0;
   margin-bottom: 35px;
-  color: #283645;
+
+  font-size: 14px;
   line-height: 30px;
+  font-weight: 400;
+
+  text-align: center;
+
+  @media (min-width: $tablet-widths) {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 54px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    max-width: 770px;
+  }
 }
+
+.competition__title-part-bottom {
+  display: none;
+
+  @media (min-width: $tablet-widths) {
+    display: inline-block;
+  }
+}
+
+.competition__form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-widths) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+

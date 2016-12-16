@@ -1,11 +1,136 @@
-.competition-message {
-  margin-bottom: 45px;
+.competition__message-wrapper {
+  @include container;
 
-  outline: 1px solid #c91353;
+  padding-top: 39px;
+  padding-bottom: 39px;
 
-  h4 {
-    text-transform: uppercase;
-    color: #d22856;
-    line-height: 18px;
+   @media (min-width: $tablet-widths) {
+    order: 4;
+
+    padding-top: 7px;
+    padding-bottom: 0;
+   }
+
+   @media (min-width: $desktop-widths) {
+    width: auto;
+    min-width: 100%;
+
+    padding-left: 0;
+    padding-right: 0;
+   }
+}
+
+.competition__message {
+  border: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 15px;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 37px;
+    padding-left: 58px;
+    padding-right: 66px;
+    padding-bottom: 32px;
+
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+   }
+
+   @media (min-width: $desktop-widths) {
+    width: auto;
+    padding-top: 34px;
+    padding-bottom: 12px;
+   }
+}
+
+.competition-message__title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+  color: #d22856;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+textarea[name="competition-message__text"] {
+  width: 100%;
+  min-height: 197px;
+
+  border-radius: 2px;
+  border: 2px solid #e5e5e5;
+
+  @media (min-width: $desktop-widths) {
+    min-height: 125px;
+  }
+}
+
+.competition__btn-block {
+  @include container;
+
+   @media (min-width: $tablet-widths) {
+    order: 5;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 66px;
+    padding-bottom: 65px;
+   }
+
+   @media (min-width: $desktop-widths) {
+    width: auto;
+    min-width: 100%;
+
+    padding-left: 0;
+    padding-right: 15px;
+   }
+}
+
+.competition__btn {
+  @include btn;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 17px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  margin-bottom: 36px;
+
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background: /*#2aab6d*/transparent;
+
+  border-radius: 4px;
+
+  @media (min-width: $tablet-widths) {
+    max-width: 300px;
+    margin-bottom: 0;
+  }
+}
+
+.competition__remark {
+  margin: 0;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.competition__remark-sign {
+  display: inline-block;
+
+  color: #d22856;
+}
+
+.competition__remark-more-words {
+  display: none;
+
+  @media (min-width: $desktop-widths) {
+    display: inline-block;
+    width: auto;
   }
 }
