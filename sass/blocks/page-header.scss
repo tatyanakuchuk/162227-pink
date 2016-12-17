@@ -2,28 +2,52 @@
   @include container;
 }
 
+.page-header__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+
+  color: #fff;
+  text-align: center;
+
+  @media (min-width: $tablet-widths) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+
+/*-------СТРАНИЦА С ФОРМОЙ-------*/
+
 .page-header__title--form {
   margin: 0;
   padding-top: 30px;
   padding-bottom: 48px;
 
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 400;
-  color: #fff;
-  text-align: center;
-
   @media (min-width: $tablet-widths) {
     padding-top: 70px;
     padding-bottom: 75px;
-
-    font-size: 50px;
-    line-height: 60px;
   }
 
   @media (min-width: $desktop-widths) {
     padding-top: 59px;
     padding-bottom: 99px;
+  }
+}
+
+
+/*--------СТРАНИЦА С ФОТО--------*/
+
+.page-header__title--photo {
+  width: 180px;
+  margin: 0 auto;
+  padding-top: 29px;
+  padding-bottom: 79px;
+
+  @media (min-width: $tablet-widths) {
+    width: auto;
+    padding-top: 70px;
+    padding-bottom: 136px;
   }
 }
 

@@ -1,36 +1,53 @@
 .add-photo {
-  padding: 40px 10px;
-
-  outline: 1px solid #c91353;
+  padding-top: 22px;
 }
 
 .add-photo__title {
-  padding-bottom: 45px;
+  padding-bottom: 75px;
+  margin: 0 auto;
 
+  font-size: 14px;
   line-height: 30px;
   font-weight: normal;
 }
 
-.add-photo__content {
-  padding-bottom: 34px;
+.add-photo__title--part-top,
+.add-photo__title--part-bottom {
+  display: block;
+  text-align: center;
+}
 
-  background: #f2f2f2;
+.add-photo__content {
+  @include container;
+
+  padding-top: 18px;
+  padding-bottom: 34px;
 
   border-bottom: 2px solid #dddfe0;
 }
 
 .add-photo__picture {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .add-photo__tools {
-  margin-bottom: 30px;
+  margin-bottom: 38px;
 
-  outline: 1px solid #c91353;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tool {
+  @include btn;
+  @include hidden-text;
+
+  display: block;
+  width: 45px;
+  height: 45px;
 }
 
 .add-photo__range {
-  outline: 1px solid #c91353;
+  padding-left: 18px;
 }
 
 .add-photo__line-range {
@@ -57,17 +74,32 @@
 }
 
 .add-photo__wrapper-btn {
-  padding: 40px 0;
-  outline: 1px solid #c91353;
+  @include container;
 
-  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 37px;
+  padding-bottom: 26px;
 }
 
 .add-photo__btn {
   @include btn;
-  padding: 5px 10px;
+
+  padding-top: 8px;
+  padding-bottom: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 12px;
+
+  text-align: center;
   color: #d22856;
-  background: #ffffff;
-  border: 2px solid #d22856;
+
+  background: transparent;
+  border: 3px solid #d22856;
   border-radius: 30px;
+}
+
+.add-photo__btn {
+  width: 100%;
 }

@@ -76,6 +76,7 @@ textarea[name="competition-message__text"] {
 
 .competition__btn-block {
   padding-top: 4px;
+  padding-bottom: 20px;
 
    @media (min-width: $tablet-widths) {
     order: 5;
@@ -86,7 +87,7 @@ textarea[name="competition-message__text"] {
     align-items: center;
 
     padding-top: 71px;
-    padding-bottom: 65px;
+    padding-bottom: 48px;
    }
 
    @media (min-width: $desktop-widths) {
@@ -94,7 +95,7 @@ textarea[name="competition-message__text"] {
     min-width: 100%;
 
     padding-top: 65px;
-
+    padding-bottom: 10px;
     padding-left: 0;
     padding-right: 0;
    }
