@@ -32,7 +32,7 @@
     border-radius: 5px;
    }
 
-   @media (min-width: $desktop-widths) {
+  @media (min-width: $desktop-widths) {
     width: auto;
     padding-left: 49px;
     padding-right: 0;
@@ -73,17 +73,17 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] + label::before {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 39px;
-    width: 39px;
+  content: "";
+  position: absolute;
+  display: block;
+  height: 39px;
+  width: 39px;
 
-    top: -3px;
-    left: 0;
+  top: -3px;
+  left: 0;
 
-    background-image: url(../../img/checkbox.png);
-    background-repeat: no-repeat;
+  background-image: url(../../img/checkbox.png);
+  background-repeat: no-repeat;
 }
 
 .competition-achievements__list {
@@ -114,36 +114,35 @@ input[type="checkbox"] + label::before {
   }
 }
 
-.competition-achievements__item:nth-child(2) {
+.competition-achievements__item--burned-on-beach {
   @media (min-width: $desktop-widths) {
     order: 3;
   }
 }
 
-.competition-achievements__item:nth-child(3) {
+.competition-achievements__item--saw-chuck-norris {
   @media (min-width: $desktop-widths) {
     order: 1;
   }
 }
 
-.competition-achievements__item:nth-child(4) {
+.competition-achievements__item--bought-souvenirs {
   @media (min-width: $desktop-widths) {
     order: 4;
   }
 }
 
-.competition-achievements__item:nth-child(5) {
+.competition-achievements__item--keep-tower {
   @media (min-width: $desktop-widths) {
     order: 2;
   }
 }
 
-.competition-achievements__item:nth-child(6) {
+.competition-achievements__item--crushed-hotel {
   @media (min-width: $desktop-widths) {
     order: 6;
   }
 }
-
 
 .competition-achievements__item:last-child {
   margin-bottom: 0;

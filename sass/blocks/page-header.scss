@@ -49,5 +49,11 @@
     padding-top: 70px;
     padding-bottom: 136px;
   }
+
+  @media (min-width: $desktop-widths) {
+    width: 350px;
+    padding-top: 59px;
+    padding-bottom: 99px;
+  }
 }
 

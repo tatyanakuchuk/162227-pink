@@ -1,14 +1,31 @@
 .add-photo {
   padding-top: 22px;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 42px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-top: 5px;
+  }
 }
 
 .add-photo__title {
-  padding-bottom: 75px;
+  @include container;
+  padding-bottom: 45px;
   margin: 0 auto;
 
   font-size: 14px;
   line-height: 30px;
   font-weight: normal;
+
+  @media (min-width: $tablet-widths) {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: normal;
+
+    padding-bottom: 64px;
+  }
 }
 
 .add-photo__title--part-top,
@@ -21,20 +38,84 @@
   @include container;
 
   padding-top: 18px;
-  padding-bottom: 34px;
 
-  border-bottom: 2px solid #dddfe0;
+  @media (min-width: $tablet-widths) {
+    padding-top: 62px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-widths) {
+    justify-content: space-around;
+    padding-top: 58px;
+  }
 }
 
 .add-photo__picture {
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-widths)  {
+    min-width: auto;
+    width: 300px;
+  }
+}
+
+.add-photo__picture img {
+  width: 100%;
+
+  @media (min-width: $tablet-widths)  {
+    width: 100%;
+  }
+}
+
+.add-photo__action-block {
+  @media (min-width: $desktop-widths) {
+    width: 410px;
+  }
+
 }
 
 .add-photo__tools {
-  margin-bottom: 38px;
-
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-around;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-widths) {
+    min-width: auto;
+    width: 300px;
+    flex-direction: column;
+    padding-left: 28px;
+    padding-right: 20px;
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 100%;
+    margin-bottom: 91px;
+    padding-left: 0;
+    padding-right: 29px;
+  }
+}
+
+.tool-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 17px;
+
+  border-bottom: 1px solid #dddfe0;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 9px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: auto;
+    padding-top: 0;
+  }
 }
 
 .tool {
@@ -44,10 +125,43 @@
   display: block;
   width: 45px;
   height: 45px;
+
+  @media (min-width: $tablet-widths) {
+    width: 23px;
+    height: 23px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.add-photo__range--crop,
+.add-photo__range--paint,
+.add-photo__range--contrast {
+  display: none;
+
+  @media (min-width: $tablet-widths) {
+    display: block;
+  }
 }
 
 .add-photo__range {
+  position: relative;
+
+  padding-bottom: 35px;
   padding-left: 18px;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 10px;
+    padding-bottom: 33px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-top: 19px;
+  }
 }
 
 .add-photo__line-range {
@@ -57,6 +171,14 @@
   width: 240px;
   height: 2px;
   background: #283645;
+
+  @media (min-width: $tablet-widths) {
+    width: 200px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 290px;
+  }
 }
 
 .add-photo__toggle-range {
@@ -73,19 +195,79 @@
   border-radius: 50%;
 }
 
-.add-photo__wrapper-btn {
-  @include container;
+.add-photo__toggle-range--crop {
+  left: 147px;
 
+  @media (min-width: $desktop-widths) {
+    left: 73px;
+  }
+}
+
+.add-photo__toggle-range--paint {
+  left: 26px;
+
+  @media (min-width: $desktop-widths) {
+    left: 249px;
+  }
+}
+
+.add-photo__toggle-range--contrast {
+  left: 97px;
+
+  @media (min-width: $desktop-widths) {
+    left: 162px;
+  }
+}
+
+.add-photo__range--common {
+  @media (min-width: $tablet-widths) {
+    display: none;
+  }
+}
+
+.add-photo__range--common::after {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 320px;
+  height: 1px;
+
+  bottom: 0;
+  left: -20px;
+
+  background: #dddfe0;
+}
+
+.add-photo__control-btn {
+  width: auto;
   display: flex;
   flex-direction: column;
 
-  padding-top: 37px;
+  padding-top: 39px;
   padding-bottom: 26px;
+
+  @media (min-width: $tablet-widths) {
+    min-width: auto;
+    width: 300px;
+    padding-left: 27px;
+    padding-right: 14px;
+
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-widths) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .add-photo__btn {
   @include btn;
-
+  width: 100%;
   padding-top: 8px;
   padding-bottom: 11px;
   padding-left: 5px;
@@ -98,8 +280,12 @@
   background: transparent;
   border: 3px solid #d22856;
   border-radius: 30px;
-}
 
-.add-photo__btn {
-  width: 100%;
+  @media (min-width: $tablet-widths) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 45%;
+  }
 }

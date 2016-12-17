@@ -33,6 +33,11 @@
     font-size: 18px;
     line-height: 30px;
   }
+
+  @media (min-width: $desktop-widths) {
+    width: 580px;
+    margin-bottom: 60px;
+  }
 }
 
 .photo__article {
@@ -40,7 +45,11 @@
 
   @media (min-width: $tablet-widths) {
     width: 300px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    margin-bottom: 55px;
   }
 }
 
@@ -51,12 +60,21 @@
     width: 100%;
     height: 300px;
   }
+
+  @media (min-width: $desktop-widths) {
+    height: 400px;
+  }
 }
 
 .photo__article--of-the-day {
+  width: 100%;
+
   @media (min-width: $tablet-widths) {
-    width: 620px;
     margin-bottom: 47px;
+
+  }
+
+  @media (min-width: $desktop-widths) {
   }
 }
 
@@ -68,8 +86,15 @@
   margin-left: -20px;
 
   @media (min-width: $tablet-widths) {
-    min-width: 700px;
+    min-width: 660px;
     min-height: 510px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    min-width: 940px;
+    min-height: 505px;
+
+    margin-left: -7px;
   }
 }
 
@@ -88,6 +113,16 @@
   @media (min-width: $tablet-widths) {
     padding-top: 16px;
     padding-left: 27px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-bottom: 22px;
+  }
+}
+
+.photo-content__top {
+  @media (min-width: $tablet-widths) {
+    min-height: 85px;
   }
 }
 
@@ -140,11 +175,15 @@
   @media (min-width: $tablet-widths) {
 
   }
+
+  @media (min-width: $desktop-widths) {
+
+  }
 }
 
 .content-like--of-the-day {
   @media (min-width: $tablet-widths) {
-  order: 1;
+  order: 0;
   }
 }
 
