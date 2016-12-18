@@ -1,19 +1,151 @@
-.competition-achievements {
-  background: #f2f2f2;
+.competition__achievements-wrapper {
+  padding-top: 41px;
 
-  outline: 1px solid #c91353;
+  @media (min-width: $tablet-widths) {
+    order: 3;
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: auto;
+    min-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.competition-achievements {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  padding-top: 40px;
+
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 46px;
+    padding-bottom: 55px;
+    padding-left: 58px;
+
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: auto;
+    padding-left: 49px;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
 }
 
 .competition-achievements__title {
-  margin-bottom: 30px;
+  width: 230px;
+  margin: 0 auto;
+  margin-bottom: 43px;
 
   text-transform: uppercase;
   color: #d22856;
+  font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+
+  @media (min-width: $tablet-widths) {
+    width: auto;
+  }
+}
+
+input[type="checkbox"] {
+  display:none;
+}
+
+.competition-achievements__label {
+  position: relative;
+  display: inline-block;
+
+  padding-left: 70px;
+
+  @media (min-width: $tablet-widths) {
+    padding-left: 58px;
+  }
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+
+  top: -3px;
+  left: 0;
+}
+
+.competition-achievements__list {
+  @include drop;
+
+  padding-bottom: 52px;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-widths) {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-widths) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .competition-achievements__item {
-  margin-bottom: 35px;
+  margin-bottom: 52px;
+
+  @media (min-width: $desktop-widths) {
+    width: 250px;
+    text-align: left;
+  }
+}
+
+.competition-achievements__item--burned-on-beach {
+  @media (min-width: $desktop-widths) {
+    order: 3;
+  }
+}
+
+.competition-achievements__item--saw-chuck-norris {
+  @media (min-width: $desktop-widths) {
+    order: 1;
+  }
+}
+
+.competition-achievements__item--bought-souvenirs {
+  @media (min-width: $desktop-widths) {
+    order: 4;
+  }
+}
+
+.competition-achievements__item--keep-tower {
+  @media (min-width: $desktop-widths) {
+    order: 2;
+  }
+}
+
+.competition-achievements__item--crushed-hotel {
+  @media (min-width: $desktop-widths) {
+    order: 6;
+  }
+}
+
+.competition-achievements__item:last-child {
+  margin-bottom: 0;
 }
 
 .competition-achievements__label {

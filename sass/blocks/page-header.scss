@@ -1,15 +1,58 @@
-.page-header {
-  background: #2a3a4a;
-  background-image: url(../../img/iphone-hand-mobile@1x.png),
-                    url(../../img/bg-back-mobile@1x.jpg);
-  background-repeat: no-repeat, no-repeat;
-  min-height: 400px;
-
-  outline: 1px solid #c91353;
+.page-header__title-wrapper {
+  @include container;
 }
 
-.page-header__top {
-  padding: 20px;
+.page-header__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
 
-  outline: 1px solid #c91353;
+  color: #fff;
+  text-align: center;
+
+  @media (min-width: $tablet-widths) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+
+/*-------СТРАНИЦА С ФОРМОЙ-------*/
+
+.page-header__title--form {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 48px;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 70px;
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-top: 59px;
+    padding-bottom: 99px;
+  }
+}
+
+
+/*--------СТРАНИЦА С ФОТО--------*/
+
+.page-header__title--photo {
+  width: 180px;
+  margin: 0 auto;
+  padding-top: 29px;
+  padding-bottom: 79px;
+
+  @media (min-width: $tablet-widths) {
+    width: auto;
+    padding-top: 70px;
+    padding-bottom: 136px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 350px;
+    padding-top: 59px;
+    padding-bottom: 99px;
+  }
 }

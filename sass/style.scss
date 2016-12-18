@@ -1,21 +1,19 @@
 @import "global/fonts.scss";
-
 @import "mixins.scss";
+@import "variables.scss";
+
+@import "normalize.scss";
 
 @import "blocks/base.scss";
 
 @import "blocks/page-header.scss";
+@import "blocks/page-footer.scss";
 
 @import "blocks/main-nav.scss";
-
 @import "blocks/download.scss";
-
 @import "blocks/advantages.scss";
-
+@import "blocks/research.scss";
 @import "blocks/reviews.scss";
-
-@import "blocks/page-footer";
-
 @import "blocks/prices.scss";
 
 @import "blocks/competition.scss";
@@ -24,7 +22,6 @@
 @import "blocks/competition-contacts.scss";
 @import "blocks/competition-apps.scss";
 @import "blocks/competition-message.scss";
-@import "blocks/competition__btn.scss";
 @import "blocks/popup.scss";
 
 @import "blocks/photo.scss";

@@ -4,175 +4,232 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+  BODY {
+    background: url('preview/pink-photo-mobile.jpg') 50% 0 no-repeat;
+  }
+
+  @media (min-width: 660px) {
+    BODY {
+      background-image: url( 'preview/pink-photo-tablet.jpg' );
+    }
+  }
+
+  @media (min-width: 960px) {
+    BODY {
+      background-image: url( 'preview/pink-photo-desktop.jpg' );
+    }
+  }
+</style>
   </head>
   <body>
     <header class="page-header">
-      <div class="container">
-        <h1 class="visually-hidden">PINK - приложение для путешествий!</h1>
-        <div class="page-header__top">
-          <div class="page-header__logo">
-            <img src="img/logo-pink-white-mobile.svg" alt="PINK">
-          </div>
+      <h1 class="visually-hidden">PINK - приложение для путешествий!</h1>
+      <div class="page-header__top">
+        <div class="page-header__logo-block">
+          <a href="index.html" class="page-header__logo">PINK</a>
           <button class="btn-toggle">Oткрыть меню</button>
         </div>
-        <h2 class="page-header__title">Фотографии пользователей</h2>
-        <!--НАВИГАЦИЯ-->
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="index.html" class="main-nav__link">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active">Фотографии</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html" class="main-nav__link">Конкурс</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__link">HTMLAcademy</a>
-            </li>
-          </ul>
-        </nav>
+      <!--НАВИГАЦИЯ-->
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="index.html" class="main-nav__link">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="form.html" class="main-nav__link">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">HTMLAcademy</a>
+          </li>
+        </ul>
+      </nav>
+      </div>
+      <div class="page-header__title-wrapper">
+        <h2 class="page-header__title  page-header__title--photo">Фотографии пользователей</h2>
       </div>
     </header>
     <main class="page-main">
-      <div class="container">
         <section class="photo">
           <h3 class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h3>
-          <article class="photo__article">
+          <div class="photo__wrapper">
+          <article class="photo__article  photo__article--of-the-day">
             <img src="img/panorama-mobile@1x.jpg" alt="Photo">
-            <div class="photo__content photo-content">
-              <div class="photo-content__info">
-                <p class="photo-content__author">Анна</p>
-                <p class="photo-content__time">(5 минут назад)</p>
-              </div>
-              <h4 class="photo-content__title">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</h4>
-              <div class="photo-content__like content-like">
-                <p class="content-like__text">нравится:</p>
-                <p class="content-like__amount">215</p>
+            <div class="photo__content  photo-content  photo-content--of-the-day">
+                <div class="photo-content__info">
+                  <span class="photo-content__author">Анна</span>
+                  <span class="photo-content__time">(5 минут назад)</span>
+                </div>
+                <h4 class="photo-content__title  photo-content__title--of-the-day">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</h4>
+              <div class="photo-content__like  content-like  content-like--of-the-day">
+                <span class="content-like__text">нравится:</span>
+                <span class="content-like__amount">215</span>
               </div>
             </div>
           </article>
           <article class="photo__article">
             <img src="img/photo-1-mobile@1x.jpg" alt="Photo">
             <div class="photo__content  photo-content">
-              <div class="photo-content__info">
-                <p class="photo-content__author">Левон</p>
-                <p class="photo-content__time">(5 часов назад)</p>
+              <div class="photo-content__top">
+                <div class="photo-content__info">
+                  <span class="photo-content__author">Левон</span>
+                  <span class="photo-content__time">(5 часов назад)</span>
+                </div>
+                <h4 class="photo-content__title">Вчера он на луну летал, сегодня в руки к нам попал.</h4>
               </div>
-              <h4 class="photo-content__title">Вчера он на луну летал, сегодня в руки к нам попал.</h4>
               <div class="photo-content__like  content-like">
-                <p class="content-like__like">нравится:</p>
-                <p class="content-like__amount">356</p>
+                <span class="content-like__text">нравится:</span>
+                <span class="content-like__amount">356</span>
               </div>
             </div>
           </article>
           <article class="photo__article">
             <img src="img/photo-2-mobile@1x.jpg" alt="Photo">
             <div class="photo__content  photo-content">
-              <div class="photo-content__info">
-                <p class="photo-content__author">Антон</p>
-                <p class="photo-content__time">(12 часов назад)</p>
+              <div class="photo-content__top">
+                <div class="photo-content__info">
+                  <span class="photo-content__author">Антон</span>
+                  <span class="photo-content__time">(12 часов назад)</span>
+                </div>
+                <h4 class="photo-content__title">Соседи будут рады!</h4>
               </div>
-              <h4 class="photo-content__title">Соседи будут рады!</h4>
               <div class="photo-content__like  content-like">
-                <p class="content-like__like">нравится:</p>
-                <p class="content-like__amount">666</p>
+                <span class="content-like__text">нравится:</span>
+                <span class="content-like__amount">666</span>
               </div>
             </div>
           </article>
           <article class="photo__article">
             <img src="img/photo-3-mobile@1x.jpg" alt="Photo">
             <div class="photo__content  photo-content">
-              <div class="photo-content__info">
-                <p class="photo-content__author">Борис</p>
-                <p class="photo-content__time">(20 часов назад)</p>
+              <div class="photo-content__top">
+                <div class="photo-content__info">
+                  <span class="photo-content__author">Борис</span>
+                  <span class="photo-content__time">(20 часов назад)</span>
+                </div>
+                <h4 class="photo-content__title">Здесь могла быть ваша цитата о высоком и вечном.</h4>
               </div>
-              <h4 class="photo-content__title">Здесь могла быть ваша цитата о высоком и вечном.</h4>
               <div class="photo-content__like  content-like">
-                <p class="content-like__like">нравится:</p>
-                <p class="content-like__amount">215</p>
+                <span class="content-like__text">нравится:</span>
+                <span class="content-like__amount">215</span>
               </div>
             </div>
           </article>
           <article class="photo__article">
             <img src="img/photo-4-mobile@1x.jpg" alt="Photo">
             <div class="photo__content  photo-content">
-              <div class="photo-content__info">
-                <p class="photo-content__author">Сергей</p>
-                <p class="photo-content__time">(25 часов назад)</p>
+              <div class="photo-content__top">
+                <div class="photo-content__info">
+                  <span class="photo-content__author">Сергей</span>
+                  <span class="photo-content__time">(25 часов назад)</span>
+                </div>
+                <h4 class="photo-content__title">Самая кубанская в мире!</h4>
               </div>
-              <h4 class="photo-content__title">Самая кубанская в мире!</h4>
               <div class="photo-content__like  content-like">
-                <p class="content-like__like">нравится:</p>
-                <p class="content-like__amount">4</p>
+                <span class="content-like__text">нравится:</span>
+                <span class="content-like__amount">4</span>
               </div>
             </div>
           </article>
           <article class="photo__article">
             <img src="img/photo-5-mobile@1x.jpg" alt="Photo">
             <div class="photo__content  photo-content">
-              <div class="photo-content__info">
-                <p class="photo-content__author">Максим</p>
-                <p class="photo-content__time">(40 часов назад)</p>
+              <div class="photo-content__top">
+                <div class="photo-content__info">
+                  <span class="photo-content__author">Максим</span>
+                  <spanp class="photo-content__time">(40 часов назад)</span>
+                </div>
+                <h4 class="photo-content__title">Где снег-то?</h4>
               </div>
-              <h4 class="photo-content__title">Где снег-то?</h4>
               <div class="photo-content__like  content-like">
-                <p class="content-like__like">нравится:</p>
-                <p class="content-like__amount">150</p>
+                <span class="content-like__text">нравится:</span>
+                <span class="content-like__amount">150</span>
               </div>
             </div>
           </article>
           <article class="photo__article">
             <img src="img/photo-6-mobile@1x.jpg" alt="Photo">
             <div class="photo__content  photo-content">
-              <div class="photo-content__info">
-                <p class="photo-content__author">Надежда</p>
-                <p class="photo-content__time">(45 часов назад)</p>
+              <div class="photo-content__top">
+                <div class="photo-content__info">
+                  <span class="photo-content__author">Надежда</span>
+                  <span class="photo-content__time">(45 часов назад)</span>
+                </div>
+                <h4 class="photo-content__title">Всем GM и взаимные лайки!</h4>
               </div>
-              <h4 class="photo-content__title">Всем GM и взаимные лайки!</h4>
               <div class="photo-content__like  content-like">
-                <p class="content-like__like">нравится:</p>
-                <p class="content-like__amount">2560</p>
+                <span class="content-like__text">нравится:</span>
+                <span class="content-like__amount">2560</span>
               </div>
             </div>
           </article>
         </section>
         <section class="add-photo">
-          <h3 class="add-photo__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h3>
-          <div class="add-photo__content">
-            <div class="add-photo__picture">
-              <img src="img/photo-7-mobile@1x.jpg" alt="PostPhoto">
-            </div>
-            <div class="add-photo__tools tools">
-              <button class="tool tool--crop">Обрезать</button>
-              <button class="tool tool--paint">Заливка</button>
-              <button class="tool tool--contrast">Контраст</button>
-            </div>
-            <!--БЕГУНОК-->
-            <div class="add-photo__range">
-              <div class="add-photo__line-range">
-                <div class="add-photo__toggle-range"></div>
+          <h3 class="add-photo__title">
+            <span class="add-photo__title--part-top">Затмите их всех!</span>
+            <span class="add-photo__title--part-bottom">Выкладывайте все, что накопилось в телефоне!</span>
+          </h3>
+            <div class="add-photo__content">
+                <div class="add-photo__picture">
+                  <img src="img/photo-7-mobile@1x.jpg" alt="PostPhoto">
+                </div>
+              <div class="add-photo__action-block">
+                  <div class="add-photo__tools  tools">
+                    <div class="tool-wrapper">
+                      <button class="tool  tool--crop">Обрезать</button>
+                      <div class="add-photo__range  add-photo__range--crop">
+                        <div class="add-photo__line-range">
+                          <div class="add-photo__toggle-range  add-photo__toggle-range--crop"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tool-wrapper">
+                      <button class="tool  tool--paint">Заливка</button>
+                      <div class="add-photo__range  add-photo__range--paint">
+                        <div class="add-photo__line-range">
+                          <div class="add-photo__toggle-range  add-photo__toggle-range--paint"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tool-wrapper">
+                      <button class="tool  tool--contrast">Контраст</button>
+                      <div class="add-photo__range  add-photo__range--contrast">
+                        <div class="add-photo__line-range">
+                          <div class="add-photo__toggle-range  add-photo__toggle-range--contrast"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--БЕГУНОК-->
+                  <div class="add-photo__range  add-photo__range--common">
+                    <div class="add-photo__line-range">
+                      <div class="add-photo__toggle-range"></div>
+                    </div>
+                  </div>
+                <div class="add-photo__control-btn">
+                  <button class="add-photo__btn add-photo__btn--post">Запостить</button>
+                  <button class="add-photo__btn add-photo__btn--cancel">Отмена</button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="add-photo__wrapper-btn">
-            <button class="add-photo__btn add-photo__btn--post">Запостить</button>
-            <button class="add-photo__btn add-photo__btn--cancel">Отмена</button>
-          </div>
         </section>
-      </div>
     </main>
     <!--ФУТЕР-->
     <footer class="page-footer">
-      <div class="container">
-        <img src="img/logo-pink-blue-mobile.svg" class="page-footer__logo" alt="PINK">
-        <div class="social">
+      <div class="page-footer__socials  page-footer__socials--photo">
+        <div class="page-footer__logo  page-footer__logo--photo">
+          <a href="#" class="page-footer__logo-link  ">PINK</a>
+        </div>
+        <div class="page-footer__social  page-footer__social--photo">
           <a href="#" class="social__btn social__btn--tw">Twitter</a>
           <a href="#" class="social__btn social__btn--fb">Facebook</a>
           <a href="#" class="social__btn social__btn--ytb">Youtube</a>
         </div>
-        <div class="copyright">
+        <div class="page-footer__copyright  copyright  page-footer__copyright--photo">
           <p class="copyright__text">Разработано</p>
           <a href="#" class="copyright__link">HTMLAcademy</a>
         </div>

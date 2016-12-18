@@ -4,7 +4,26 @@ body {
   font-family: 'Open Sans', 'Arial', sans-serif;
 }
 
+BODY > * {
+    outline: 2px solid deeppink;
+}
+BODY > * > * {
+    outline: 2px dashed lime;
+    outline-offset: -2px;
+}
+BODY > * > * > * {
+    outline: 2px dotted dodgerblue;
+    outline-offset: -4px;
+}
+BODY > * > * > * > *{
+    outline: 1px solid dodgerblue;
+    outline-offset: -5px;
+}
+
 img {
+  max-width: 100%;
+  height: auto;
+
   border: none;
 }
 

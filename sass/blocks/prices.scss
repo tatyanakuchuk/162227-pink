@@ -1,15 +1,267 @@
 .prices {
-  padding-top: 65px;
+  overflow: hidden;
+  @include container;
+
+  position: relative;
+  padding-top: 91px;
   padding-bottom: 100px;
-  background: #f2f2f2;
+
+  @media (min-width: $tablet-widths) {
+    padding-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-top: 140px;
+    padding-bottom: 97px;
+  }
 }
 
-.price {
-  background: #ffffff;
+/*-------ТАБЛИЦА------*/
 
-  th {
-    background: #283645;
-    color: #ffffff;
-    text-transform: uppercase;
+.price {
+  width: 840px;
+  margin-left: -280px;
+
+  @media (min-width: $tablet-widths) {
+    width: 620px;
+    margin-left: 0;
   }
+
+  @media (min-width: $desktop-widths) {
+    width: 940px;
+  }
+}
+
+tr {
+  border: 2px solid #e5e5e5;
+}
+
+tr:first-child {
+  border-bottom: none;
+  border-top: none;
+
+  @media (min-width: $tablet-widths) {
+    border-left: none;
+  }
+}
+
+th,
+td {
+  width: 25%;
+}
+
+td {
+  white-space:nowrap;  /*???*/
+}
+
+/*отсутствующая ячейка*/
+.tariff-cell:first-child {
+  display: none;
+
+  @media (min-width: $tablet-widths) {
+    display: block;
+
+    border-right: none;
+  }
+}
+
+.tariff-cell {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  border-left: 2px solid #e5e5e5;
+  border-right: 2px solid #e5e5e5;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 12px;
+    padding-bottom: 6px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-top: 17px;
+    padding-bottom: 18px;
+
+    border-bottom: none;
+  }
+}
+
+.tariff {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+
+  color: #ffffff;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-widths) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    font-size: 18px;
+    line-height: 31px;
+  }
+}
+
+.tariff-price {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+
+  color: #ffffff;
+
+  @media (min-width: $tablet-widths) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    font-size: 24px;
+  }
+}
+
+.option-name {
+  display: none;
+
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 11px;
+
+  @media (min-width: $tablet-widths) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-top: 13px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+
+    border-right: none;
+  }
+}
+
+.option-name__text {
+  @media (min-width: $tablet-widths) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-widths) {
+    font-size: 19px;
+    line-height: 30px;
+    font-weight: normal;
+  }
+}
+
+.option-cell {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+
+  padding-top: 14px;
+  padding-bottom: 17px;
+
+  text-align: center;
+
+  border-right: 2px solid #e5e5e5;
+  border-left: 2px solid #e5e5e5;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-bottom: 14px;
+  }
+}
+
+.option-cell::before {
+  content: attr(data-name);
+  width: 200px;
+
+  float: left;
+
+  font-size: 14px;
+  line-height: 30px;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-widths) {
+    display: none;
+  }
+}
+
+.option-mark {
+  float: right;
+  display: block;
+  width: 28px;
+  height: 28px;
+
+  font-size: 0;
+
+  background-repeat: no-repeat;
+
+    @media (min-width: $tablet-widths) {
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+.option-mark--yes {
+  background-image: url(../../img/icon-yes.svg);
+}
+
+.option-mark--no {
+  background-image: url(../../img/icon-no.svg);
+}
+
+/*-------НАВИГАЦИЯ ТАБЛИЦЫ ПРАЙСА-------*/
+
+.prices-slider__nav {
+  position: absolute;
+
+  left: 50%;
+  margin-left: -30px;
+  bottom: 44px;
+
+  @media (min-width: $tablet-widths) {
+    display: none;
+  }
+}
+
+.prices-slider__link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  margin-right: 14px;
+
+  border-radius: 50%;
+
+  background: #bec2c7;
+
+  @include hidden-text;
+}
+
+.prices-slider__link--back {
+  margin-right: 0;
+}
+
+.prices-slider__link--active {
+  width: 6px;
+  height: 6px;
+  border: 3px solid #2d3b49;
+  border-radius: 50%;
+
+  background: #ffffff;
 }

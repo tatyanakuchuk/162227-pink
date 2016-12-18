@@ -1,15 +1,155 @@
 .reviews {
+  @include container;
 
-  outline: 1px solid #c91353;
+  position: relative;
+
+  padding-top: 40px;
+  padding-bottom: 88px;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 96px;
+    padding-bottom: 68px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-top: 187px;
+    padding-bottom: 49px;
+  }
 }
+
 .reviews__list {
   @include drop;
-  padding: 20px 50px 150px;
-
-  outline: 1px solid #c91353;
 }
 
 .review {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  @media (min-width: $desktop-widths) {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.review-client__name {
+  margin: 0;
+  margin-bottom: 13px;
+
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+
+  @media (min-width: $tablet-widths) {
+    margin-bottom: 3px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    font-size: 24px;
+
+    margin-bottom: 1px;
+  }
+}
+
+.review-client__info {
+  display: none;
+  margin: 0;
+
+  line-height: 30px;
+
+  @media (min-width: $tablet-widths) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-widths) {
+    font-size: 18px;
+  }
+}
+
+.reviews-slider__nav {
+  position: absolute;
+
+  left: 50%;
+  margin-left: -30px;
+  bottom: 38px;
+
+  @media (min-width: $tablet-widths) {
+    bottom: 15px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+
+    left: 50%;
+    margin-left: -470px;
+    bottom: 165px;
+  }
+}
+
+.review__text {
+  margin: 0;
+
+  line-height: 30px;
+
+  @media (min-width: $tablet-widths) {
+    margin-bottom: 33px;
+
+    font-size: 18px;
+
+    order: -1;
+  }
+
+  @media (min-width: $desktop-widths) {
+    margin-bottom: 38px;
+  }
+}
+
+.reviews-slider__link {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  margin-right: 14px;
+
+  border-radius: 50%;
+
+  background: #bec2c7;
+
+  @include hidden-text;
+
+  @media (min-width: $desktop-widths) {
+    display: none;
+  }
+}
+
+.reviews-slider__link--back {
+  margin-right: 0;
+}
+
+.reviews-slider__link--active {
+  width: 6px;
+  height: 6px;
+  border: 3px solid #2d3b49;
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+.reviews-slider__link--forward,
+.reviews-slider__link--back {
+
+  @media (min-width: $desktop-widths) {
+    display: block;
+    width: 26px;
+    height: 50px;
+    margin: 0;
+
+    border: none;
+    background: none;
+  }
 }

@@ -1,11 +1,147 @@
-.competition-message {
-  margin-bottom: 45px;
+.competition__message-wrapper {
+  padding-top: 39px;
+  padding-bottom: 39px;
 
-  outline: 1px solid #c91353;
+  @media (min-width: $tablet-widths) {
+    order: 4;
 
-  h4 {
-    text-transform: uppercase;
-    color: #d22856;
-    line-height: 18px;
+    padding-top: 7px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: auto;
+    min-width: 100%;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.competition__message {
+  border: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 15px;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 37px;
+    padding-left: 58px;
+    padding-right: 66px;
+    padding-bottom: 32px;
+
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: auto;
+    padding-top: 34px;
+    padding-left: 49px;
+    padding-right: 39px;
+    padding-bottom: 35px;
+
+    box-sizing: border-box;
+  }
+}
+
+.competition-message__title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+  color: #d22856;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+textarea[name="competition-message__text"] {
+  min-width: 275px;
+  padding: 0;
+  min-height: 197px;
+
+  border-radius: 2px;
+  border: 2px solid #e5e5e5;
+
+  @media (min-width: $tablet-widths) {
+    min-width: 495px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    min-height: 125px;
+    min-width: 820px;
+  }
+}
+
+.competition__btn-block {
+  padding-top: 4px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-widths) {
+    order: 5;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 71px;
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: auto;
+    min-width: 100%;
+
+    padding-top: 65px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.competition__btn {
+  @include btn;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 17px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  margin-bottom: 36px;
+
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background: /*#2aab6d*/transparent;
+
+  border-radius: 4px;
+
+  @media (min-width: $tablet-widths) {
+    max-width: 300px;
+    margin-bottom: 0;
+  }
+}
+
+.competition__remark {
+  margin: 0;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.competition__remark-sign {
+  display: inline-block;
+
+  color: #d22856;
+}
+
+.competition__remark-more-words {
+  display: none;
+
+  @media (min-width: $desktop-widths) {
+    display: inline-block;
+    width: auto;
   }
 }

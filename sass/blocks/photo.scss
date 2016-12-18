@@ -1,40 +1,210 @@
 .photo {
-  padding-top: 45px;
+  padding-top: 48px;
+}
 
-  outline: 1px solid #c91353;
+.photo__wrapper {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-widths) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .photo__title {
-  margin-bottom: 50px;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 48px;
 
+  font-size: 14px;
   line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+
+  @media (min-width: $tablet-widths) {
+    width: 440px;
+    padding-top: 46px;
+    padding-bottom: 28px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 580px;
+    margin-bottom: 60px;
+  }
 }
 
 .photo__article {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
-  background: #f2f2f2;
+  @media (min-width: $tablet-widths) {
+    width: 300px;
+    margin-bottom: 28px;
+  }
 
-  outline: 1px solid #c91353;
+  @media (min-width: $desktop-widths) {
+    margin-bottom: 55px;
+  }
 }
 
+.photo__article img {
+  max-width: 300px;
+
+  @media (min-width: $tablet-widths) {
+    width: 100%;
+    height: 300px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    height: 400px;
+  }
+}
+
+.photo__article--of-the-day {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $tablet-widths) {
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $desktop-widths) {
+  }
+}
+
+.photo__article--of-the-day img {
+  min-width: 320px;
+  padding-left: 0;
+  padding-right: 0;
+
+  margin-left: -20px;
+
+  @media (min-width: $tablet-widths) {
+    min-width: 660px;
+    min-height: 510px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    min-width: 940px;
+    min-height: 505px;
+
+    margin-left: -7px;
+  }
+}
+
+.photo__article--of-the-day::before {
+  content: "панорама дня";
+  position: absolute;
+  right: 0;
+
+  display: block;
+  width: 140px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+
+  background: #d22856;
+
+  @media (min-width: $tablet-widths) {
+    top: 55px;
+  }
+}
+
+
 .photo-content {
-  padding: 20px 15px;
+  padding-top: 11px;
+  padding-left: 20px;
+  padding-right: 18px;
+  padding-bottom: 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 16px;
+    padding-left: 27px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-bottom: 22px;
+  }
+}
+
+.photo-content__top {
+  @media (min-width: $tablet-widths) {
+    min-height: 85px;
+  }
+}
+
+.photo-content--of-the-day {
+  @media (min-width: $tablet-widths) {
+    padding-top: 16px;
+    padding-bottom: 19px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.photo-content__title--of-the-day {
+  @media (min-width: $tablet-widths) {
+    order: 2;
+  }
 }
 
 .photo-content__author {
+  display: inline-block;
+  vertical-align: middle;
+
   font-weight: bold;
 }
 
 .photo-content__time {
+  display: inline-block;
+  vertical-align: middle;
+
   text-transform: uppercase;
 }
 
 .photo-content__title {
+  margin: 0;
+  margin-bottom: 8px;
+
   font-weight: normal;
 }
 
 .photo-content__like {
+  font-size: 12px;
+  line-height: 24px;
   color: #d22856;
   text-transform: uppercase;
+}
+
+.content-like--of-the-day {
+  @media (min-width: $tablet-widths) {
+  order: 0;
+  }
+}
+
+.content-like__text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.content-like__amount {
+  display: inline-block;
+  vertical-align: middle;
 }

@@ -1,28 +1,89 @@
+.competition__present-wrapper {
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 15px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 50%;
+    min-width: 440px;
+    margin: 0;
+    box-sizing: border-box;
+
+    padding-top: 27px;
+    padding-left: 0;
+    padding-right: 35px;
+  }
+}
+
 .competition-present {
-  outline: 1px solid #c91353;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $desktop-widths) {
+    width: auto;
+
+  }
+}
+
+.competition__list {
+  @include drop;
+
+  padding-bottom: 40px;
 }
 
 .competition-present__item {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    margin-bottom: 53px;
+  }
 }
 
 .competition-present__item:last-child {
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 
 .competition-present__label {
+  margin-left: 23px;
   margin-bottom: 5px;
 
   text-transform: uppercase;
   color: #d22856;
   line-height: 30px;
+
+  @media (min-width: $tablet-widths) {
+    margin-left: 0;
+    margin-right: 18px;
+    margin-bottom: 0;
+  }
 }
 
 .competition-present__input {
-  padding: 5px 15px;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 15px;
+  padding-left: 23px;
+  padding-right: 5px;
 
   font-size: 18px;
   line-height: 30px;
 
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+
   box-sizing: border-box;
+
+  @media (min-width: $tablet-widths) {
+
+  }
 }

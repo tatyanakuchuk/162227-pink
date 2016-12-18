@@ -4,18 +4,33 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+  BODY {
+    background: url('preview/pink-form-mobile.jpg') 50% 0 no-repeat;
+  }
+
+  @media (min-width: 660px) {
+    BODY {
+      background-image: url( 'preview/pink-form-tablet.jpg' );
+    }
+  }
+
+  @media (min-width: 960px) {
+    BODY {
+      background-image: url( 'preview/pink-form-desktop.jpg' );
+    }
+  }
+</style>
   </head>
   <body>
     <header class="page-header">
-      <div class="container">
         <h1 class="visually-hidden">PINK - приложение для путешествий!</h1>
         <div class="page-header__top">
-          <div class="page-header__logo">
-            <img src="img/logo-pink-white-mobile.svg" alt="PINK">
+          <div class="page-header__logo-block">
+            <a href="index.html" class="page-header__logo  page-header__logo--form">PINK</a>
+            <button class="btn-toggle">Oткрыть меню</button>
           </div>
-          <button class="btn-toggle">Oткрыть меню</button>
-        </div>
-        <h2 class="page-header__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
         <!--НАВИГАЦИЯ-->
         <nav class="main-nav">
           <ul class="main-nav__list">
@@ -33,15 +48,23 @@
             </li>
           </ul>
         </nav>
-      </div>
+        </div>
+        <div class="page-header__title-wrapper">
+          <h2 class="page-header__title  page-header__title--form">Конкурс на самое безбашенное путешествие с Пинк</h2>
+        </div>
     </header>
     <main class="page-main">
-      <div class="container">
         <section class="competition">
-          <h3 class="competition__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h3>
+          <h3 class="competition__title">
+            <span class="competition__title-part-top">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</span>
+            <span class="competition__title-part-bottom">Пожалуйста, заполните форму ниже:</span>
+          </h3>
           <form class="competition__form" action="#" method="post">
-            <div class="competition__present  competition-present">
-              <h4 class="visually-hidden">Ваши фамилия, имя и отчество</h4>
+            <div class="competition__present-wrapper">
+            <fieldset class="competition__present  competition-present">
+              <legend>
+                <h4 class="visually-hidden">Ваши фамилия, имя и отчество</h4>
+              </legend>
               <ul class="competition__list">
                 <li class="competition-present__item">
                   <label class="competition-present__label" for="surname">Фамилия:</label>
@@ -56,41 +79,49 @@
                   <input class="competition-present__input" type="text" id="middle-name" placeholder="Ну и отчество тоже">
                 </li>
               </ul>
+            </fieldset>
             </div>
             <!--ДОСТИЖЕНИЯ-->
-            <div class="competition__achievements  competition-achievements">
-              <h4 class="competition-achievements__title">Ваши безбашенные достижения в путешествии</h4>
+            <div class="competition__achievements-wrapper">
+            <fieldset class="competition__achievements  competition-achievements">
+              <legend>
+                <h4 class="competition-achievements__title">Ваши безбашенные достижения в путешествии</h4>
+              </legend>
               <ul class="competition-achievements__list">
-                <li class="competition-achievements__item">
+                <li class="competition-achievements__item  competition-achievements__item--selfie-sharp">
                   <input class="competition-achievements__input" type="checkbox" id="selfie-sharp" checked>
                   <label class="competition-achievements__label" for="selfie-sharp">Сделал селфи с акулой</label>
                 </li>
-                <li class="competition-achievements__item">
+                <li class="competition-achievements__item  competition-achievements__item--burned-on-beach">
                   <input class="competition-achievements__input" type="checkbox" id="burned-on-beach" checked>
                   <label class="competition-achievements__label" for="burned-on-beach">Обгорел на пляже</label>
                 </li>
-                <li class="competition-achievements__item">
+                <li class="competition-achievements__item  competition-achievements__item--saw-chuck-norris">
                   <input class="competition-achievements__input" type="checkbox" id="saw-chuck-norris">
                   <label class="competition-achievements__label" for="saw-chuck-norris">Видел Чака Норриса</label>
                 </li>
-                <li class="competition-achievements__item">
+                <li class="competition-achievements__item  competition-achievements__item--bought-souvenirs">
                   <input class="competition-achievements__input" type="checkbox" id="bought-souvenirs">
                   <label class="competition-achievements__label" for="bought-souvenirs">Накупил сувениров</label>
                 </li>
-                <li class="competition-achievements__item">
+                <li class="competition-achievements__item  competition-achievements__item--keep-tower">
                   <input class="competition-achievements__input" type="checkbox" id="keep-tower" checked>
                   <label class="competition-achievements__label" for="keep-tower">Удержал башню</label>
                 </li>
-                <li class="competition-achievements__item">
+                <li class="competition-achievements__item  competition-achievements__item--crushed-hotel">
                   <input class="competition-achievements__input" type="checkbox" id="crushed-hotel">
                   <label class="competition-achievements__label" for="crushed-hotel">Разгромил отель</label>
                 </li>
               </ul>
+            </fieldset>
             </div>
             <!--КОНТАКТНЫЕ ДАННЫЕ-->
-            <div class="competition__contacts  competition-contacts">
-              <h4 class="visually-hidden">Ваши контактные данные</h4>
-              <ul class="competition__list">
+            <div class="competition__contacts-wrapper">
+            <fieldset class="competition__contacts  competition-contacts">
+              <legend>
+                <h4 class="competition-contacts__title">Контактная информация</h4>
+              </legend>
+              <ul class="competition-contacts__list">
                 <li class="competition-contacts__item">
                   <label class="competition-contacts__label" for="competition-contacts__tel">Номер телефона</label>
                   <input class="competition-contacts__input" type="tel" id="competition-contacts__tel" placeholder="Номер, пожалуйста">
@@ -100,10 +131,14 @@
                   <input class="competition-contacts__input" type="email" id="competition-contacts__email" placeholder="Введите почту *" required>
                 </li>
               </ul>
+            </fieldset>
             </div>
             <!--ВЫБРАТЬ ПРИЛОЖЕНИЕ-->
-            <div class="competition__apps competition-apps">
-              <h4 class="competition-apps__title">С каким приложением путешествовали?</h4>
+            <div class="competition__apps-wrapper">
+            <fieldset class="competition__apps competition-apps">
+              <legend>
+                <h4 class="competition-apps__title">С каким приложением путешествовали?</h4>
+              </legend>
               <ul class="competition-apps__list">
                 <li class="competition-apps__item">
                   <input class="competition-apps__input" type="radio" name="select" id="ios" checked>
@@ -118,47 +153,60 @@
                   <label class="competition-apps__label" for="windows-phone">Windows Phone</label>
                 </li>
               </ul>
+            </fieldset>
             </div>
             <!--ТЕКСТ СООБЩЕНИЯ-->
-            <div class="competition__message  competition-message">
-              <h4 class="competition-message__title">Опишите свои эмоции</h4>
-              <textarea name="competition-message__text" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <div class="competition__message-wrapper">
+            <fieldset class="competition__message  competition-message">
+              <legend>
+                <h4 class="competition-message__title">Опишите свои эмоции</h4>
+              </legend>
+              <textarea name="competition-message__text" cols="20" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </fieldset>
             </div>
             <!--КНОПКА ОТПРАВКИ ФОРМЫ-->
-            <input class="competition__btn" type="submit" value="Отправить форму">
-            <p class="competition__remark">* — обязательные поля</p>
+            <div class="competition__btn-block">
+              <input class="competition__btn" type="submit" value="Отправить форму">
+              <p class="competition__remark"><span class="competition__remark-sign">*</span> — обязательные<span class="competition__remark-more-words">для заполнения</span> поля</p>
+
+            </div>
           </form>
         </section>
-      </div>
     </main>
     <!--ФУТЕР-->
     <footer class="page-footer">
-      <div class="container">
-        <img src="img/logo-pink-blue-mobile.svg" class="page-footer__logo" alt="PINK">
-        <div class="social">
+    <div class="page-footer__socials  page-footer__socials--form">
+        <div class="page-footer__logo  page-footer__logo--form">
+          <a href="#" class="page-footer__logo-link">PINK</a>
+        </div>
+        <div class="page-footer__social  page-footer__social--form">
           <a href="#" class="social__btn  social__btn--tw">Twitter</a>
           <a href="#" class="social__btn  social__btn--fb">Facebook</a>
           <a href="#" class="social__btn  social__btn--ytb">Youtube</a>
         </div>
-        <div class="copyright">
+        <div class="page-footer__copyright  copyright">
           <p class="copyright__text">Разработано</p>
           <a href="#" class="copyright__link">HTMLAcademy</a>
         </div>
       </div>
     </footer>
     <div class="popup  popup--success">
-      <div class="container">
+      <div class="popup__content-top">
         <p class="popup__name">Ваша заявка отправлена</p>
         <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+      </div>
+      <div class="popup__content-bottom">
         <div class="popup__wrapper-btn">
           <button class="popup__btn">Закрыть окно</button>
         </div>
       </div>
     </div>
     <div class="popup  popup--failed">
-      <div class="container">
+      <div class="popup__content-top">
         <p class="popup__name">Что-то пошло не так!</p>
         <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      </div>
+      <div class="popup__content-bottom">
         <div class="popup__wrapper-btn">
           <button class="popup__btn">ок</button>
         </div>
