@@ -35,9 +35,9 @@
 
     border: 2px solid #e5e5e5;
     border-radius: 5px;
-   }
+  }
 
-   @media (min-width: $desktop-widths) {
+  @media (min-width: $desktop-widths) {
     width: auto;
     padding-top: 50px;
     padding-left: 75px;
@@ -92,15 +92,15 @@ input[type="radio"] {
 }
 
 input[type="radio"] + label::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    height: 39px;
-    width: 39px;
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
 
-    top: -3px;
-    left: 0;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
 
-    background-image: url(../../img/checkbox.png);
-    background-repeat: no-repeat;
+  top: -3px;
+  left: 0;
 }

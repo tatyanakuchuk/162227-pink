@@ -64,6 +64,7 @@
 
 .add-photo__picture img {
   width: 100%;
+  height: auto;
 
   @media (min-width: $tablet-widths)  {
     width: 100%;
@@ -74,7 +75,6 @@
   @media (min-width: $desktop-widths) {
     width: 410px;
   }
-
 }
 
 .add-photo__tools {

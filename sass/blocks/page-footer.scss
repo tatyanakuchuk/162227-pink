@@ -154,13 +154,11 @@
 
   @media (min-width: $tablet-widths) {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
   @media (min-width: $desktop-widths) {
-    display: flex;
-    justify-content: space-between;
-
     padding-top: 58px;
     padding-bottom: 73px;
   }
