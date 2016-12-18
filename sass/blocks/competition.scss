@@ -2,9 +2,9 @@
   @include container;
   padding-top: 47px;
 
-   @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) {
     padding-top: 97px;
-   }
+  }
 }
 
 legend {
@@ -53,4 +53,3 @@ legend {
     justify-content: space-between;
   }
 }
-

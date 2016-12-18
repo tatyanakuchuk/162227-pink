@@ -1,10 +1,10 @@
 .competition__present-wrapper {
 
-   @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) {
     padding-top: 15px;
-   }
+  }
 
-   @media (min-width: $desktop-widths) {
+  @media (min-width: $desktop-widths) {
     width: 50%;
     min-width: 440px;
     margin: 0;
@@ -13,7 +13,7 @@
     padding-top: 27px;
     padding-left: 0;
     padding-right: 35px;
-   }
+  }
 }
 
 .competition-present {
@@ -36,17 +36,17 @@
 .competition-present__item {
   margin-bottom: 25px;
 
-   @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     margin-bottom: 52px;
-   }
+  }
 
-   @media (min-width: $desktop-widths) {
+  @media (min-width: $desktop-widths) {
     margin-bottom: 53px;
-   }
+  }
 }
 
 .competition-present__item:last-child {
@@ -61,11 +61,11 @@
   color: #d22856;
   line-height: 30px;
 
-   @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) {
     margin-left: 0;
     margin-right: 18px;
     margin-bottom: 0;
-   }
+  }
 }
 
 .competition-present__input {
@@ -83,9 +83,7 @@
 
   box-sizing: border-box;
 
-   @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) {
 
-   }
+  }
 }
-
-

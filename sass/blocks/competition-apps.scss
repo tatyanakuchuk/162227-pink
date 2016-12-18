@@ -41,7 +41,7 @@
     width: auto;
     padding-top: 50px;
     padding-left: 75px;
-   }
+  }
 }
 
 .competition-apps__title {
@@ -63,7 +63,6 @@
 .competition-apps__list {
   @include drop;
 }
-
 
 .competition-apps__item {
   margin-bottom: 45px;
