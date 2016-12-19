@@ -1,4 +1,20 @@
+.popup__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 999;
+}
+
+
 .popup {
+  display: none;
+  left: 50%;
+  top: 50%;
+  margin: auto;
+
   max-width: 320px;
   padding-top: 45px;
 
@@ -13,7 +29,20 @@
   }
 }
 
+/*------- КЛАСС ДЛЯ JS -------*/
+.popup--active {
+  display: block;
+}
+
+.popup--success {
+  max-height: 380px;
+  margin-top: 190px;
+}
+
 .popup--failed {
+  max-height: 290px;
+  margin-top: 145px;
+
   @media (min-width: $desktop-widths) {
     max-width: 460px;
   }
