@@ -1,27 +1,28 @@
-.popup__overlay {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-
-  z-index: 999;
-}
-
-
 .popup {
   display: none;
-  left: 50%;
-  top: 50%;
+
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
   margin: auto;
 
   max-width: 320px;
   padding-top: 45px;
 
+  background: #fff;
+
+  box-sizing: border-box;
+
   @media (min-width: $tablet-widths) {
     max-width: 460px;
-
-    box-sizing: border-box;
   }
 
   @media (min-width: $desktop-widths) {
@@ -31,21 +32,30 @@
 
 /*------- КЛАСС ДЛЯ JS -------*/
 .popup--active {
-  display: block;
+  display: flex;
 }
 
 .popup--success {
   max-height: 380px;
-  margin-top: 190px;
+
+  @media (min-width: $tablet-widths) {
+    max-height: 430px;
+    margin-top: 190px;
+   }
+
 
   @media (min-width: $desktop-widths) {
-  width: 780px;
+  max-width: 780px;
   }
 }
 
 .popup--failed {
   max-height: 290px;
   margin-top: 145px;
+
+  @media (min-width: $tablet-widths) {
+    max-height: 360px;
+  }
 
   @media (min-width: $desktop-widths) {
     max-width: 460px;
@@ -68,6 +78,22 @@
     max-width: 460px;
     padding-left: 70px;
     padding-right: 70px;
+  }
+}
+
+.popup--success .popup__content-top {
+
+   @media (min-width: $tablet-widths) {
+    padding-bottom: 22px;
+   }
+}
+
+
+
+.popup--failed .popup__content-top {
+
+  @media (min-width: $tablet-widths) {
+    padding-bottom: 26px;
   }
 }
 
@@ -95,12 +121,13 @@
 }
 
 .popup__text {
+  margin: 0;
+
   text-align: center;
 
   @media (min-width: $tablet-widths) {
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 25px;
   }
 
   @media (min-width: $desktop-widths) {
@@ -116,6 +143,8 @@
 }
 
 .popup--failed .popup__content-bottom {
+  padding-top: 0;
+
   background: #fff;
 }
 
