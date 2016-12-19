@@ -66,6 +66,10 @@
     margin-right: 18px;
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop-widths) {
+    margin-right: 12px;
+  }
 }
 
 .competition-present__input {

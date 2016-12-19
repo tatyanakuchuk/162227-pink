@@ -48,8 +48,9 @@
   }
 
   @media (min-width: $desktop-widths) {
-    justify-content: space-around;
     padding-top: 58px;
+    padding-left: 80px;
+    padding-right: 60px;
   }
 }
 
@@ -81,6 +82,9 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: space-around;
+
+  padding-left: 15px;
+  padding-right: 15px;
 
   box-sizing: border-box;
 

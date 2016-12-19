@@ -7,7 +7,7 @@
   padding-bottom: 88px;
 
   @media (min-width: $tablet-widths) {
-    padding-top: 96px;
+    padding-top: 94px;
     padding-bottom: 68px;
   }
 
@@ -50,7 +50,7 @@
   @media (min-width: $desktop-widths) {
     font-size: 24px;
 
-    margin-bottom: 1px;
+    margin-bottom: 2px;
   }
 }
 
@@ -74,10 +74,10 @@
 
   left: 50%;
   margin-left: -30px;
-  bottom: 38px;
+  bottom: 37px;
 
   @media (min-width: $tablet-widths) {
-    bottom: 15px;
+    bottom: 18px;
   }
 
   @media (min-width: $desktop-widths) {
@@ -94,10 +94,11 @@
 .review__text {
   margin: 0;
 
+  text-align: center;
   line-height: 30px;
 
   @media (min-width: $tablet-widths) {
-    margin-bottom: 33px;
+    margin-bottom: 35px;
 
     font-size: 18px;
 
@@ -105,7 +106,7 @@
   }
 
   @media (min-width: $desktop-widths) {
-    margin-bottom: 38px;
+    margin-bottom: 36px;
   }
 }
 

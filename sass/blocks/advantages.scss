@@ -100,27 +100,34 @@
   @media (min-width: $desktop-widths) {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 
     padding: 0;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
 .advantage {
   padding-top: 16px;
 
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 
   @media (min-width: $tablet-widths) {
-    width: 300px;
-    margin-bottom: 19px;
+    width: 310px;
+    padding-top: 14px;
+    padding-right: 10px;
+    margin-bottom: 18px;
+
+    box-sizing: border-box;
   }
 
   @media (min-width: $desktop-widths) {
     position: relative;
 
-    width: 240px;
-    padding-top: 358px;
+    width: 235px;
+    padding-top: 356px;
+    padding-right: 0;
 
     text-align: center;
   }
@@ -143,7 +150,7 @@
 
 .advantage__title {
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 11px;
 
   font-size: 18px;
   line-height: 27px;
