@@ -37,6 +37,10 @@
 .popup--success {
   max-height: 380px;
   margin-top: 190px;
+
+  @media (min-width: $desktop-widths) {
+  width: 780px;
+  }
 }
 
 .popup--failed {
