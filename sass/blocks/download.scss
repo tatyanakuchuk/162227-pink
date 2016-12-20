@@ -6,24 +6,31 @@
   @media (min-width: $tablet-widths) {
     padding-top: 0;
   }
+
+  @media (min-width: $desktop-widths) {
+    padding-left: 1px;
+  }
 }
 
 .promotion {
   display: none;
+
   width: 300px;
 
-  padding: 0 40px;
   padding-top: 90px;
-  padding-bottom: 29px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  box-sizing: border-box;
 
   @media (min-width: $tablet-widths) {
     display: block;
-
-    box-sizing: border-box;
   }
 
   @media (min-width: $desktop-widths) {
-    padding: 0 31px;
+    padding-left: 31px;
+    padding-right: 35px;
     padding-top: 105px;
     padding-bottom: 54px;
   }

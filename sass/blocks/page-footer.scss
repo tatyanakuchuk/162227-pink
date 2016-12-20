@@ -7,7 +7,7 @@
   text-align: center;
 
   @media (min-width: $tablet-widths) {
-    padding-top: 48px;
+    padding-top: 50px;
     padding-bottom: 0;
   }
 
@@ -19,7 +19,7 @@
 
 .contacts__title {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 
   font-size: 24px;
   line-height: 29px;
@@ -40,7 +40,7 @@
     margin-bottom: 14px;
 
     font-size: 50px;
-    line-height: 57px;
+    line-height: 60px;
   }
 }
 
@@ -52,9 +52,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 
-    padding-top: 45px;
+    padding-top: 44px;
   }
 
   @media (min-width: $desktop-widths) {
@@ -67,13 +67,14 @@
   margin-bottom: 27px;
 
   @media (min-width: $tablet-widths) {
-    width: 300px;
+    width: 50%;
     margin-bottom: 48px;
 
     text-align: center;
   }
 
   @media (min-width: $desktop-widths) {
+    width: 31%;
     margin: 0;
   }
 }
@@ -108,7 +109,7 @@
 
 .contact-address {
   @media (min-width: $tablet-widths) {
-    width: 250px;
+    width: 35%;
     margin-bottom: 28px;
   }
 }
@@ -120,6 +121,7 @@
 
 .contact-address {
   @media (min-width: $desktop-widths) {
+    width: 25%;
     order: 1;
   }
 }
@@ -156,11 +158,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+
+    padding-top: 32px;
   }
 
   @media (min-width: $desktop-widths) {
-    padding-top: 58px;
+    padding-top: 56px;
     padding-bottom: 73px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -186,7 +193,7 @@
 .page-footer__social {
   display: flex;
   justify-content: space-between;
-  width: 185px;
+  width: 180px;
 
   text-align: center;
 
@@ -228,29 +235,51 @@
 
 
 .page-footer__copyright {
-  width: 150px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+  font-size: 0;
   text-align: right;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 14px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
 
   @media (min-width: $desktop-widths) {
     max-width: 165px;
+    padding-left: 0;
+    padding-top: 10px;
   }
 }
 
 .copyright__text {
-  font-size: 14px;
-  line-height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  margin-right: 13px;
+
+  font-size: 15px;
+  line-height: 35px;
+
+  @media (min-width: $desktop-widths) {
+    margin-right: 19px;
+
+    font-size: 18px;
+  }
 }
 
 .copyright__link {
+  font-size: 15px;
+  line-height: 35px;
   @include hidden-text;
 
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   width: 28px;
   height: 35px;
+
+
 
   background-image: url(../../img/logo-htmlacademy.svg);
   background-repeat: no-repeat;
