@@ -40,8 +40,7 @@
 
   @media (min-width: $tablet-widths) {
     max-height: 430px;
-    margin-top: 190px;
-   }
+  }
 
 
   @media (min-width: $desktop-widths) {
@@ -51,7 +50,6 @@
 
 .popup--failed {
   max-height: 290px;
-  margin-top: 145px;
 
   @media (min-width: $tablet-widths) {
     max-height: 360px;
@@ -83,12 +81,10 @@
 
 .popup--success .popup__content-top {
 
-   @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) {
     padding-bottom: 22px;
-   }
+  }
 }
-
-
 
 .popup--failed .popup__content-top {
 
