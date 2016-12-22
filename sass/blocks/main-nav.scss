@@ -1,4 +1,11 @@
+.page-header__top-wrapper {
+  @media (min-width: $desktop-widths) {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
 .page-header__top {
+  background: #283645;
 
   @media (min-width: $desktop-widths) {
     max-width: 960px;
@@ -7,7 +14,7 @@
     display: flex;
     justify-content: space-between;
 
-    background: none;
+    background: transparent;
   }
 }
 
@@ -16,8 +23,8 @@
   display: flex;
   justify-content: space-between;
 
-  padding-top: 21px;
-  padding-bottom: 18px;
+  padding-top: 23px;
+  padding-bottom: 22px;
 
   border-bottom: 1px solid #000;
 
@@ -36,12 +43,7 @@
 .page-header__logo {
   display: block;
   width: 75px;
-  height: 30px;
-
-  background-image: url(../../img/logo-pink-white-mobile.svg);
-  background-repeat: no-repeat;
-
-  @include hidden-text;
+  height: 24px;
 
   @media (min-width: $tablet-widths) {
     width: 150px;
@@ -54,23 +56,9 @@
   }
 }
 
-.btn-toggle {
-  @include btn;
-  @include hidden-text;
-
-  width: 24px;
-  height: 23px;
-
-  background-image: url(../../img/icon-menu-cross.svg);
-  background-repeat: no-repeat;
-
-  @media (min-width: $tablet-widths) {
-    align-self: flex-end;
-  }
-
-  @media (min-width: $desktop-widths) {
-    display: none;
-  }
+.page-header__logo svg {
+  width: 75px;
+  height: 24px;
 }
 
 .main-nav {
@@ -87,7 +75,6 @@
     box-sizing: border-box;
   }
 }
-
 
 .main-nav__list {
   @include drop;
@@ -121,6 +108,16 @@
   text-align: center;
   color: #ffffff;
 
+  cursor: pointer;
+
+  &:hover {
+    color: #d22856;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+
   @media (min-width: $tablet-widths) {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -134,5 +131,73 @@
 
     font-weight: normal;
     text-transform: none;
+
+    &:hover {
+      color: #d22856;
+    }
+
+    &:active {
+      color: #6a747f;
+    }
+
+    &--active {
+      color: #fff;
+      &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        left: 0;
+        right: 0;
+        background: #fff;
+      }
+      &:hover {
+          color: #d22856;
+          &::after {
+            background: #d22856;
+          }
+      }
+    }
   }
 }
+
+
+/*--------КНОПКА ОТКРЫТЬ МЕНЮ--------*/
+
+.btn-toggle {
+  @include btn;
+
+  width: 24px;
+  height: 24px;
+
+  background: transparent;
+}
+
+.btn-toggle {
+/*  @include btn;
+
+  width: 24px;
+  height: 24px;
+
+  background: transparent;*/
+
+  @media (min-width: $tablet-widths) {
+    align-self: flex-end;
+  }
+
+  @media (min-width: $desktop-widths) {
+    display: none;
+  }
+}
+
+.btn-toggle .btn-toggle__cross{
+  fill: #fff;
+}
+
+.btn-toggle:hover .btn-toggle__cross{
+  fill: #d22856;
+}
+
+.btn-toggle:active .btn-toggle__cross{
+  fill: rgba(210, 40, 86, 0.3);
+}
+

@@ -1,6 +1,4 @@
 .download {
-  @include container;
-
   padding-top: 390px;
 
   @media (min-width: $tablet-widths) {
@@ -56,8 +54,30 @@
   }
 }
 
-.download__block {
+.download__content {
+  @include container;
 
+  background: #1d2631;
+
+  @media (min-width: $tablet-widths) {
+    background: transparent;
+  }
+
+  @media (min-width: $desktop-widths) {
+    background: transparent;
+    background-image: url(../../img/iphone-hand-desktop@1x.png);
+    background-repeat: no-repeat;
+    background-position: 40px 90px;
+    /*ретина*/
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(../../img/iphone-hand-desktop@2x.png);
+      background-repeat: no-repeat;
+      background-position: 40px 90px;
+    }
+  }
+}
+
+.download__block {
   padding-top: 33px;
   padding-bottom: 30px;
 
@@ -109,6 +129,16 @@
     font-size: 21px;
     line-height: 22px;
   }
+}
+
+.download__btn:hover {
+  color: #d22856;
+  background: #fff;
+}
+
+.download__btn:active {
+  color: rgba(210, 40, 86, 0.3);
+  background: #fff;
 }
 
 .download__links {

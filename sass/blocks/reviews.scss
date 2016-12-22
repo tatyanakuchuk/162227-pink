@@ -6,6 +6,8 @@
   padding-top: 40px;
   padding-bottom: 88px;
 
+  background: #fff;
+
   @media (min-width: $tablet-widths) {
     padding-top: 94px;
     padding-bottom: 68px;
@@ -128,8 +130,12 @@
   }
 }
 
-.reviews-slider__link--back {
-  margin-right: 0;
+.reviews-slider__link:hover {
+  background: #7e868f;
+}
+
+.reviews-slider__link:active {
+  background: #e9ebec;
 }
 
 .reviews-slider__link--active {
@@ -138,7 +144,17 @@
   border: 3px solid #2d3b49;
   border-radius: 50%;
 
-  background: #ffffff;
+  background: #fff;
+}
+
+.reviews-slider__link--active:hover {
+  background: #fff;
+}
+
+
+
+.reviews-slider__link--back {
+  margin-right: 0;
 }
 
 .reviews-slider__link--forward,

@@ -1,9 +1,10 @@
 .advantages {
-  @include container;
-
   display: flex;
   flex-direction: column;
+}
 
+
+.advantages__title-wrapper {
   padding-top: 40px;
 
   @media (min-width: $tablet-widths) {
@@ -17,6 +18,7 @@
 
 .advantages-title {
   margin: 0;
+  @include container;
 
   font-size: 24px;
   line-height: 29px;
@@ -71,22 +73,51 @@
     width: 425px;
   }
 }
+.advantages__list-wrapper {
+  background: #f2f2f2;
+
+  background-image: url(../../img/bg-triangle-white.svg);
+  background-repeat: no-repeat;
+  background-position: 0 -5px;
+  background-size: 100% 35px;
+
+  @media (min-width: $tablet-widths) {
+    background-image: url(../../img/bg-triangle-white.svg);
+    background-repeat: no-repeat;
+    background-position: 0 -2px;
+    background-size: 100% 55px;
+  }
+
+  @media (min-width: $desktop-widths) {
+      background-image: url(../../img/bg-triangle-white.svg);
+      background-repeat: no-repeat;
+      background-position: center -21px;
+      background-size: 100% 115px;
+  }
+}
 
 .advantages__list {
   @include drop;
+  @include container;
 
   padding-top: 66px;
   padding-bottom: 305px;
 
-/*background: #f2f2f2;
-  background-image: url(../../img/iphone-screen-mobile@1x.png);
-  background-repeat: no-repeat;
-  background-position: 84px 460px;*/
-
   text-align: center;
 
-  @media (min-width: $tablet-widths) {
+  background-image: url(../../img/iphone-screen-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: center 509px;
+  background-size: auto;
+  /*ретина*/
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url(../../img/iphone-screen-mobile@2x.png);
+    background-repeat: no-repeat;
+    background-position: center 509px;
+    background-size: auto;
+  }
 
+  @media (min-width: $tablet-widths) {
     padding-top: 60px;
     padding-bottom: 20px;
 
@@ -95,6 +126,18 @@
     align-items: flex-end;
 
     text-align: left;
+
+    background-image: url(../../img/iphone-screen-3-tablet@1x.png);
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+    background-size: auto;
+    /*ретина*/
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(../../img/iphone-screen-3-tablet@2x.png);
+      background-repeat: no-repeat;
+      background-position: 20px 0;
+      background-size: auto;
+    }
   }
 
   @media (min-width: $desktop-widths) {
@@ -102,9 +145,7 @@
     flex-direction: row;
     justify-content: space-between;
 
-    padding: 0;
-    padding-left: 24px;
-    padding-right: 24px;
+    background: none;
   }
 }
 
