@@ -107,8 +107,17 @@
 
   border: 2px solid #e5e5e5;
   border-radius: 2px;
+  outline: none;
 
   box-sizing: border-box;
+
+  &:hover {
+    border: 2px solid #283645;
+  }
+
+  &:focus {
+    border: 2px solid #d22856;
+  }
 
   @media (min-width: $tablet-widths) {
     order: 0;

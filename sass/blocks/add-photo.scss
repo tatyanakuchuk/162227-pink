@@ -124,11 +124,30 @@
 
 .tool {
   @include btn;
-  @include hidden-text;
 
   display: block;
   width: 45px;
   height: 45px;
+  padding: 0;
+
+  background: none;
+
+  svg {
+    fill: #b5b9be;
+  }
+
+  &:hover {
+    svg {
+      fill: #8d949b;
+    }
+  }
+
+  &:active,
+  &.active {
+    svg {
+      fill: #d22856;
+    }
+  }
 
   @media (min-width: $tablet-widths) {
     width: 23px;
@@ -156,6 +175,13 @@
 
   padding-bottom: 35px;
   padding-left: 18px;
+
+  &:active,
+  &.active {
+    .add-photo__toggle-range {
+      background: #d22856;
+    }
+  }
 
   @media (min-width: $tablet-widths) {
     padding-top: 10px;
@@ -197,6 +223,13 @@
   background: #ffffff;
   border: 2px solid #d22856;
   border-radius: 50%;
+
+  &:active,
+  &.active {
+    .add-photo__toggle-range {
+      background: #d22856;
+    }
+  }
 }
 
 .add-photo__toggle-range--crop {
@@ -291,5 +324,32 @@
 
   @media (min-width: $desktop-widths) {
     width: 45%;
+  }
+}
+
+.add-photo__btn--post {
+  &:hover {
+    color: #fff;
+    background: #d22856;
+  }
+
+  &:active {
+    color: rgba(250, 250, 250, 0.3);
+  }
+}
+
+.add-photo__btn--cancel {
+  border: 3px solid #dddfe0;
+  color: #dddfe0;
+
+  &:hover {
+    color: #b5b9be;
+    border: 3px solid #b5b9be;
+  }
+
+  &:active {
+    color: rgba(250, 250, 250, 0.3);
+    background: #b5b9be;
+    border: 3px solid #b5b9be;
   }
 }

@@ -1,4 +1,4 @@
-.page-footer__contacts {
+.contacts {
   @include container;
 
   padding-top: 40px;
@@ -149,7 +149,7 @@
   background-image: url(../../img/bg-triangle-white-footer.svg),
                     url(../../img/bg-map-mobile@1x.png);
   background-repeat: no-repeat, no-repeat;
-  background-position: center -2px, center;
+  background-position: center 0, center;
   background-size: 100% 35px, cover;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -163,7 +163,6 @@
     background-image: url(../../img/bg-triangle-white-footer.svg),
                       url(../../img/bg-map-tablet@1x.jpg);
     background-size: 100% 68px, cover;
-    background-position: center 0, center;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url(../../img/bg-triangle-white-footer.svg),
@@ -176,7 +175,6 @@
 
     background-image: url(../../img/bg-triangle-white-footer.svg),
                       url(../../img/bg-map-desktop@1x.jpg);
-    background-position: 0 -8px, center;
     background-size: 100% 115px, cover;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -186,7 +184,7 @@
   }
 }
 
-.page-footer__socials {
+.page-footer__part-bottom {
   display: none;
 
   flex-direction: column;
@@ -195,7 +193,7 @@
   @include container;
 
   padding-bottom: 34px;
-  padding-top: 34px;
+  padding-top: 41px;
 
   @media (min-width: $tablet-widths) {
     display: flex;
@@ -203,7 +201,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    padding-top: 32px;
+    padding-top: 31px;
   }
 
   @media (min-width: $desktop-widths) {
@@ -211,6 +209,18 @@
     padding-bottom: 60px;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+.page-footer__part-bottom--photo {
+  display: flex;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 43px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-top: 106px;
   }
 }
 
@@ -223,14 +233,51 @@
 }
 
 .page-footer__logo-link {
-  @include hidden-text;
-
   display: block;
   width: 150px;
   height: 40px;
 
-  background-image: url(../../img/logo-pink-blue-mobile.svg);
-  background-repeat: no-repeat;
+  .page-footer__logo-desktop {
+      display: none;
+    }
+
+  @media (min-width: $desktop-widths) {
+    .page-footer__logo-desktop {
+      display: block;
+    }
+    .page-footer__logo-mobile {
+      display: none;
+    }
+    .pink-blue,
+    .star-blue {
+      fill: #283645;
+    }
+
+    .star-pink,
+    .glasses-pink {
+      fill: #d22856;
+    }
+
+    &:hover {
+      .pink-blue,
+      .star-blue {
+        fill: #d22856;
+      }
+    }
+
+    &:active {
+      .pink-blue,
+      .star-blue {
+      fill: #283645;
+      opacity: 0.3;
+      }
+
+      .star-pink,
+      .glasses-pink {
+        opacity: 0.3;
+      }
+    }
+  }
 }
 
 .page-footer__social {
@@ -342,7 +389,7 @@
 
 /*--------СТРАНИЦА С ФОРМОЙ--------*/
 
-.page-footer__socials--form {
+.page-footer__part-bottom--form {
   display: flex;
 
   @media (min-width: $tablet-widths)  {
@@ -351,7 +398,6 @@
 }
 
 .page-footer__logo--form {
-  margin: 0 auto;
   margin-bottom: 40px;
 
   @media (min-width: $tablet-widths) {
@@ -360,7 +406,6 @@
 }
 
 .page-footer__social--form {
-  margin: 0 auto;
   margin-bottom: 30px;
 
   @media (min-width: $tablet-widths) {
