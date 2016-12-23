@@ -154,10 +154,7 @@
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url(../../img/bg-triangle-white-footer.svg),
-                    url(../../img/bg-map-mobile@2x.png);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center -2px, center;
-    background-size: 100% 35px, cover;
+                      url(../../img/bg-map-mobile@2x.png);
   }
 
   @media (min-width: $tablet-widths) {
@@ -166,13 +163,11 @@
     background-image: url(../../img/bg-triangle-white-footer.svg),
                       url(../../img/bg-map-tablet@1x.jpg);
     background-size: 100% 68px, cover;
+    background-position: center 0, center;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url(../../img/bg-triangle-white-footer.svg),
                     url(../../img/bg-map-tablet@2x.png);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center 0, center;
-    background-size: 100% 68px, cover;
     }
   }
 
@@ -181,14 +176,12 @@
 
     background-image: url(../../img/bg-triangle-white-footer.svg),
                       url(../../img/bg-map-desktop@1x.jpg);
-    background-size: 100% 105px, cover;
+    background-position: 0 -8px, center;
+    background-size: 100% 115px, cover;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url(../../img/bg-triangle-white-footer.svg),
                     url(../../img/bg-map-desktop@2x.png);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center 0, center;
-    background-size: 100% 105px, cover;
     }
   }
 }
@@ -215,7 +208,7 @@
 
   @media (min-width: $desktop-widths) {
     padding-top: 56px;
-    padding-bottom: 73px;
+    padding-bottom: 60px;
     padding-left: 0;
     padding-right: 0;
   }

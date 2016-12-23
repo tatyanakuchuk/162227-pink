@@ -45,20 +45,60 @@
   width: 75px;
   height: 24px;
 
+  svg {
+    width: 75px;
+    height: 24px;
+
+    .page-header__logo--tablet {
+      display: none;
+    }
+
+    .page-header__logo--desktop {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-widths) {
     width: 150px;
     height: 40px;
+
+    svg {
+      width: 150px;
+      height: 40px;
+
+      .page-header__logo--mobile {
+        display: none;
+      }
+      .page-header__logo--tablet {
+        display: block;
+
+        width: 150px;
+        height: 40px;
+      }
+      .page-header__logo--desktop {
+        display: none;
+      }
+    }
   }
 
   @media (min-width: $desktop-widths) {
     width: 150px;
     height: 50px;
-  }
-}
+    svg {
+      width: 150px;
+      height: 50px;
 
-.page-header__logo svg {
-  width: 75px;
-  height: 24px;
+      .page-header__logo--mobile {
+        display: none;
+      }
+      .page-header__logo--tablet {
+        display: none;
+      }
+      .page-header__logo--desktop {
+        display: block;
+      }
+    }
+  }
 }
 
 .main-nav {
@@ -165,20 +205,40 @@
 
 .btn-toggle {
   @include btn;
+  padding: 0;
 
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
 
   background: transparent;
-}
 
-.btn-toggle {
-/*  @include btn;
+  .btn-toggle__svg {
+    width: 25px;
+    height: 25px;
+  }
 
-  width: 24px;
-  height: 24px;
+  .btn-toggle__opened {
+    display: block;
 
-  background: transparent;*/
+    fill: #fff;
+  }
+
+  .btn-toggle__closed {
+    display: none;
+  }
+
+    &:hover {
+      .btn-toggle__opened {
+      fill: #d22856;
+      }
+    }
+
+    &:active {
+      .btn-toggle__opened {
+      fill: #d22856;
+      opacity: 0.3;
+      }
+    }
 
   @media (min-width: $tablet-widths) {
     align-self: flex-end;
@@ -199,5 +259,58 @@
 
 .btn-toggle:active .btn-toggle__cross{
   fill: rgba(210, 40, 86, 0.3);
+}
+
+
+/*-------СТИЛИ ПРИ ЗАКРЫТОМ МЕНЮ-------*/
+
+.page-header--menu-closed {
+  background-position: 0 175px, -190px 0;
+  /*-----кнопка открыть меню-----*/
+  .btn-toggle {
+    width: 50px;
+    height: 25px;
+
+    .btn-toggle__svg {
+      width: 50px;
+      height: 25px;
+
+      .btn-toggle__opened {
+        display: none;
+      }
+
+      .btn-toggle__closed {
+        display: block;
+
+        fill: #fff;
+      }
+    }
+
+    &:hover {
+      .btn-toggle__closed {
+      fill: #d22856;
+      }
+    }
+
+    &:active {
+      .btn-toggle__closed {
+      fill: #d22856;
+      opacity: 0.3;
+      }
+    }
+  }
+
+  .main-nav {
+    display: none;
+
+    @media (min-width: $desktop-widths) {
+      display: block;
+    }
+  }
+
+  .page-header__top {
+    background: none;
+    background: rgba(0, 0, 0, 0.3);
+  }
 }
 

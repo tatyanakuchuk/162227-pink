@@ -1,66 +1,82 @@
 .research {
   display: none;
 
+  @media (min-width: $tablet-widths) {
+    display: block;
+  }
+
+   @media (min-width: $desktop-widths) {
+    background: #f2f2f2;
+   }
+}
+
+.research-wrapper {
   @include container;
 
-  text-align: left;
-
-  padding-top: 96px;
-  padding-bottom: 30px;
-
-  background-image: url(../../img/icon-editor-diagram-fill.svg),
-                    url(../../img/icon-timer.svg);
-  background-size: 200px auto, 240px auto;
-  background-repeat: no-repeat, no-repeat;
-  background-position: 40px 120px, 20px 60px;
-
-  @media (min-width: $tablet-widths) {
+   @media (min-width: $tablet-widths) {
     display: flex;
     justify-content: space-between;
 
-    padding-top: 100px;
-    padding-bottom: 30px;
+    background-image: url(../../img/icon-editor-diagram-fill.svg),
+                      url(../../img/icon-timer.svg);
+    background-size: 200px, 240px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 40px 120px, 20px 60px;
   }
 
   @media (min-width: $desktop-widths) {
     display: flex;
-    justify-content: flex-end;
-    padding-top: 140px;
+    justify-content: space-between;
 
-    padding-bottom: 110px;
+    background-size: 252px, 300px;
+    background-position: 24px 98px, 0 28px;
   }
 }
 
 .research__timer {
   @media (min-width: $tablet-widths) {
     width: 240px;
-    min-height: 240px;
+    min-height: 254px;
     display: flex;
-
+    margin-top: auto;
   }
 
   @media (min-width: $desktop-widths) {
-    width: 575px;
+    width: 275px;
+    margin-top: 0;
   }
 }
 
 .research__timer-number {
-  font-size: 96px;
-  line-height: 100px;
-  font-weight: 700;
-
-  color: #d22856;
-
-  margin: auto;
-}
-
-.research__content {
   @media (min-width: $tablet-widths) {
-    width: 310px;
+    margin: auto;
+
+    font-size: 96px;
+    line-height: 100px;
+    font-weight: 700;
+
+    color: #d22856;
   }
 
   @media (min-width: $desktop-widths) {
-    width: 575px;
+    font-size: 120px;
+    line-height: 140px;
+  }
+}
+
+.research__content {
+  text-align: left;
+
+  @media (min-width: $tablet-widths) {
+    width: 310px;
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 565px;
+    padding-top: 120px;
+    padding-bottom: 110px;
   }
 }
 

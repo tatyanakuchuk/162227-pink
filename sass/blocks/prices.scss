@@ -1,5 +1,4 @@
 .prices {
-
   position: relative;
   padding-top: 91px;
   padding-bottom: 100px;
@@ -7,20 +6,20 @@
   background: #f2f2f2;
   background-image: url(../../img/bg-triangle-white.svg);
   background-repeat: no-repeat;
-  background-position: 0 -5px;
+  background-position: 0 0;
   background-size: 100% 35px;
 
   @media (min-width: $tablet-widths) {
     padding-top: 87px;
     padding-bottom: 65px;
-    background-position: 0 -2px;
+
     background-size: 100% 55px;
   }
 
   @media (min-width: $desktop-widths) {
     padding-top: 140px;
     padding-bottom: 97px;
-    background-position: center -15px;
+
     background-size: 100% 115px;
   }
 }
@@ -36,7 +35,7 @@
 
   @media (min-width: $tablet-widths) {
     width: 620px;
-    margin-left: 0;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-widths) {

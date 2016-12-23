@@ -1,12 +1,14 @@
 .reviews {
+  background: #fff;
+}
+
+.reviews-wrapper {
   @include container;
 
   position: relative;
 
   padding-top: 40px;
   padding-bottom: 88px;
-
-  background: #fff;
 
   @media (min-width: $tablet-widths) {
     padding-top: 94px;
@@ -16,6 +18,10 @@
   @media (min-width: $desktop-widths) {
     padding-top: 187px;
     padding-bottom: 49px;
+
+    background-image: url(../../img/icon-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 75px;
   }
 }
 
@@ -132,10 +138,18 @@
 
 .reviews-slider__link:hover {
   background: #7e868f;
+
+  @media (min-width: $desktop-widths) {
+    background: none;
+  }
 }
 
 .reviews-slider__link:active {
   background: #e9ebec;
+
+  @media (min-width: $desktop-widths) {
+    background: none;
+  }
 }
 
 .reviews-slider__link--active {
@@ -149,9 +163,11 @@
 
 .reviews-slider__link--active:hover {
   background: #fff;
+
+  @media (min-width: $desktop-widths) {
+    background: none;
+  }
 }
-
-
 
 .reviews-slider__link--back {
   margin-right: 0;
@@ -159,14 +175,97 @@
 
 .reviews-slider__link--forward,
 .reviews-slider__link--back {
-
   @media (min-width: $desktop-widths) {
     display: block;
+
     width: 26px;
     height: 50px;
     margin: 0;
 
     border: none;
     background: none;
+
+    &:before,
+    &:after {
+      content: "";
+
+      position: absolute;
+      display: block;
+
+      background: #bec2c7;
+    }
+  }
+}
+
+.reviews-slider__link--forward {
+  @media (min-width: $desktop-widths) {
+    &:before {
+      width: 30px;
+      height: 2px;
+      left: 1px;
+      top: 14px;
+
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      width: 2px;
+      height: 30px;
+      left: 14px;
+      top: 20px;
+
+      transform: rotate(135deg);
+    }
+
+    &:hover {
+      &:before,
+      &:after{
+        background: #7e868f;
+      }
+    }
+
+    &:active {
+      &:before,
+      &:after{
+        background: #edeef0;
+      }
+    }
+  }
+}
+
+.reviews-slider__link--back {
+  @media (min-width: $desktop-widths) {
+    &:before {
+      width: 30px;
+      height: 2px;
+      right: 1px;
+      top: 14px;
+
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      width: 2px;
+      height: 30px;
+
+      right: 14px;
+      top: 20px;
+
+      transform: rotate(45deg);
+    }
+
+    &:hover {
+      &:before,
+      &:after{
+        background: #7e868f;
+      }
+    }
+
+    &:active {
+      &:before,
+      &:after{
+        background: #edeef0;
+      }
+    }
   }
 }
