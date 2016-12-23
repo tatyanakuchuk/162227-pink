@@ -239,7 +239,60 @@
 
   .page-footer__logo-desktop {
       display: none;
+  }
+
+  .page-footer__logo-mobile {
+    .text-blue {
+      fill:#283645;
     }
+    .glasses-pink {
+      fill: #d22856;
+    }
+  }
+
+  &:hover {
+    .text-blue {
+      fill:#d22856;
+    }
+  }
+
+  &:active {
+    .text-blue {
+      fill:#283645;
+      opacity: 0.3;
+    }
+    .glasses-pink {
+      fill: #d22856;
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet-widths) {
+    .page-footer__logo-mobile {
+      .text-blue {
+        fill:#283645;
+      }
+      .glasses-pink {
+        fill: #d22856;
+      }
+    }
+    &:hover {
+      .text-blue {
+        fill:#d22856;
+      }
+    }
+
+    &:active {
+      .text-blue {
+        fill:#283645;
+        opacity: 0.3;
+      }
+      .glasses-pink {
+        fill: #d22856;
+        opacity: 0.3;
+      }
+    }
+  }
 
   @media (min-width: $desktop-widths) {
     .page-footer__logo-desktop {
