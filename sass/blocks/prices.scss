@@ -43,74 +43,6 @@
   }
 }
 
-.price {
-  &:before {
-    content: "";
-    position: absolute;
-    left: 19px;
-    top: 91px;
-
-    display: block;
-    width: 74px;
-    height: 74px;
-
-    background: transparent;
-    background-image: url(../../img/bg-hit.svg);
-    background-repeat: no-repeat;
-
-    @media (min-width: $tablet-widths) {
-      left: 331px;
-      top: 87px;
-      width: 60px;
-      height: 60px;
-
-      background: transparent;
-      background-image: url(../../img/bg-hit-tablet.svg);
-      background-repeat: no-repeat;
-    }
-
-    @media (min-width: $desktop-widths) {
-      left: 481px;
-      top: 140px;
-      width: 72px;
-      height: 72px;
-    }
-  }
-
-  &:after {
-    content: "хит";
-    position: absolute;
-    left: 40px;
-    top: 78px;
-
-    display: block;
-    width: 74px;
-    height: 74px;
-
-    font-size: 14px;
-    line-height: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #fff;
-
-    transform: rotate(-45deg);
-
-    @media (min-width: $tablet-widths) {
-      left: 343px;
-      width: 60px;
-      height: 60px;
-
-      font-weight: normal;
-    }
-    @media (min-width: $desktop-widths) {
-      left: 495px;
-      top: 125px;
-      width: 72px;
-      height: 72px;
-    }
-  }
-}
-
 tr {
   border: 2px solid #e5e5e5;
 }
@@ -168,6 +100,73 @@ td {
     padding-bottom: 20px;
 
     border-bottom: none;
+  }
+}
+/*-------ФЛАЖОК "ХИТ"-------*/
+.tariff-cell:nth-child(3) {
+  &:before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 91px;
+
+    display: block;
+    width: 74px;
+    height: 74px;
+
+    background-image: url(../../img/bg-hit.svg);
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-widths) {
+      left: 332px;
+      top: 88px;
+      width: 60px;
+      height: 60px;
+
+      background-image: url(../../img/bg-hit-tablet.svg);
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: $desktop-widths) {
+      left: 481px;
+      top: 140px;
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  &:after {
+    content: "хит";
+    position: absolute;
+    left: 23px;
+    top: 95px;
+
+    display: block;
+    width: 74px;
+    height: 74px;
+
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+
+    transform: rotate(-45deg);
+
+    @media (min-width: $tablet-widths) {
+      top: 88px;
+      left: 332px;
+      width: 60px;
+      height: 60px;
+
+      font-weight: normal;
+    }
+    @media (min-width: $desktop-widths) {
+      left: 479px;
+      top: 140px;
+      width: 72px;
+      height: 72px;
+    }
   }
 }
 

@@ -82,12 +82,10 @@
   background-size: 100% 35px;
 
   @media (min-width: $tablet-widths) {
-    background-image: url(../../img/bg-triangle-white.svg);
     background-size: 100% 55px;
   }
 
   @media (min-width: $desktop-widths) {
-      background-image: url(../../img/bg-triangle-white.svg);
       background-size: 100% 115px;
   }
 }
