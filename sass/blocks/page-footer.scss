@@ -144,42 +144,62 @@
 
 .map {
   display: block;
+  position: relative;
   height: 200px;
 
-  background-image: url(../../img/bg-triangle-white-footer.svg),
-                    url(../../img/bg-map-mobile@1x.png);
-  background-repeat: no-repeat, no-repeat;
-  background-position: center 0, center;
-  background-size: 100% 35px, cover;
+  background-image: url(../../img/bg-map-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 320px;
+    height: 35px;
+
+    background-image: url(../../img/bg-triangle-white-footer.svg);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: 100% 35px;
+  }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url(../../img/bg-triangle-white-footer.svg),
-                      url(../../img/bg-map-mobile@2x.jpg);
+    background-image: url(../../img/bg-map-mobile@2x.jpg);
   }
 
   @media (min-width: $tablet-widths) {
     height: 380px;
 
-    background-image: url(../../img/bg-triangle-white-footer.svg),
-                      url(../../img/bg-map-tablet@1x.jpg);
-    background-size: 100% 68px, cover;
+    background-image: url(../../img/bg-map-tablet@1x.jpg);
+
+    &:before {
+    width: 700px;
+    height: 70px;
+
+    background-size: 100% 70px;
+  }
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url(../../img/bg-triangle-white-footer.svg),
-                    url(../../img/bg-map-tablet@2x.jpg);
+    background-image: url(../../img/bg-map-tablet@2x.jpg);
     }
   }
 
   @media (min-width: $desktop-widths) {
     height: 500px;
 
-    background-image: url(../../img/bg-triangle-white-footer.svg),
-                      url(../../img/bg-map-desktop@1x.jpg);
-    background-size: 100% 115px, cover;
+    background-image: url(../../img/bg-map-desktop@1x.jpg);
+
+    &:before {
+    width: 960px;
+    height: 115px;
+
+    background-size: 100% 115px;
+  }
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url(../../img/bg-triangle-white-footer.svg),
-                    url(../../img/bg-map-desktop@2x.jpg);
+    background-image: url(../../img/bg-map-desktop@2x.jpg);
     }
   }
 }
@@ -207,8 +227,6 @@
   @media (min-width: $desktop-widths) {
     padding-top: 56px;
     padding-bottom: 60px;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 

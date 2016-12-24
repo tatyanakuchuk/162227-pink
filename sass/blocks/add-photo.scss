@@ -74,7 +74,7 @@
 
 .add-photo__action-block {
   @media (min-width: $desktop-widths) {
-    width: 410px;
+    width: 420px;
   }
 }
 
@@ -133,7 +133,7 @@
   background: none;
 
   svg {
-    width: 100%;
+    width: 45px;
     height: 45px;
     fill: #b5b9be;
   }
@@ -156,7 +156,7 @@
     height: 23px;
 
     svg {
-      width: 100%;
+      width: 23px;
       height: 23px;
     }
   }
@@ -168,6 +168,27 @@
     svg {
       width: 45px;
       height: 45px;
+    }
+  }
+}
+
+.tool--contrast {
+  svg {
+  width: 32px;
+  height: 32px;
+  }
+
+  @media (min-width: $tablet-widths) {
+    svg {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  @media (min-width: $desktop-widths) {
+    svg {
+      width: 32px;
+      height: 32px;
     }
   }
 }
@@ -310,7 +331,7 @@
     justify-content: space-between;
     width: 100%;
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 10px;
   }
 }
 
