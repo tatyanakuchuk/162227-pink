@@ -155,6 +155,8 @@
   &:before {
     content: "";
     position: absolute;
+    left: 50%;
+    margin-left: -160px;
     display: block;
     width: 320px;
     height: 35px;
@@ -177,6 +179,7 @@
     &:before {
     width: 700px;
     height: 70px;
+    margin-left: -350px;
 
     background-size: 100% 70px;
   }
@@ -194,6 +197,7 @@
     &:before {
     width: 960px;
     height: 115px;
+    margin-left: -480px;
 
     background-size: 100% 115px;
   }
