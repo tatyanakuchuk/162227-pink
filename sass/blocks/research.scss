@@ -65,16 +65,12 @@
 }
 
 .research__content {
-  display: block;
   text-align: left;
-  background: url("../../img/bg-map-desktop@1x.jpg") 0 0 repeat;
 
   @media (min-width: $tablet-widths) {
     width: 310px;
     padding-top: 100px;
     padding-bottom: 30px;
-
-
   }
 
   @media (min-width: $desktop-widths) {
