@@ -1,10 +1,12 @@
-.page-footer__contacts {
+.contacts {
   @include container;
 
   padding-top: 40px;
   padding-bottom: 15px;
 
   text-align: center;
+
+  background: #fff;
 
   @media (min-width: $tablet-widths) {
     padding-top: 50px;
@@ -105,6 +107,20 @@
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
+
+  text-decoration: none;
+}
+
+.contact-email .contact__text {
+  &:hover {
+    color: #283645;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: #bec2c7;
+    text-decoration: none;
+  }
 }
 
 .contact-address {
@@ -127,23 +143,72 @@
 }
 
 .map {
-/*  background-image: url(../../img/bg-map-mobile@1x.png);
-  background-repeat: no-repeat;
-  background-size: cover;*/
-
   display: block;
+  position: relative;
   height: 200px;
+
+  background-image: url(../../img/bg-map-mobile@1x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -160px;
+    display: block;
+    width: 320px;
+    height: 35px;
+
+    background-image: url(../../img/bg-triangle-white-footer.svg);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: 100% 35px;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url(../../img/bg-map-mobile@2x.jpg);
+  }
 
   @media (min-width: $tablet-widths) {
     height: 380px;
+
+    background-image: url(../../img/bg-map-tablet@1x.jpg);
+
+    &:before {
+    width: 700px;
+    height: 70px;
+    margin-left: -350px;
+
+    background-size: 100% 70px;
+  }
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url(../../img/bg-map-tablet@2x.jpg);
+    }
   }
 
   @media (min-width: $desktop-widths) {
     height: 500px;
+
+    background-image: url(../../img/bg-map-desktop@1x.jpg);
+
+    &:before {
+    width: 960px;
+    height: 115px;
+    margin-left: -480px;
+
+    background-size: 100% 115px;
+  }
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url(../../img/bg-map-desktop@2x.jpg);
+    }
   }
 }
 
-.page-footer__socials {
+.page-footer__part-bottom {
   display: none;
 
   flex-direction: column;
@@ -152,7 +217,7 @@
   @include container;
 
   padding-bottom: 34px;
-  padding-top: 34px;
+  padding-top: 41px;
 
   @media (min-width: $tablet-widths) {
     display: flex;
@@ -160,14 +225,24 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    padding-top: 32px;
+    padding-top: 31px;
   }
 
   @media (min-width: $desktop-widths) {
     padding-top: 56px;
-    padding-bottom: 73px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-bottom: 60px;
+  }
+}
+
+.page-footer__part-bottom--photo {
+  display: flex;
+
+  @media (min-width: $tablet-widths) {
+    padding-top: 43px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    padding-top: 106px;
   }
 }
 
@@ -180,14 +255,104 @@
 }
 
 .page-footer__logo-link {
-  @include hidden-text;
-
   display: block;
   width: 150px;
   height: 40px;
 
-  background-image: url(../../img/logo-pink-blue-mobile.svg);
-  background-repeat: no-repeat;
+  .page-footer__logo-desktop {
+      display: none;
+  }
+
+  .page-footer__logo-mobile {
+    .text-blue {
+      fill:#283645;
+    }
+    .glasses-pink {
+      fill: #d22856;
+    }
+  }
+
+  &:hover {
+    .text-blue {
+      fill:#d22856;
+    }
+  }
+
+  &:active {
+    .text-blue {
+      fill:#283645;
+      opacity: 0.3;
+    }
+    .glasses-pink {
+      fill: #d22856;
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet-widths) {
+    .page-footer__logo-mobile {
+      .text-blue {
+        fill:#283645;
+      }
+      .glasses-pink {
+        fill: #d22856;
+      }
+    }
+    &:hover {
+      .text-blue {
+        fill:#d22856;
+      }
+    }
+
+    &:active {
+      .text-blue {
+        fill:#283645;
+        opacity: 0.3;
+      }
+      .glasses-pink {
+        fill: #d22856;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-widths) {
+    .page-footer__logo-desktop {
+      display: block;
+    }
+    .page-footer__logo-mobile {
+      display: none;
+    }
+    .pink-blue,
+    .star-blue {
+      fill: #283645;
+    }
+
+    .star-pink,
+    .glasses-pink {
+      fill: #d22856;
+    }
+
+    &:hover {
+      .pink-blue,
+      .star-blue {
+        fill: #d22856;
+      }
+    }
+
+    &:active {
+      .pink-blue,
+      .star-blue {
+      fill: #283645;
+      opacity: 0.3;
+      }
+
+      .star-pink,
+      .glasses-pink {
+        opacity: 0.3;
+      }
+    }
+  }
 }
 
 .page-footer__social {
@@ -213,12 +378,21 @@
 
   border: 3px solid #e9ebec;
   border-radius: 50%;
+
+  &:hover {
+    border-color: #283645;
+  }
+
+  &:active {
+    border: 3px solid #e9ebec;
+    opacity: 0.3;
+  }
 }
 
 .social__btn--tw {
   background-image: url(../../img/icon-twitter.svg);
   background-repeat: no-repeat;
-  background-position: 18px 17px;
+  background-position: 15px 17px;
 }
 
 .social__btn--fb {
@@ -230,7 +404,7 @@
 .social__btn--ytb {
   background-image: url(../../img/icon-youtube.svg);
   background-repeat: no-repeat;
-  background-position: 14px 16px;
+  background-position: 16px 16px;
 }
 
 
@@ -272,24 +446,25 @@
 .copyright__link {
   font-size: 15px;
   line-height: 35px;
-  @include hidden-text;
 
   display: inline-block;
   vertical-align: middle;
   width: 28px;
   height: 35px;
 
+  &:hover svg {
+    fill: #283645;
+  }
 
-
-  background-image: url(../../img/logo-htmlacademy.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  &:active svg {
+    fill: #bec2c7;
+  }
 }
 
 
 /*--------СТРАНИЦА С ФОРМОЙ--------*/
 
-.page-footer__socials--form {
+.page-footer__part-bottom--form {
   display: flex;
 
   @media (min-width: $tablet-widths)  {
@@ -298,7 +473,6 @@
 }
 
 .page-footer__logo--form {
-  margin: 0 auto;
   margin-bottom: 40px;
 
   @media (min-width: $tablet-widths) {
@@ -307,7 +481,6 @@
 }
 
 .page-footer__social--form {
-  margin: 0 auto;
   margin-bottom: 30px;
 
   @media (min-width: $tablet-widths) {

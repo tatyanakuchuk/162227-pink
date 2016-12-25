@@ -1,4 +1,11 @@
+.page-header__top-wrapper {
+  @media (min-width: $desktop-widths) {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
 .page-header__top {
+  background: #283645;
 
   @media (min-width: $desktop-widths) {
     max-width: 960px;
@@ -7,7 +14,7 @@
     display: flex;
     justify-content: space-between;
 
-    background: none;
+    background: transparent;
   }
 }
 
@@ -16,8 +23,8 @@
   display: flex;
   justify-content: space-between;
 
-  padding-top: 21px;
-  padding-bottom: 18px;
+  padding-top: 23px;
+  padding-bottom: 22px;
 
   border-bottom: 1px solid #000;
 
@@ -36,40 +43,96 @@
 .page-header__logo {
   display: block;
   width: 75px;
-  height: 30px;
+  height: 24px;
 
-  background-image: url(../../img/logo-pink-white-mobile.svg);
-  background-repeat: no-repeat;
+  svg {
+    width: 75px;
+    height: 24px;
+    fill: #fff;
 
-  @include hidden-text;
+    .page-header__logo--tablet {
+      display: none;
+    }
+
+    .page-header__logo--desktop {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-widths) {
     width: 150px;
     height: 40px;
+
+    svg {
+      width: 150px;
+      height: 40px;
+      .page-header__logo--mobile {
+        display: none;
+      }
+
+      .page-header__logo--tablet {
+        display: block;
+      }
+
+      .page-header__logo--desktop {
+        display: none;
+      }
+    }
   }
 
   @media (min-width: $desktop-widths) {
     width: 150px;
     height: 50px;
+
+    svg {
+      width: 150px;
+      height: 50px;
+      .page-header__logo--mobile {
+        display: none;
+      }
+      .page-header__logo--tablet {
+        display: none;
+      }
+      .page-header__logo--desktop {
+        display: block;
+      }
+    }
   }
 }
 
-.btn-toggle {
-  @include btn;
-  @include hidden-text;
-
-  width: 24px;
-  height: 23px;
-
-  background-image: url(../../img/icon-menu-cross.svg);
-  background-repeat: no-repeat;
-
-  @media (min-width: $tablet-widths) {
-    align-self: flex-end;
+.page-header__logo--form,
+.page-header__logo--photo {
+  &:hover {
+    svg {
+        fill: #d22856;
+      }
+    }
+  &:active {
+    svg {
+      fill: #d22856;
+      opacity: 0.3;
+    }
   }
+}
 
-  @media (min-width: $desktop-widths) {
-    display: none;
+.page-header__logo--desktop {
+  svg {
+    fill: #fff;
+  }
+  .page-header__logo--desktop-star {
+    fill:#d22856;
+  }
+  &:hover {
+    svg {
+        fill: #d22856;
+      }
+    }
+
+  &:active {
+    svg {
+      fill: #d22856;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -87,7 +150,6 @@
     box-sizing: border-box;
   }
 }
-
 
 .main-nav__list {
   @include drop;
@@ -121,6 +183,16 @@
   text-align: center;
   color: #ffffff;
 
+  cursor: pointer;
+
+  &:hover {
+    color: #d22856;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+
   @media (min-width: $tablet-widths) {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -134,5 +206,146 @@
 
     font-weight: normal;
     text-transform: none;
+
+    &:hover {
+      color: #d22856;
+    }
+
+    &:active {
+      color: #6a747f;
+    }
+
+    &--active {
+      color: #fff;
+      &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        left: 0;
+        right: 0;
+        background: #fff;
+      }
+      &:hover {
+          color: #d22856;
+          &::after {
+            background: #d22856;
+          }
+      }
+    }
   }
 }
+
+
+/*--------КНОПКА ОТКРЫТЬ МЕНЮ--------*/
+
+.btn-toggle {
+  @include btn;
+  padding: 0;
+
+  width: 25px;
+  height: 25px;
+
+  background: transparent;
+
+  .btn-toggle__svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .btn-toggle__opened {
+    display: block;
+
+    fill: #fff;
+  }
+
+  .btn-toggle__closed {
+    display: none;
+  }
+
+    &:hover {
+      .btn-toggle__opened {
+      fill: #d22856;
+      }
+    }
+
+    &:active {
+      .btn-toggle__opened {
+      fill: #d22856;
+      opacity: 0.3;
+      }
+    }
+
+  @media (min-width: $tablet-widths) {
+    align-self: flex-end;
+  }
+
+  @media (min-width: $desktop-widths) {
+    display: none;
+  }
+}
+
+.btn-toggle .btn-toggle__cross{
+  fill: #fff;
+}
+
+.btn-toggle:hover .btn-toggle__cross{
+  fill: #d22856;
+}
+
+.btn-toggle:active .btn-toggle__cross{
+  fill: rgba(210, 40, 86, 0.3);
+}
+
+
+/*-------СТИЛИ ПРИ ЗАКРЫТОМ МЕНЮ-------*/
+
+.page-header--menu-closed {
+  background-position: 0 175px, -190px 0;
+  /*-----кнопка открыть меню-----*/
+  .btn-toggle {
+    width: 50px;
+    height: 25px;
+
+    .btn-toggle__svg {
+      width: 50px;
+      height: 25px;
+
+      .btn-toggle__opened {
+        display: none;
+      }
+
+      .btn-toggle__closed {
+        display: block;
+
+        fill: #fff;
+      }
+    }
+
+    &:hover {
+      .btn-toggle__closed {
+      fill: #d22856;
+      }
+    }
+
+    &:active {
+      .btn-toggle__closed {
+      fill: #d22856;
+      opacity: 0.3;
+      }
+    }
+  }
+
+  .main-nav {
+    display: none;
+
+    @media (min-width: $desktop-widths) {
+      display: block;
+    }
+  }
+
+  .page-header__top {
+    background: none;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
