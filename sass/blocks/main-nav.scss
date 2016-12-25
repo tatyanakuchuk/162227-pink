@@ -50,6 +50,8 @@
     height: 24px;
     fill: #fff;
 
+    pointer-events: none;
+
     .page-header__logo--tablet {
       display: none;
     }
@@ -100,8 +102,7 @@
   }
 }
 
-.page-header__logo--form,
-.page-header__logo--photo {
+.page-header__logo--inner {
   &:hover {
     svg {
         fill: #d22856;

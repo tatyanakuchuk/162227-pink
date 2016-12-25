@@ -234,7 +234,7 @@
   }
 }
 
-.page-footer__part-bottom--photo {
+.page-footer__part-bottom--inner {
   display: flex;
 
   @media (min-width: $tablet-widths) {
@@ -259,6 +259,9 @@
   width: 150px;
   height: 40px;
 
+  svg {
+    pointer-events: none;
+  }
   .page-footer__logo-desktop {
       display: none;
   }
@@ -464,7 +467,7 @@
 
 /*--------СТРАНИЦА С ФОРМОЙ--------*/
 
-.page-footer__part-bottom--form {
+.page-footer__part-bottom--inner {
   display: flex;
 
   @media (min-width: $tablet-widths)  {
@@ -472,13 +475,13 @@
   }
 }
 
-.page-footer__logo--form {
+/*.page-footer__logo--inner {
   margin-bottom: 40px;
 
   @media (min-width: $tablet-widths) {
     margin: 0;
   }
-}
+}*/
 
 .page-footer__social--form {
   margin-bottom: 30px;

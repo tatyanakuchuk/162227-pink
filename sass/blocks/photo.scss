@@ -4,6 +4,7 @@
 
 .photo__wrapper {
   @include container;
+  max-width: 320px;
 
   display: flex;
   flex-direction: column;
@@ -187,15 +188,48 @@
 }
 
 .photo-content__like {
+  position: relative;
+
+  padding-left: 30px;
+
   font-size: 12px;
   line-height: 24px;
   color: #d22856;
   text-transform: uppercase;
-}
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+
+    display: block;
+    width: 13px;
+    height: 12px;
+
+    background-image: url(../../img/icon-heart.svg);
+  }
+
+    @media (min-width: $tablet-widths) {
+      padding-left: 0;
+      padding-right: 30px;
+
+      &:before {
+        left: 224px;
+      }
+    }
+  }
+
 
 .content-like--of-the-day {
   @media (min-width: $tablet-widths) {
-  order: 0;
+    padding-right: 32px;
+
+    order: 0;
+
+    &:before {
+      left: 96px;
+    }
   }
 }
 

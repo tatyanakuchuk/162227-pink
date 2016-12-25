@@ -12,6 +12,7 @@
 
 .add-photo__title {
   @include container;
+  max-width: 320px;
   padding-bottom: 45px;
   margin: 0 auto;
 
@@ -36,6 +37,7 @@
 
 .add-photo__content {
   @include container;
+  max-width: 320px;
 
   padding-top: 18px;
 
