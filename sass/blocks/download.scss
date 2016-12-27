@@ -54,6 +54,7 @@
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url(../../img/iphone-hand-mobile@2x.png);
+    background-size: 258px 286px;
   }
 
   @media (min-width: $tablet-widths) {
@@ -63,11 +64,12 @@
     background-image: url(../../img/iphone-hand-tablet@1x.png);
     background-size: 700px 545px;
     background-repeat: no-repeat;
-    background-position: -20px 70px;
+    background-position: center 72px;
 
     /*ретина*/
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url(../../img/iphone-hand-tablet@2x.png);
+      background-size: 700px 545px;
     }
   }
 
@@ -75,10 +77,11 @@
     background-image: url(../../img/iphone-hand-desktop@1x.png);
     background-size: 1050px 645px;
     background-repeat: no-repeat;
-    background-position: 40px 90px;
+    background-position: center 90px;
     /*ретина*/
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url(../../img/iphone-hand-desktop@2x.png);
+      background-size: 1050px 645px;
     }
   }
 }

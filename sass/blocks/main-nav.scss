@@ -37,6 +37,8 @@
     min-width: auto;
     padding-top: 22px;
     margin: 0;
+
+    border-bottom: none;
   }
 }
 
@@ -140,9 +142,6 @@
 .main-nav {
   color: #ffffff;
 
-  @media (min-width: $tablet-widths) {
-  }
-
   @media (min-width: $desktop-widths) {
     width: 630px;
     padding-right: 3px;
@@ -236,9 +235,7 @@
   }
 }
 
-
-/*--------КНОПКА ОТКРЫТЬ МЕНЮ--------*/
-
+/*--------КНОПКА МЕНЮ--------*/
 .btn-toggle {
   @include btn;
   padding: 0;
@@ -248,36 +245,28 @@
 
   background: transparent;
 
-  .btn-toggle__svg {
-    width: 25px;
-    height: 25px;
-  }
-
-  .btn-toggle__opened {
-    display: block;
-
-    fill: #fff;
-  }
-
-  .btn-toggle__closed {
+  .btn-toggle__burger {
     display: none;
   }
 
-    &:hover {
-      .btn-toggle__opened {
-      fill: #d22856;
-      }
-    }
+  .btn-toggle__cross{
+    fill: #fff;
+  }
 
-    &:active {
-      .btn-toggle__opened {
+  &:hover {
+    .btn-toggle__cross {
       fill: #d22856;
-      opacity: 0.3;
-      }
     }
+  }
+
+  &:active {
+    .btn-toggle__cross {
+      fill: rgba(210, 40, 86, 0.3);
+    }
+  }
 
   @media (min-width: $tablet-widths) {
-    align-self: flex-end;
+    margin-top: auto;
   }
 
   @media (min-width: $desktop-widths) {
@@ -285,24 +274,25 @@
   }
 }
 
-.btn-toggle .btn-toggle__cross{
-  fill: #fff;
+/*-------БЕЗ JS-------*/
+.main-nav-nojs {
+  .btn-toggle {
+    display: none;
+  }
 }
 
-.btn-toggle:hover .btn-toggle__cross{
-  fill: #d22856;
-}
+/*-------СТИЛИ ДЛЯ СКРИПТА-------*/
+.main-nav-closed {
+  background-position: center 0;
 
-.btn-toggle:active .btn-toggle__cross{
-  fill: rgba(210, 40, 86, 0.3);
-}
+  .page-header__top-wrapper {
+    background: rgba(0, 0, 0, 0.3);
+  }
 
+  .page-header__top {
+    background: none;
+  }
 
-/*-------СТИЛИ ПРИ ЗАКРЫТОМ МЕНЮ-------*/
-
-.page-header--menu-closed {
-  background-position: 0 175px, -190px 0;
-  /*-----кнопка открыть меню-----*/
   .btn-toggle {
     width: 50px;
     height: 25px;
@@ -311,11 +301,11 @@
       width: 50px;
       height: 25px;
 
-      .btn-toggle__opened {
+      .btn-toggle__cross {
         display: none;
       }
 
-      .btn-toggle__closed {
+      .btn-toggle__burger {
         display: block;
 
         fill: #fff;
@@ -323,30 +313,31 @@
     }
 
     &:hover {
-      .btn-toggle__closed {
-      fill: #d22856;
+      .btn-toggle__burger {
+        fill: #d22856;
       }
     }
 
     &:active {
-      .btn-toggle__closed {
-      fill: #d22856;
-      opacity: 0.3;
+      .btn-toggle__burger {
+        fill: #d22856;
+        opacity: 0.3;
       }
     }
   }
 
-  .main-nav {
-    display: none;
+  .page-header__logo-block {
+    border-bottom: none;
+  }
 
+  .main-nav__item {
+    display: none;
     @media (min-width: $desktop-widths) {
       display: block;
     }
   }
 
-  .page-header__top {
-    background: none;
-    background: rgba(0, 0, 0, 0.3);
+  @media (min-width: $tablet-widths) {
+    background-position: center 0;
   }
 }
-

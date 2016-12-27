@@ -8,11 +8,12 @@
     <script src="js/picturefill.min.js"></script>
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header  main-nav-nojs  main-nav-closed">
       <h1 class="visually-hidden">PINK - приложение для путешествий!</h1>
-      <div class="page-header__top">
-        <div class="page-header__logo-block">
-          <a href="index.html" class="page-header__logo  page-header__logo--inner">
+      <div class="page-header__top-wrapper">
+        <div class="page-header__top">
+          <div class="page-header__logo-block">
+            <a href="index.html" class="page-header__logo  page-header__logo--inner">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" preserveAspectRatio="none" y="0px" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
                 <g class="page-header__logo--mobile">
                   <path d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z"/>
@@ -41,40 +42,41 @@
                     <path class="page-header__logo--desktop-star"  d="M10.734,34.072c-1.519,0-2.749-1.23-2.749-2.75c0,1.52-1.23,2.75-2.749,2.75 c1.519,0,2.749,1.229,2.749,2.748C7.985,35.303,9.215,34.072,10.734,34.072z"/>
               </g>
               </svg>
-          </a>
-          <button class="btn-toggle">
-            <svg class="btn-toggle__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" preserveAspectRatio="none" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
-              <g class="btn-toggle__opened">
-                <path d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/>
-              </g>
-              <g class="btn-toggle__closed">
-                <g>
-                <path id="path-1" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+            </a>
+            <button class="btn-toggle">
+              <svg class="btn-toggle__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" preserveAspectRatio="none" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
+                <g class="btn-toggle__cross">
+                  <path d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/>
                 </g>
-                <g>
-                  <path id="path-1_1_" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+                <g class="btn-toggle__burger">
+                  <g>
+                    <path id="path-1" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+                  </g>
+                  <g>
+                    <path id="path-1_1_" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
                   </g>
                 </g>
               </svg>
-          </button>
+            </button>
+          </div>
+          <!--НАВИГАЦИЯ-->
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="index.html" class="main-nav__link">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--active">Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html" class="main-nav__link">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">HTMLAcademy</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      <!--НАВИГАЦИЯ-->
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="index.html" class="main-nav__link">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active">Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html" class="main-nav__link">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link">HTMLAcademy</a>
-          </li>
-        </ul>
-      </nav>
       </div>
       <div class="page-header__title-wrapper">
         <h2 class="page-header__title  page-header__title--photo">Фотографии пользователей</h2>
@@ -222,11 +224,12 @@
               </div>
             </div>
           </article>
+        </div>
         </section>
         <section class="add-photo">
           <h3 class="add-photo__title">
-            <span class="add-photo__title--part-top">Затмите их всех!</span>
-            <span class="add-photo__title--part-bottom">Выкладывайте все, что накопилось в телефоне!</span>
+            <span class="add-photo__title-part-top">Затмите их всех!</span>
+            <span class="add-photo__title-part-bottom">Выкладывайте все, что накопилось в телефоне!</span>
           </h3>
             <div class="add-photo__content">
                 <div class="add-photo__picture">
@@ -295,7 +298,7 @@
     </main>
     <!--ФУТЕР-->
     <footer class="page-footer  page-footer--inner">
-      <div class="page-footer__part-bottom  page-footer__part-bottom--inner">
+      <div class="page-footer__part-bottom">
         <div class="page-footer__logo  page-footer__logo--inner">
           <a href="#" class="page-footer__logo-link">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="40.375px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
@@ -322,7 +325,7 @@
             </svg>
           </a>
         </div>
-        <div class="page-footer__social  page-footer__social--photo">
+        <div class="page-footer__social  social">
           <a href="#" class="social__btn social__btn--tw">Twitter</a>
           <a href="#" class="social__btn social__btn--fb">Facebook</a>
           <a href="#" class="social__btn social__btn--ytb">Youtube</a>
@@ -337,5 +340,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/nav.js"></script>
   </body>
 </html>

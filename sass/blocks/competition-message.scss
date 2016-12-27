@@ -45,6 +45,11 @@
   }
 }
 
+legend {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .competition-message__title {
   margin: 0;
   margin-bottom: 10px;
@@ -57,13 +62,16 @@
 }
 
 textarea[name="competition-message__text"] {
-  min-width: 275px;
-  padding: 0;
+  width: 100%;
+  min-width: 280px;
+  padding: 20px;
   min-height: 197px;
 
   border-radius: 2px;
   border: 2px solid #e5e5e5;
   outline: none;
+
+  box-sizing: border-box;
 
   &:hover {
     border: 2px solid #283645;
@@ -96,7 +104,7 @@ textarea[name="competition-message__text"] {
     align-items: center;
 
     padding-top: 71px;
-    padding-bottom: 55px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: $desktop-widths) {
@@ -104,7 +112,7 @@ textarea[name="competition-message__text"] {
     min-width: 100%;
 
     padding-top: 65px;
-    padding-bottom: 16px;
+    padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
   }

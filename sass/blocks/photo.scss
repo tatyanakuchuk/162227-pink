@@ -43,14 +43,16 @@
 
 .photo__article {
   margin-bottom: 25px;
+  background: #f2f2f2;
 
   @media (min-width: $tablet-widths) {
-    width: 300px;
+    max-width: 300px;
     margin-bottom: 28px;
   }
 
   @media (min-width: $desktop-widths) {
     margin-bottom: 55px;
+    max-width: 300px;
   }
 }
 
@@ -72,10 +74,12 @@
   width: 100%;
 
   @media (min-width: $tablet-widths) {
+    max-width: 620px;
     margin-bottom: 47px;
   }
 
   @media (min-width: $desktop-widths) {
+    max-width: 940px;
   }
 }
 

@@ -29,8 +29,8 @@
   }
 }
 
-.add-photo__title--part-top,
-.add-photo__title--part-bottom {
+.add-photo__title-part-top,
+.add-photo__title-part-bottom {
   display: block;
   text-align: center;
 }
@@ -40,6 +40,8 @@
   max-width: 320px;
 
   padding-top: 18px;
+
+  background: #f2f2f2;
 
   @media (min-width: $tablet-widths) {
     padding-top: 62px;

@@ -64,11 +64,48 @@
 .competition-contacts__item {
   margin-bottom: 20px;
 
+  &:after {
+      display: none;
+
+      width: 21px;
+      height: 21px;
+
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: 20px;
+
+      background-image: url(../../img/sprite.png);
+      background-repeat: no-repeat;
+    }
+    &:before {
+      display: none;
+
+      width: 59px;
+      height: 59px;
+
+      content: "";
+      position: absolute;
+      right: 2px;
+      top: 2px;
+
+      background: #e5e5e5;
+    }
+
   @media (min-width: $tablet-widths) {
     display: flex;
     flex-direction: column;
 
     margin-bottom: 29px;
+    position: relative;
+
+    &:after {
+      display: block;
+    }
+
+    &:before {
+      display: block;
+    }
   }
 
   @media (min-width: $desktop-widths) {
@@ -79,6 +116,10 @@
 
 .competition-contacts__item:last-child {
   margin-bottom: 0;
+
+  &:after {
+    background-position: -25px 0;
+  }
 }
 
 .competition-contacts__label {
@@ -122,6 +163,7 @@
   @media (min-width: $tablet-widths) {
     order: 0;
 
+    padding-right: 70px;
     margin-bottom: 10px;
   }
 }

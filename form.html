@@ -5,9 +5,10 @@
     <title>HTML Academy: Пинк</title>
     <link href="css/style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="js/picturefill.min.js"></script>
   </head>
   <body>
-    <header class="page-header  page-header--form">
+    <header class="page-header  main-nav-nojs  main-nav-closed">
         <h1 class="visually-hidden">PINK - приложение для путешествий!</h1>
         <div class="page-header__top-wrapper">
           <div class="page-header__top">
@@ -43,39 +44,39 @@
               </svg>
               </a>
               <button class="btn-toggle">
-              <svg class="btn-toggle__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" preserveAspectRatio="none" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
-              <g class="btn-toggle__opened">
-                <path d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/>
-              </g>
-              <g class="btn-toggle__closed">
-                <g>
-                <path id="path-1" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
-                </g>
-                <g>
-                  <path id="path-1_1_" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+                <svg class="btn-toggle__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" preserveAspectRatio="none" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
+                  <g class="btn-toggle__cross">
+                    <path d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/>
                   </g>
-                </g>
-              </svg>
+                  <g class="btn-toggle__burger">
+                    <g>
+                      <path id="path-1" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+                    </g>
+                    <g>
+                      <path id="path-1_1_" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+                    </g>
+                  </g>
+                </svg>
               </button>
             </div>
+            <!--НАВИГАЦИЯ-->
+            <nav class="main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="index.html" class="main-nav__link">Главная</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="photo.html" class="main-nav__link">Фотографии</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link  main-nav__link--active">Конкурс</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">HTMLAcademy</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <!--НАВИГАЦИЯ-->
-          <nav class="main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a href="index.html" class="main-nav__link">Главная</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="photo.html" class="main-nav__link">Фотографии</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link  main-nav__link--active">Конкурс</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">HTMLAcademy</a>
-              </li>
-            </ul>
-          </nav>
         </div>
         <div class="page-header__title-wrapper">
           <h2 class="page-header__title  page-header__title--form">Конкурс на самое безбашенное путешествие с Пинк</h2>
@@ -203,7 +204,7 @@
     </main>
     <!--ФУТЕР-->
     <footer class="page-footer">
-    <div class="page-footer__part-bottom  page-footer__part-bottom--inner">
+      <div class="page-footer__part-bottom">
         <div class="page-footer__logo  page-footer__logo--inner">
           <a href="#" class="page-footer__logo-link">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="146.3px" height="40.375px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
@@ -230,7 +231,7 @@
             </svg>
           </a>
         </div>
-        <div class="page-footer__social  page-footer__social--form">
+        <div class="page-footer__social  social">
           <a href="#" class="social__btn  social__btn--tw">Twitter</a>
           <a href="#" class="social__btn  social__btn--fb">Facebook</a>
           <a href="#" class="social__btn  social__btn--ytb">Youtube</a>
@@ -271,5 +272,6 @@
           </div>
         </div>
       </div>
+      <script src="js/nav.js"></script>
   </body>
 </html>

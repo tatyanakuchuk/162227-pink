@@ -145,26 +145,38 @@
 .map {
   display: block;
   position: relative;
-  height: 200px;
+
+  max-height: 200px;
+
+  padding-bottom: 62%;
 
   background-image: url(../../img/bg-map-mobile@1x.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
+  iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+
   &:before {
     content: "";
     position: absolute;
-    left: 50%;
-    margin-left: -160px;
+
     display: block;
-    width: 320px;
+    width: 100%;
     height: 35px;
 
     background-image: url(../../img/bg-triangle-white-footer.svg);
     background-position: center 0;
     background-repeat: no-repeat;
     background-size: 100% 35px;
+
+    z-index: 10;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -172,14 +184,14 @@
   }
 
   @media (min-width: $tablet-widths) {
-    height: 380px;
+    max-height: 380px;
+
+    padding-bottom: 57%;
 
     background-image: url(../../img/bg-map-tablet@1x.jpg);
 
     &:before {
-    width: 700px;
     height: 70px;
-    margin-left: -350px;
 
     background-size: 100% 70px;
   }
@@ -190,14 +202,13 @@
   }
 
   @media (min-width: $desktop-widths) {
-    height: 500px;
+    max-height: 500px;
+    padding-bottom: 53%;
 
     background-image: url(../../img/bg-map-desktop@1x.jpg);
 
     &:before {
-    width: 960px;
     height: 115px;
-    margin-left: -480px;
 
     background-size: 100% 115px;
   }
@@ -209,45 +220,42 @@
 }
 
 .page-footer__part-bottom {
-  display: none;
+  display: flex;
 
   flex-direction: column;
   align-items: center;
 
   @include container;
 
-  padding-bottom: 34px;
-  padding-top: 41px;
+  padding-bottom: 36px;
+  padding-top: 40px;
 
   @media (min-width: $tablet-widths) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
 
-    padding-top: 31px;
+    padding-top: 38px;
+    padding-bottom: 38px;
   }
 
   @media (min-width: $desktop-widths) {
-    padding-top: 56px;
-    padding-bottom: 60px;
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
 }
 
-.page-footer__part-bottom--inner {
-  display: flex;
-
-  @media (min-width: $tablet-widths) {
-    padding-top: 43px;
-  }
-
-  @media (min-width: $desktop-widths) {
-    padding-top: 106px;
-  }
+.page-footer__part-bottom--main {
+  display: none;
 }
 
 .page-footer__logo {
   width: 150px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-widths) {
+    margin-bottom: 0;
+  }
 
   @media (min-width: $desktop-widths) {
     max-width: 640px;
@@ -361,9 +369,15 @@
 .page-footer__social {
   display: flex;
   justify-content: space-between;
+
   width: 180px;
+  margin-bottom: 40px;
 
   text-align: center;
+
+  @media (min-width: $tablet-widths) {
+    margin-bottom: 0;
+  }
 
   @media (min-width: $desktop-widths) {
     max-width: 320px;
@@ -419,13 +433,10 @@
 
   @media (min-width: $tablet-widths) {
     padding-top: 14px;
-    padding-bottom: 10px;
-    padding-left: 20px;
   }
 
   @media (min-width: $desktop-widths) {
     max-width: 165px;
-    padding-left: 0;
     padding-top: 10px;
   }
 }
@@ -436,8 +447,8 @@
   margin: 0;
   margin-right: 13px;
 
-  font-size: 15px;
-  line-height: 35px;
+  font-size: 14px;
+  line-height: 32px;
 
   @media (min-width: $desktop-widths) {
     margin-right: 19px;
@@ -462,61 +473,4 @@
   &:active svg {
     fill: #bec2c7;
   }
-}
-
-
-/*--------СТРАНИЦА С ФОРМОЙ--------*/
-
-.page-footer__part-bottom--inner {
-  display: flex;
-
-  @media (min-width: $tablet-widths)  {
-    flex-direction: row;
-  }
-}
-
-/*.page-footer__logo--inner {
-  margin-bottom: 40px;
-
-  @media (min-width: $tablet-widths) {
-    margin: 0;
-  }
-}*/
-
-.page-footer__social--form {
-  margin-bottom: 30px;
-
-  @media (min-width: $tablet-widths) {
-    margin: 0;
-  }
-}
-
-
-/*-------СТРАНИЦА С ФОТО-------*/
-
-.page-footer__socials--photo {
-  display: flex;
-  padding-top: 43px;
-
-  @media (min-width: $tablet-widths) {
-    flex-direction: row;
-    padding-top: 40px;
-  }
-
-  @media (min-width: $desktop-widths) {
-    padding-top: 108px;
-    padding-bottom: 70px;
-  }
-}
-
-.page-footer__logo--photo {
-  margin-bottom: 39px;
-}
-
-.page-footer__social--photo {
-  margin-bottom: 32px;
-}
-
-.page-footer__copyright--photo {
-  display: flex;
 }
