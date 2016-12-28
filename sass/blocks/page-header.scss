@@ -1,27 +1,27 @@
 .page-header {
   background: #1d2631;
-  background-image: url(../../img/bg-back-mobile@1x.jpg) ;
+  background-image: url(../img/bg-back-mobile@1x.jpg) ;
   background-size: 700px 462px;
   background-position: center 260px;
   background-repeat: no-repeat;
 
   /*ретина*/
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url(../../img/bg-back-mobile@2x.jpg) ;
+    background-image: url(../img/bg-back-mobile@2x.jpg) ;
     background-size: 700px 462px;
     background-repeat: no-repeat;
   }
 
   @media (min-width: $tablet-widths) {
     background: #1d2631;
-    background-image: url(../../img/bg-back-tablet@1x.jpg) ;
+    background-image: url(../img/bg-back-tablet@1x.jpg) ;
     background-position: center 260px;
     background-size: 1200px 729px;
     background-repeat: no-repeat;
 
     /*ретина*/
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url(../../img/bg-back-tablet@2x.jpg) ;
+      background-image: url(../img/bg-back-tablet@2x.jpg) ;
       background-size: 1200px 729px;
       background-repeat: no-repeat;
     }
@@ -29,13 +29,13 @@
 
   @media (min-width: $desktop-widths) {
     background: #1d2631;
-    background-image: url(../../img/bg-back-desktop@1x.jpg) ;
+    background-image: url(../img/bg-back-desktop@1x.jpg) ;
     background-position: center 0;
     background-size: 2560px 853px;
     background-repeat: no-repeat;
     /*ретина*/
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url(../../img/bg-back-desktop@2x.jpg) ;
+      background-image: url(../img/bg-back-desktop@2x.jpg) ;
       background-size: 2560px 853px;
       background-repeat: no-repeat;
     }
@@ -44,6 +44,8 @@
 
 .page-header__title {
   margin: 0 auto;
+  padding-top: 30px;
+
   font-size: 24px;
   line-height: 30px;
   font-weight: 400;
@@ -52,9 +54,29 @@
   text-align: center;
 
   @media (min-width: $tablet-widths) {
-    max-width: 380px;
+    max-width: 500px;
     font-size: 50px;
     line-height: 60px;
+
+    padding-top: 70px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    max-width: 830px;
+    padding-top: 59px;
+    padding-bottom: 99px;
+  }
+}
+
+
+/*-------СТРАНИЦА С ФОРМОЙ-------*/
+
+.page-header__title--form {
+  max-width: 240px;
+  padding-bottom: 48px;
+
+  @media (min-width: $tablet-widths) {
+    padding-bottom: 75px;
   }
 
   @media (min-width: $desktop-widths) {
@@ -63,40 +85,18 @@
 }
 
 
-/*-------СТРАНИЦА С ФОРМОЙ-------*/
-
-.page-header__title--form {
-  padding-top: 30px;
-  padding-bottom: 48px;
-
-  @media (min-width: $tablet-widths) {
-    padding-top: 70px;
-    padding-bottom: 75px;
-  }
-
-  @media (min-width: $desktop-widths) {
-    padding-top: 59px;
-    padding-bottom: 99px;
-  }
-}
-
-
 /*--------СТРАНИЦА С ФОТО--------*/
 
 .page-header__title--photo {
   width: 180px;
-  padding-top: 29px;
   padding-bottom: 79px;
 
   @media (min-width: $tablet-widths) {
     width: auto;
-    padding-top: 70px;
     padding-bottom: 136px;
   }
 
   @media (min-width: $desktop-widths) {
-    width: 350px;
-    padding-top: 59px;
-    padding-bottom: 99px;
+    max-width: 350px;
   }
 }

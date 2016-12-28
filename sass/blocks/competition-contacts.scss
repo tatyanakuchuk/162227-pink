@@ -40,6 +40,7 @@
 
 .competition-contacts__title {
   display: none;
+  margin: 0;
 
   text-transform: uppercase;
   color: #d22856;
@@ -75,7 +76,7 @@
       right: 20px;
       top: 20px;
 
-      background-image: url(../../img/sprite.png);
+      background-image: url(../img/sprite.png);
       background-repeat: no-repeat;
     }
     &:before {
