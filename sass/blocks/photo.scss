@@ -42,8 +42,7 @@
 }
 
 .photo__article {
-  min-width: auto;
-  max-width: 300px;
+  width: 300px;
   margin-bottom: 25px;
 
   background: #f2f2f2;
@@ -73,16 +72,17 @@
 
 .photo__article--of-the-day {
   position: relative;
-  width: 100%;
-  min-width: 940px;
+  min-width: auto;
+  width: 320px;
 
   @media (min-width: $tablet-widths) {
-    max-width: 620px;
+    width: 620px;
     margin-bottom: 47px;
   }
 
   @media (min-width: $desktop-widths) {
-    min-width: 940px;
+
+    width: 940px;
   }
 }
 

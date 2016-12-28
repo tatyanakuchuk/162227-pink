@@ -15,8 +15,7 @@
     box-sizing: border-box;
 
     padding-top: 13px;
-    padding-left: 33px;
-    padding-right: 0;
+
   }
 }
 
@@ -26,11 +25,12 @@
   padding: 0;
   padding-top: 38px;
 
+  box-sizing: border-box;
+
   @media (min-width: $tablet-widths) {
     padding: 0;
     padding-top: 48px;
     padding-bottom: 59px;
-    padding-left: 58px;
     margin: 0;
 
     border: 2px solid #e5e5e5;
@@ -38,9 +38,8 @@
   }
 
   @media (min-width: $desktop-widths) {
-    width: auto;
+    width: 100%;
     padding-top: 50px;
-    padding-left: 75px;
   }
 }
 
@@ -56,11 +55,16 @@
 
   @media (min-width: $tablet-widths) {
     width: auto;
+    width:320px;
+    margin: 0 auto;
   }
 }
 
 .competition-apps__list {
   @include drop;
+  @media (min-width: $tablet-widths) {
+    padding-left: 58px;
+  }
 }
 
 .competition-apps__item {
